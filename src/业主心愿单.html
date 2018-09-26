@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>业主心愿单</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="description">
+
+    <link rel="stylesheet" href="../bower_components/weui/dist/lib/weui.min.css">
+    <link rel="stylesheet" href="../bower_components/weui/dist/css/jquery-weui.css">
+    <link rel="stylesheet" href="./css/main.css">
+
+</head>
+
+<body ontouchstart>
+    <div class="owner-xyd">
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+        <p style="margin: 10px 0 30px;">
+            在这里写下您希望实现的彩店功能、或者对现有产品的改进意
+            见，一旦被我们采纳之后，您将获得不同时间段的会员有效期
+            奖励和新功能优先使用资格</p>
+        <a href="javascript:;" id="xuyuan" class="weui-btn" style="background-color: #007aff;">许下愿望</a>
+    </div>
+
+<script src="../bower_components/weui/dist/lib/jquery-2.1.4.js"></script>
+<script src="../bower_components/weui/dist/lib/fastclick.js"></script>
+<script src="../bower_components/weui/dist/js/jquery-weui.js"></script>
+<script>
+    $('#xuyuan').on('click',function(){
+        $.alert('您许下的愿望我们已经收到啦\n' +
+            '希望能帮您实现愿望','许愿成功')
+    })
+</script>
+</body>
+</html>

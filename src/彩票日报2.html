@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>彩票日报</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="description">
+
+    <link rel="stylesheet" href="../bower_components/weui/dist/lib/weui.min.css">
+    <link rel="stylesheet" href="../bower_components/weui/dist/css/jquery-weui.css">
+    <link rel="stylesheet" href="./css/main.css">
+
+</head>
+
+<body ontouchstart>
+<div class="container-index">
+    <div class="header" style="margin-top:50%;">
+        <img src="./images/login_bg.jpg">
+    </div>
+    <div class="footer-con clear-float">
+        <span id='show-confirm'>保存海报</span>
+        <span>分享给彩民</span>
+    </div>
+</div>
+
+<script src="../bower_components/weui/dist/lib/jquery-2.1.4.js"></script>
+<script src="../bower_components/weui/dist/lib/fastclick.js"></script>
+<script src="../bower_components/weui/dist/js/jquery-weui.js"></script>
+
+<script>
+    $(function() {
+        FastClick.attach(document.body);
+    });
+</script>
+
+<script>
+    $(document).on("click", "#show-confirm", function() {
+        $.confirm("您确定要保存到相册吗？", function() {
+            $.toast("已保存到相册");
+        }, function() {
+            //取消操作
+        });
+    });
+</script>
+</body>
+</html>

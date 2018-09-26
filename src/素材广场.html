@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>素材广场</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="description">
+
+    <link rel="stylesheet" href="../bower_components/weui/dist/lib/weui.min.css">
+    <link rel="stylesheet" href="../bower_components/weui/dist/css/jquery-weui.css">
+    <link rel="stylesheet" href="./css/main.css">
+
+</head>
+
+<body ontouchstart>
+    <div class="scgc-content">
+        <ul class="scgc-content-img clear-float">
+            <!--直接放图片-->
+            <li><img src="./images/login_bg.jpg"></li>
+            <li><img src="./images/login_bg.jpg"></li>
+            <li><img src="./images/login_bg.jpg"></li>
+            <li><img src="./images/login_bg.jpg"></li>
+            <li><img src="./images/login_bg.jpg"></li>
+            <li><img src="./images/login_bg.jpg"></li>
+            <li><img src="./images/login_bg.jpg"></li>
+            <li><img src="./images/login_bg.jpg"></li>
+        </ul>
+    </div>
+    <div style="text-align: center;margin-top: 10px">暂无更多</div>
+    <div class="scgc-footer">
+        <a href="javascript:;" class="weui-btn" style="background-color: #007aff;">上传本店奖票照片</a>
+        <div class=my-jl>我可以获得什么奖励？</div>
+    </div>
+
+<script src="../bower_components/weui/dist/lib/jquery-2.1.4.js"></script>
+<script src="../bower_components/weui/dist/lib/fastclick.js"></script>
+<script src="../bower_components/weui/dist/js/jquery-weui.js"></script>
+<script>
+    $('#apply-wl').on('click',function(){
+        $.alert('您申请的物料将很快为您发货，请注意查收快递','申请成功')
+    })
+</script>
+</body>
+</html>

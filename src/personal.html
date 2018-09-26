@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <title>个人中心</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="description">
+
+    <link rel="stylesheet" href="../bower_components/weui/dist/lib/weui.min.css">
+    <link rel="stylesheet" href="../bower_components/weui/dist/css/jquery-weui.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+<div class="weui-tab" id="weuitab" ><!--继承body 、height100%-->
+    <div class="weui-tab__panel" style="margin-bottom: 53px;">
+        <div class="weui-panel" id="weui-panel2"  >
+                    <div class="personal-center">
+                        <div style="background-color:rgb(246, 246, 246);padding:5px 0;">
+                        <div class="personal-center-top clear-float">
+                            <span class="normal-vip">普通会员</span>
+                            <div class="auter-left">
+                                <img src="./images/teamsignnew_560.png" alt="">
+                            </div>
+                            <div class="auter-right">
+                                <div>
+                                    <span class="user-name">用户名称</span>
+                                    <span><img src="./images/vip.png" alt=""></span>
+                                 </div>
+                                <div class="vip-time">
+                                    <span>2019年12月23日到期</span>
+                                    <span class="vip-jump"><a href="#">会员续费</a></span>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="weui-cells" style="margin-top: 0;">
+                            <a class="weui-cell weui-cell_access" href="javascript:;" id="show-shop">
+                                <div class="weui-cell__bd">
+                                    <p>我的积分</p>
+                                </div>
+                                <div class="weui-cell__ft weui-cell-font">
+                                    886积分
+                                </div>
+                            </a>
+                            <a class="weui-cell weui-cell_access" href="javascript:;">
+                                <div class="weui-cell__bd">
+                                    <p>我的订单</p>
+                                </div>
+                                <div class="weui-cell__ft weui-cell-font"></div>
+                            </a>
+                            <a class="weui-cell weui-cell_access" href="javascript:;">
+                                <div class="weui-cell__bd">
+                                    <p>业主心愿单</p>
+                                </div>
+                                <div class="weui-cell__ft weui-cell-font"></div>
+                            </a>
+                            <a class="weui-cell weui-cell_access" href="javascript:;">
+                                <div class="weui-cell__bd">
+                                    <p>联系客服</p>
+                                </div>
+                                <div class="weui-cell__ft weui-cell-font"></div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+    </div>
+
+    <!----------------weui-tabbar------------------------>
+    <div class="weui-tabbar tabbar-bg">
+        <a href="index.html" class="weui-tabbar__item">
+            <img src="./images/tabr2.png" class="weui-tabbar__icon">
+            <p class="weui-tabbar__label tab-color">首页</p>
+        </a>
+        <a href="personal.html" class="weui-tabbar__item tab-toggle">
+            <img src="./images/tabr1.png" class="weui-tabbar__icon" >
+            <p class="weui-tabbar__label tab-color">个人中心</p>
+        </a>
+    </div>
+
+</div>
+<script src="../bower_components/weui/dist/lib/jquery-2.1.4.js"></script>
+<script src="../bower_components/weui/dist/lib/fastclick.js"></script>
+<script src="../bower_components/weui/dist/js/jquery-weui.js"></script>
+
+<script>
+    $(function() {
+        FastClick.attach(document.body);
+    });
+</script>
+
+<script type="text/javascript">
+//    弹框
+    $(document).on("click", "#show-shop", function() {
+        $.alert("先去赚点积分吧", "积分商城还未开放");
+    });
+
+</script>
+</body>

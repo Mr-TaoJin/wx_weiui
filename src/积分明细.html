@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>积分明细</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="description">
+
+    <link rel="stylesheet" href="../bower_components/weui/dist/lib/weui.min.css">
+    <link rel="stylesheet" href="../bower_components/weui/dist/css/jquery-weui.css">
+    <link rel="stylesheet" href="./css/main.css">
+
+</head>
+
+<body ontouchstart>
+    <div class="my-order">
+        <table>
+            <tbody>
+                <tr>
+                    <td class="td-order1">
+                        <div class="tr-order">
+                            <div>2018年4月22日 14:22:22</div>
+                            <div class="order-font">上传素材积分奖励</div>
+                        </div>
+                    </td>
+                    <td class="td-order2">+20积分</td>
+                </tr>
+                <tr>
+                    <td class="td-order1">
+                        <div class="tr-order">
+                            <div>2018年4月22日 14:22:22</div>
+                            <div class="order-font">积分商城兑换</div>
+                        </div>
+                    </td>
+                    <td class="td-order2">-200积分</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+<script src="../bower_components/weui/dist/lib/jquery-2.1.4.js"></script>
+<script src="../bower_components/weui/dist/lib/fastclick.js"></script>
+<script src="../bower_components/weui/dist/js/jquery-weui.js"></script>
+<script>
+    $('#renew').on('click',function(){
+        $.alert('您兑换的宝贝将很快为您发货，\n' +
+            '请注意查收快递','兑换成功')
+    })
+</script>
+</body>
+</html>

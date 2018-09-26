@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>会员续费</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="description">
+
+    <link rel="stylesheet" href="../bower_components/weui/dist/lib/weui.min.css">
+    <link rel="stylesheet" href="../bower_components/weui/dist/css/jquery-weui.css">
+    <link rel="stylesheet" href="./css/main.css">
+
+</head>
+
+<body ontouchstart>
+    <div>
+        <div class="weui-flex vip-renew">
+            <div class="weui-flex__item">
+                <div class="placeholder ">
+                    <div class="vip-renew-left vip-check">
+                        <div>
+                            <img src="./images/vip-easy.png" alt="">
+                            <span class="vip-tit">普通会员</span>
+                        </div>
+                        <p class="vip-tit2">会员有效期12个月</p>
+                    </div>
+                    <!--右下角图标采用背景图定位（没素材，手机页面小，暂时只做了框）-->
+                </div>
+            </div>
+            <div class="weui-flex__item">
+                <div class="placeholder">
+                    <div class="vip-renew-left">
+                        <div>
+                            <img src="./images/vip.png" alt="">
+                            <span class="vip-tit">超级会员</span>
+                        </div>
+                        <p class="vip-tit2">会员有效期12个月</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p class="vip-renew-font">您当前是普通会员</p>
+        <div class="vip-renew-con">
+            <ul>
+                <li>
+                    <table>
+                        <tbody>
+                            <tr class="vip-tr">
+                                <td class="td-img"><img src="./images/vip-gn.png"></td>
+                                <td class="td-font">享有基础版龙眼推荐TV版、PC版、店主个人版12个月会员有效期</td>
+                            </tr>
+                            <tr>
+                                <td class="td-img"><img src="./images/vip-gn.png"></td>
+                                <td class="td-font">每日彩报、每日单关、每日计划、热门赛事等海报每日推送</td>
+                            </tr>
+                            <tr>
+                                <td class="td-img"><img src="./images/vip-gn.png"></td>
+                                <td class="td-font">素材广场每日可下载保存5个素材</td>
+                            </tr>
+                            <tr>
+                                <td class="td-img"><img src="./images/vip-gn.png"></td>
+                                <td class="td-font">店内转化物料不包邮免费申领</td>
+                            </tr>
+                            <tr>
+                                <td class="td-img"><img src="./images/vip-gn.png"></td>
+                                <td class="td-font">彩店商城9折优惠</td>
+                            </tr>
+                            <tr>
+                                <td class="td-img"><img src="./images/vip-gn.png"></td>
+                                <td class="td-font">龙眼彩服新产品30天免费内测资格</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </li>
+            </ul>
+        </div>
+        <div class="vip-renew-footer">
+            <span><i class="add-gold">总价 ￥889</i><s>￥1099</s></span>
+            <span id="renew">立即续费</span>
+        </div>
+    </div>
+
+<script src="../bower_components/weui/dist/lib/jquery-2.1.4.js"></script>
+<script src="../bower_components/weui/dist/lib/fastclick.js"></script>
+<script src="../bower_components/weui/dist/js/jquery-weui.js"></script>
+<script>
+    $('#renew').on('click',function(){
+        $.alert('您当前的会员到期时间为\n' +
+            '2020年3月22日','普通会员续费成功')
+    })
+</script>
+</body>
+</html>
