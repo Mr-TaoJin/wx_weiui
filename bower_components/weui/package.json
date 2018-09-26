@@ -1,0 +1,68 @@
+{
+  "name": "jquery-weui",
+  "version": "1.2.0",
+  "description": "为微信 Web 服务量身设计",
+  "keywords": [
+    "jQuery WeUI",
+    "weui",
+    "wechat",
+    "weixin",
+    "css",
+    "less",
+    "mobile",
+    "jQuery",
+    "Zepto"
+  ],
+  "scripts": {},
+  "author": {
+    "name": "言川"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lihongxun945/jquery-weui.git"
+  },
+  "homepage": "http://lihongxun945.github.io/jquery-weui/",
+  "bugs": {
+    "url": "https://github.com/lihongxun945/jquery-weui/issues"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-clean": "^0.3.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-connect": "^2.3.1",
+    "gulp-cssmin": "^0.1.7",
+    "gulp-ejs": "^2.1.1",
+    "gulp-ext-replace": "^0.3.0",
+    "gulp-header": "^1.7.1",
+    "gulp-less": "^3.0.5",
+    "gulp-uglify": "^1.5.3"
+  },
+  "gitHead": "1a4e7baf46a80aeab0f3e5bb8ddff40fdd319575",
+  "_id": "jquery-weui@1.2.0",
+  "_shasum": "348e02b6c0a94584f948c088f62c65c20d1f7690",
+  "_from": "jquery-weui@latest",
+  "_npmVersion": "3.10.10",
+  "_nodeVersion": "6.10.2",
+  "_npmUser": {
+    "name": "lihongxun945",
+    "email": "lihongxun945@gmail.com"
+  },
+  "dist": {
+    "shasum": "348e02b6c0a94584f948c088f62c65c20d1f7690",
+    "tarball": "https://registry.npmjs.org/jquery-weui/-/jquery-weui-1.2.0.tgz"
+  },
+  "maintainers": [
+    {
+      "name": "lihongxun945",
+      "email": "lihongxun945@gmail.com"
+    }
+  ],
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/jquery-weui-1.2.0.tgz_1511669986307_0.10306166904047132"
+  },
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/jquery-weui/-/jquery-weui-1.2.0.tgz"
+}
