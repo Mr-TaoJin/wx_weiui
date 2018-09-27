@@ -30,6 +30,15 @@ a:hover{
     content:"";
     display:table;
 }
+.clear_float:after{
+    content:"";
+    display:block;
+    clear:both;
+}
+.clear_height{
+    content:"";
+    display:table;
+}
 li{
     list-style:none;
 }
@@ -90,7 +99,6 @@ li{
 }
 .weui-cell {
     border-top:1px solid #e5e5e5;
-    /*border-bottom:1px solid #e5e5e5;*/
 }
 .reg-position{
     position: relative;
@@ -100,35 +108,66 @@ li{
     position: absolute;
     right:20px;
 }
-/* index */
+/* 公用样式 */
 .bg_fff{
     background:#fff;
 }
+.text_center{
+    text-align:center;
+}
+.icon_right{/*向右图标*/
+    float:right;
+}
+.icon_right::before{
+    content: " ";
+    display: inline-block;
+    height: 6px;
+    width: 6px;
+    border-width: 2px 2px 0 0;
+    border-color: #c8c8cd;
+    border-style: solid;
+    -webkit-transform: matrix(.71,.71,-.71,.71,0,0);
+    transform: matrix(.71,.71,-.71,.71,0,0);
+}
+/* index */
 .page{
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color:#ccc;
+    background-color:#ddd;
+    font-size:0.3733rem;
 }
 .index_top{
-    /* position: absolute; */
     width: 100%;
-    height:100px;
+    height:2.6667rem;
     background: #0099FF;
     color:#fff;
     text-align: center;
-    padding:15px 0;
+    padding:0.4rem 0;
 }
-.index_top p{
-    margin-top:5px;
+.index_top p,
+.index_mid_top p{
+    margin-top:0.1333rem;
+}
+.index_top a,
+.index_mid_top a{
+    display: inline-block;
+}
+.index_top a{
+    color:#fff;
 }
 .index_top img{
-    width: 45px;
+    width: 1.2rem;
 }
-.index_top .weui-flex__item{
+.index_mid_top img{
+    width: 1.1rem;
+}
+.index_top .weui-flex__item,
+.index_mid_top .weui-flex__item{
     position: relative;
 }
-.index_top span{
+.index_top span,
+.index_mid_top span{
     position: absolute;
     top:-0.16rem;
     right:0.08rem;
@@ -138,10 +177,112 @@ li{
     text-align: center;
     border-radius: 50%;
     background: #ff0000;
+    color:#fff;
 }
 .index_mid_top{
     width: 94%;
-    height:100px;
-    margin:-30px auto 0;
-    border-radius: 8px;
+    margin:-0.8rem auto 0;
+    border-radius: 0.2133rem;
+    padding:10px 0;
+}
+.index_mid_mid{
+    width: 94%;
+    margin: 0.2667rem auto 0;
+    border-radius: 0.2133rem;
+}
+.index_mid_mid .order{
+    border-bottom: 1px solid #ddd;
+    padding:0.2667rem;
+}
+.index_mid_mid .weui-flex__item{
+    padding:0.48rem 0;
+}
+.index_mid_mid .weui-flex__item b{
+    font-size:0.64rem;
+    color:#000;
+}
+.index_mid_mid .weui-flex__item p{
+    font-size:0.48rem;
+    margin-top:0.2133rem;
+}
+.index_mid_bot{
+    width: 94%;
+    margin: 0.2667rem auto 0;
+    border-radius: 0.2133rem;
+}
+.index_mid_bot .order{
+    border-bottom: 1px solid #ddd;
+    padding:0.2667rem;
+}
+.index_mid_bot .weui-flex__item{
+    padding-top:0.48rem;
+}
+.index_mid_bot .weui-flex__item b{
+    font-size:0.5333rem;
+    font-weight:600;
+}
+.index_mid_bot .weui-flex__item p{
+    margin-top:0.2133rem;
+}
+/* 订单管理 */
+.order_nav{
+    background:#fff;
+    padding:0 0.5333rem;
+}
+.order_nav .weui-flex__item{
+    padding:0.32rem 0;
+}
+.order_nav .weui-flex__item.checked{
+    border-bottom:0.08rem solid #b2b2b2;
+    font-weight:bold;
+}
+.order_warn{
+    padding: 0.16rem;
+    margin-top:0.0533rem;
+}
+.order_warn i{
+    font-size:0.4267rem;
+    color:#000;
+}
+.order_warn a{
+    color:#00bfff;
+}
+.order_content{
+    margin-top:5px;
+}
+.order_content .cont_right{
+    float:left;
+    width: 96%;
+    font-size:0.4267rem;
+    color:#000;
+}
+.order_content .cont_right>div{
+    padding:0.1067rem 0;
+}
+.order_content i{
+    margin-top:1rem;
+}
+.order_content .name{
+    display: inline-block;
+    width: 40%;
+}
+.order_content .cont{
+    display: inline-block;
+    width: 58%;
+    text-align: right;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.order_content .font_bold{
+    font-weight: bold;
+    font-size:0.48rem;
+}
+.order_content .font_gray{
+    color:#999;
+    font-size:0.4267rem;
+}
+.order_content ul li{
+    border-bottom:0.0267rem solid #ddd;
+    padding: 0 0.2667rem 0 0.2667rem;
 }

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <title>订单管理</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="description">
+
+    <link rel="stylesheet" href="../bower_components/weui/dist/lib/weui.min.css">
+    <link rel="stylesheet" href="../bower_components/weui/dist/css/jquery-weui.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+<div class="page">
+   <div class="order_nav">
+        <div class="weui-flex text_center" style="margin-top:0;">
+            <div class="weui-flex__item checked" >
+                <p>待打票</p>
+            </div>
+            <div class="weui-flex__item" >
+                <p>待开奖</p>
+            </div>
+            <div class="weui-flex__item" >
+                <p>已完成</p>
+            </div>
+        </div>
+   </div>
+   <div class="order_warn bg_fff">
+        <i class="weui-icon-warn"></i>
+        <span>如果理论奖金和实际奖金不一致，需修改请 <a href="#">联系客服</a></span>
+   </div>
+   <div class="order_content bg_fff">
+        <ul>
+            <li class="clear_float">
+                <div class="cont_right">
+                    <div>
+                        <span class="name font_bold">沙夏</span>
+                        <span class="cont font_gray">自由投注-龙眼14号</span>
+                    </div>
+                    <div>
+                        <span class="name">100.00元</span>
+                        <span class="cont">理论奖金 201.56元</span>
+                    </div>
+                    <div>
+                        <span class="name font_gray">2018-09-07 12:05</span>
+                        <span class="cont font_gray">待开奖</span>
+                    </div>
+                </div>
+                <i class="icon_right"></i>
+            </li>
+            <li class="clear_float">
+                <div class="cont_right">
+                    <div>
+                        <span class="name font_bold">沙夏</span>
+                        <span class="cont font_gray">自由投注-龙眼14号</span>
+                    </div>
+                    <div>
+                        <span class="name">100.00元</span>
+                        <span class="cont">理论奖金 100.56-201.56元</span>
+                    </div>
+                    <div>
+                        <span class="name font_gray">2018-09-07 12:05</span>
+                        <span class="cont font_gray">待开奖</span>
+                    </div>
+                </div>
+                <i class="icon_right"></i>
+            </li>
+            <li class="clear_float">
+                <div class="cont_right">
+                    <div>
+                        <span class="name font_bold">沙夏</span>
+                        <span class="cont font_gray">自由投注-龙眼14号</span>
+                    </div>
+                    <div>
+                        <span class="name">100.00元</span>
+                        <span class="cont">理论奖金 100.56-201.56元</span>
+                    </div>
+                    <div>
+                        <span class="name font_gray">2018-09-07 12:05</span>
+                        <span class="cont font_gray">待打票</span>
+                    </div>
+                </div>
+                <i class="icon_right"></i>
+            </li>
+            <li class="clear_float">
+                <div class="cont_right">
+                    <div>
+                        <span class="name font_bold">沙夏</span>
+                        <span class="cont font_gray">自由投注-龙眼14号</span>
+                    </div>
+                    <div>
+                        <span class="name">100.00元</span>
+                        <span class="cont">--</span>
+                    </div>
+                    <div>
+                        <span class="name font_gray">2018-09-07 12:05</span>
+                        <span class="cont font_gray">出票失败</span>
+                    </div>
+                </div>
+                <i class="icon_right"></i>
+            </li>
+        </ul>
+   </div>
+</div>
+<script src="../bower_components/weui/dist/lib/jquery-2.1.4.js"></script>
+<script src="../bower_components/weui/dist/lib/fastclick.js"></script>
+<script src="../bower_components/weui/dist/js/jquery-weui.js"></script>
+<script src="../bower_components/flexible/flexible.js"></script>
+
+<script>
+    $(function() {
+        FastClick.attach(document.body);
+    });
+</script>
+
+<script type="text/javascript">
+    // 切换
+    $(".order_nav .weui-flex__item").click(function(){
+        $(this).addClass('checked').siblings().removeClass('checked');
+    })
+    
+
+</script>
+</body>
