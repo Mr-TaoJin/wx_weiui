@@ -3250,6 +3250,39 @@ if (typeof define === 'function' && define.amd) {
 
     return dialog;
   };
+  $.modal_zdy = function(params, onOpen) {
+    params = $.extend({}, defaults, params);
+
+
+    var buttons = params.buttons;
+
+    var buttonsHtml = buttons.map(function(d, i) {
+      return '<a href="javascript:;" class="weui-dialog__btn ' + (d.className || "") + '">' + d.text + '</a>';
+    }).join("");
+
+    var tpl = '<div class="weui-dialog">' +
+                '<div class="weui-dialog__hd"><strong class="weui-dialog__title font_weight">' + params.title + '</strong></div>' +
+                ( params.text ? '<div class="weui-dialog__bd_zdy">'+params.text+'</div>' : '')+
+                ( params.text2 ? '<div class="weui-dialog__bd_zdy"><i class="weui-icon-warn" style="color:#000;font-size:0.48rem;margin-bottom:5px;"></i>'+params.text2+'</div>' : '')+
+                '<div class="weui-dialog__ft">' + buttonsHtml + '</div>' +
+              '</div>';
+    
+    var dialog = $.openModal(tpl, onOpen);
+
+    dialog.find(".weui-dialog__btn").each(function(i, e) {
+      var el = $(e);
+      el.click(function() {
+        //先关闭对话框，再调用回调函数
+        if(params.autoClose) $.closeModal();
+
+        if(buttons[i].onClick) {
+          buttons[i].onClick.call(dialog);
+        }
+      });
+    });
+
+    return dialog;
+  };
 
   $.openModal = function(tpl, onOpen) {
     var mask = $("<div class='weui-mask'></div>").appendTo(document.body);
@@ -3327,6 +3360,42 @@ if (typeof define === 'function' && define.amd) {
     }
     return $.modal({
       text: config.text,
+      title: config.title,
+      buttons: [
+      {
+        text: defaults.buttonCancel,
+        className: "default",
+        onClick: config.onCancel
+      },
+      {
+        text: defaults.buttonOK,
+        className: "primary",
+        onClick: config.onOK
+      }]
+    });
+  };
+  $.confirm_zdy = function(text,text2,title, onOK, onCancel) {
+    var config;
+    if (typeof text === 'object') {
+      config = text
+    } else {
+      if (typeof title === 'function') {
+        onCancel = arguments[2];
+        onOK = arguments[1];
+        title = undefined;
+      }
+
+      config = {
+        text: text,
+        text2: text2,
+        title: title,
+        onOK: onOK,
+        onCancel: onCancel
+      }
+    }
+    return $.modal_zdy({
+      text: config.text,
+      text2: config.text2,
       title: config.title,
       buttons: [
       {

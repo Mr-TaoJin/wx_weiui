@@ -100,13 +100,15 @@ li{
 .weui-cell {
     border-top:1px solid #e5e5e5;
 }
-.reg-position{
-    position: relative;
-}
 
-.reg-position .weui-cell_access .weui-cell__ft{
-    position: absolute;
-    right:20px;
+.weui-dialog__bd_zdy {
+    padding: 0 0 .8em;
+    min-height: 20px;
+    font-size: 0.4rem;
+    line-height: 1.3;
+    word-wrap: break-word;
+    word-break: break-all;
+    color: #999;
 }
 /* 公用样式 */
 .bg_fff{
@@ -128,6 +130,9 @@ li{
     border-style: solid;
     -webkit-transform: matrix(.71,.71,-.71,.71,0,0);
     transform: matrix(.71,.71,-.71,.71,0,0);
+}
+.font_weight{
+    font-weight: bold;
 }
 /* index */
 .page{
@@ -285,4 +290,98 @@ li{
 .order_content ul li{
     border-bottom:0.0267rem solid #ddd;
     padding: 0 0.2667rem 0 0.2667rem;
+}
+/* 待出票 */
+.wait_head{
+    padding:0.2667rem;
+}
+.wait_head .name,
+.wait_head .order_num{
+    display: inline-block;
+    width: 49%;
+    font-size:0.4267rem;
+}
+.wait_head .name{
+    
+    font-weight: bold;
+}
+.wait_head .order_num{
+    text-align: right;
+}
+.wait_content{
+    margin-top:0.2667rem;
+}
+.wait_content .top .weui-flex__item span{
+    display: inline-block;
+    padding:0.2667rem 0 0.1333rem 0;
+    color:#b2b2b2;
+}
+.wait_content .top .weui-flex__item p{
+    padding:0.1333rem 0 0.2667rem 0;
+    color:#000;
+    font-size:0.4267rem;
+    font-weight:600;
+}
+.wait_content .top{
+    border-bottom:1px dotted #ccc;
+}
+.wait_content .middle .tit{
+    display: inline-block;
+    padding-left:0.2667rem;
+    margin:0.4rem 0 0.4rem 0.5333rem;
+    border-left:0.1333rem solid #000;
+    font-size:0.4267rem;
+    font-weight: bold;
+}
+.wait_content .middle .cont_details{
+    padding:0 0.5333rem 0.5333rem;
+}
+.wait_content .middle .play{
+    font-size: 0.3733rem;
+}
+.wait_content .middle .play span:first-child{
+    display: inline-block;
+    width: 0.48rem;
+    height:0.48rem;
+    line-height: 0.48rem;
+    border:0.0267rem solid #000;
+    border-radius: 50%;
+    text-align: center;
+}
+.wait_content .middle .team{
+    font-size: 0.3733rem;
+}
+.wait_content .middle .team li{
+    padding:0.2667rem 0;
+}
+.wait_content .middle .team li>p:first-child{
+    display: inline-block;
+    width: 70%;
+}
+.wait_content .middle .multiple span{
+    display:inline-block;
+    width: 35%;
+}
+.wait_content .middle .multiple span:nth-child(2){
+    width:24%;
+    text-align: center;
+}
+.wait_content .middle .multiple span:first-child,
+.wait_content .middle .multiple span:last-child{
+    border-bottom:0.0267rem solid #ccc;
+    margin-bottom:0.1067rem; 
+}
+.wait_btn{
+    padding:15px;
+}
+.wait_btn>a{
+    background:#FF9900;
+    font-size:0.4267rem;
+}
+.wait_cancel{
+    margin-top:1.3333rem;
+    padding:0.2667rem;
+}
+.wait_cancel i{
+    color:#999;
 }
