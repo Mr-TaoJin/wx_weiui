@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <title>待出票</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="description">
+
+    <link rel="stylesheet" href="../bower_components/weui/dist/lib/weui.min.css">
+    <link rel="stylesheet" href="../bower_components/weui/dist/css/jquery-weui.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+<div class="page">
+   <div class="wait_head bg_fff">
+        <span class="name">沙不是我夏</span>
+        <span class="order_num">自由投注-龙眼1号</span>
+   </div>
+   <div class="wait_content bg_fff">
+        <div class="weui-flex text_center top" style="margin-top:0;">
+            <div class="weui-flex__item">
+                <span>金额</span>
+                <p>100元</p>
+            </div>
+            <div class="weui-flex__item">
+                <span>理论奖金</span>
+                <p>100-200元</p>
+            </div>
+            <div class="weui-flex__item">
+                <span>截止时间</span>
+                <p>08-20 23:55</p>
+            </div>
+        </div>
+        <div class="middle">
+            <span class="tit">方案详情</span>
+            <div class="cont_details">
+                <div class="play font_weight">
+                    <span class="font_weight">1</span>&nbsp;
+                    <span>玩法：</span><span>竞彩足球胜平负（51）</span>
+                </div>
+                <ul class="team">
+                    <li>
+                        <p>
+                            <span>周三001</span>&nbsp;<span>皇马</span>vs<span>利物浦</span><span class="font_weight">（3001）</span>
+                        </p>
+                        <span class="font_weight">胜（3）</span>
+                    </li>
+                    <li>
+                        <p>
+                            <span>周三025</span>&nbsp;<span>巴萨</span>vs<span>阿森纳</span><span class="font_weight">（3025）</span>
+                        </p>
+                        <span class="font_weight">让平（6-1）</span>
+                    </li>
+                </ul>
+                <div class="multiple">
+                    <span></span>
+                    <span>倍数：<i class="font_weight">21倍</i></span>
+                    <span></span>
+                </div>
+            </div>
+            <div class="cont_details">
+                <div class="play font_weight">
+                    <span class="font_weight">2</span>&nbsp;
+                    <span>玩法：</span><span>竞彩足球胜平负（51）</span>
+                </div>
+                <ul class="team">
+                    <li>
+                        <p>
+                            <span>周三001</span>&nbsp;<span>皇马</span>vs<span>利物浦</span><span class="font_weight">（3001）</span>
+                        </p>
+                        <span class="font_weight">胜（3）</span>
+                    </li>
+                    <li>
+                        <p>
+                            <span>周三025</span>&nbsp;<span>巴萨</span>vs<span>阿森纳</span><span class="font_weight">（3025）</span>
+                        </p>
+                        <span class="font_weight">让平（6-1）</span>
+                    </li>
+                </ul>
+                <div class="multiple">
+                    <span></span>
+                    <span>倍数：<i class="font_weight">21倍</i></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+   </div>
+   <div class="wait_btn">
+        <a href="javascript:;" class="weui-btn weui-btn_disable" onclick="cp_isok()">确定打票</a>
+   </div>
+   <div class="wait_cancel text_center" onclick="no_cp_isok()">
+        <i class="weui-icon-cancel"></i><span>无法出票</span>
+   </div>
+    
+    
+   
+</div>
+<script src="../bower_components/weui/dist/lib/jquery-2.1.4.js"></script>
+<script src="../bower_components/weui/dist/lib/fastclick.js"></script>
+<script src="../bower_components/weui/dist/js/jquery-weui.js"></script>
+<script src="../bower_components/flexible/flexible.js"></script>
+
+<script>
+    $(function() {
+        FastClick.attach(document.body);
+    });
+</script>
+
+<script type="text/javascript">
+   
+    function cp_isok(){
+        $.confirm_zdy({//此为自定义方法，若想修改请去jquery-weui.js查看
+            title: '确定打票',
+            text: '您确定此方案已经出票吗？',
+            text2:'出票后请将实票照片微信发送给客户',
+            onOK: function () {
+                //点击确认
+            },
+            onCancel: function () {
+            }
+        });
+    }
+    function no_cp_isok(){
+        $.confirm_zdy({//此为自定义方法，若想修改请去jquery-weui.js查看
+            title: '确认出票失败',
+            text: '您确定此方案无法出票吗？',
+            text2:'退回订单后请联系彩民解释失败原因',
+            onOK: function () {
+                //点击确认
+            },
+            onCancel: function () {
+            }
+        });
+    }
+    
+</script>
+</body>
