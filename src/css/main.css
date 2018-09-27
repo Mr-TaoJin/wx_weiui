@@ -1,0 +1,147 @@
+body,h1,h2,h3,h4,h5,h5,p,ul,ol,dl,dd,pre{
+    margin:0;
+    padding:0;
+}
+img{
+    vertical-align:bottom;
+}
+i{
+    font-style: inherit;
+}
+body{
+    margin:0;
+    font:14px "微软雅黑",Arial,Helvetica,sans-serif;
+    color:#666;
+    background-color:rgb(246, 246, 246);
+}
+a{
+    color:#808080;
+    text-decoration:none;
+}
+a:hover{
+    color:#333;
+}
+.clear-float:after{
+    content:"";
+    display:block;
+    clear:both;
+}
+.clear-height{
+    content:"";
+    display:table;
+}
+li{
+    list-style:none;
+}
+.main{
+    width:60%;
+    margin:0 auto;
+    background:#ffffff;
+}
+.main-line{
+    width:60%;
+    margin:0 auto;
+}
+.text-center{
+    text-align:center;
+}
+.text-left{
+    text-align:left;
+}
+.text-right{
+    text-align:right;
+}
+.black-font{
+    color:#000;
+    margin-top:5px;
+}
+/*重定义样式*/
+.weui-mask.weui-mask--visible {
+    opacity: 0.4;
+}
+.tabbar-bg a .weui-tabbar__label{
+    color:#fff;
+}
+.weui-cell .weui-vcode-btn{
+    color:#00bfff;
+}
+.weui-cells .weui-cell .weui-input{
+    color:#ccc;
+    font-size: 16px;
+}
+.weui-cells .weui-cell input::-webkit-input-placeholder{
+    color:#ccc;
+    font-size: 16px;
+}
+.weui-cells .weui-cell input::-moz-placeholder{   /* Mozilla Firefox 19+ */
+    color:#ccc;
+    font-size: 16px;
+}
+.weui-cells .weui-cell input:-moz-placeholder{    /* Mozilla Firefox 4 to 18 */
+    color:#ccc;
+    font-size: 16px;
+}
+.weui-cells .weui-cell input:-ms-input-placeholder{  /* Internet Explorer 10-11 */
+    color:#ccc;
+    font-size: 16px;
+}
+.weui-cell:before{
+    border-top:0;
+}
+.weui-cell {
+    border-top:1px solid #e5e5e5;
+    /*border-bottom:1px solid #e5e5e5;*/
+}
+.reg-position{
+    position: relative;
+}
+
+.reg-position .weui-cell_access .weui-cell__ft{
+    position: absolute;
+    right:20px;
+}
+/* index */
+.bg_fff{
+    background:#fff;
+}
+.page{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color:#ccc;
+}
+.index_top{
+    /* position: absolute; */
+    width: 100%;
+    height:100px;
+    background: #0099FF;
+    color:#fff;
+    text-align: center;
+    padding:15px 0;
+}
+.index_top p{
+    margin-top:5px;
+}
+.index_top img{
+    width: 45px;
+}
+.index_top .weui-flex__item{
+    position: relative;
+}
+.index_top span{
+    position: absolute;
+    top:-0.16rem;
+    right:0.08rem;
+    width: 0.48rem;
+    height:0.48rem;
+    line-height: 0.48rem;
+    text-align: center;
+    border-radius: 50%;
+    background: #ff0000;
+}
+.index_mid_top{
+    width: 94%;
+    height:100px;
+    margin:-30px auto 0;
+    border-radius: 8px;
+}

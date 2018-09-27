@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <title>彩店助手</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="description">
+
+    <link rel="stylesheet" href="../bower_components/weui/dist/lib/weui.min.css">
+    <link rel="stylesheet" href="../bower_components/weui/dist/css/jquery-weui.css">
+    <link rel="stylesheet" href="../bower_components/weui/dist/css/swiper-4.2.2.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+<style>
+    html{
+        height:100%;
+    }
+    body{
+        max-width:800px;
+        margin: 0 auto;
+        height:100%;
+        border-right: 1px solid #c5c5c5;
+        border-left: 1px solid #c5c5c5;
+        box-shadow:2px 2px 3px #aaaaaa;
+    }
+</style>
+<div class="weui-tab" id="weuitab" ><!--继承body 、height100%-->
+    <div class="swiper-container weui-tab__panel" ><!--Swiper的容器-->
+        <div class="swiper-wrapper" ><!--触控的对象-->
+
+            <!----------------weui-panel1----首页-------------------->
+            <div class="swiper-slide" ><!--切换的滑块-->
+                <div class="weui-panel"  id="weui-panel1">
+                    <div class="box-content clear-float box-content-new-img">
+                        <div class="box-content-left">
+                            <p class="content-hb">我的海报</p>
+                            <p class="content-cm">每日分享给彩民朋友</p>
+                        </div>
+                        <div class="box-content-right">
+                            <img src="./images/hb.png">
+                        </div>
+                    </div>
+                    <div class="box-content clear-float">
+                        <div class="box-content-left">
+                            <p class="content-hb">我的合买码</p>
+                            <p class="content-cm">每日分享给彩民朋友</p>
+                        </div>
+                        <div class="box-content-right">
+                            <img src="./images/hmm.png">
+                        </div>
+                    </div>
+                    <div class="box-content clear-float box-content-new-img">
+                        <div class="box-content-left">
+                            <p class="content-hb">我的物料</p>
+                            <p class="content-cm">快来领取你的物料</p>
+                        </div>
+                        <div class="box-content-right">
+                            <img src="./images/hb.png">
+                        </div>
+                    </div>
+                    <div class="box-content clear-float box-content-new-img">
+                        <div class="box-content-left">
+                            <p class="content-hb">素材广场</p>
+                            <p class="content-cm">没有彩票素材？看这里</p>
+                        </div>
+                        <div class="box-content-right">
+                            <img src="./images/hb.png">
+                        </div>
+                    </div>
+                    <div class="box-content clear-float box-content-new-img">
+                        <div class="box-content-left">
+                            <p class="content-hb">彩店商城</p>
+                            <p class="content-cm">实用的彩店周边产品</p>
+                        </div>
+                        <div class="box-content-right">
+                            <img src="./images/hb.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!----------------weui-panel2-------p2----------------->
+            <div class="swiper-slide"><!--切换的滑块-->
+                <div class="weui-panel" id="weui-panel2"  >
+                    <div class="personal-center">
+                        <div style="background-color:rgb(246, 246, 246);padding:5px 0;">
+                        <div class="personal-center-top clear-float">
+                            <span class="normal-vip">普通会员</span>
+                            <div class="auter-left">
+                                <img src="./images/teamsignnew_560.png" alt="">
+                            </div>
+                            <div class="auter-right">
+                                <div>
+                                    <span class="user-name">用户名称</span>
+                                    <span><img src="./images/vip.png" alt=""></span>
+                                 </div>
+                                <div class="vip-time">2019年12月23日到期</div>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="weui-cells" style="margin-top: 0;">
+                            <a class="weui-cell weui-cell_access" href="javascript:;" id="show-shop">
+                                <div class="weui-cell__bd">
+                                    <p>我的积分</p>
+                                </div>
+                                <div class="weui-cell__ft weui-cell-font">
+                                    886积分
+                                </div>
+                            </a>
+                            <a class="weui-cell weui-cell_access" href="javascript:;">
+                                <div class="weui-cell__bd">
+                                    <p>我的订单</p>
+                                </div>
+                                <div class="weui-cell__ft weui-cell-font"></div>
+                            </a>
+                            <a class="weui-cell weui-cell_access" href="javascript:;">
+                                <div class="weui-cell__bd">
+                                    <p>业主心愿单</p>
+                                </div>
+                                <div class="weui-cell__ft weui-cell-font"></div>
+                            </a>
+                            <a class="weui-cell weui-cell_access" href="javascript:;">
+                                <div class="weui-cell__bd">
+                                    <p>联系客服</p>
+                                </div>
+                                <div class="weui-cell__ft weui-cell-font"></div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!----------------weui-tabbar------------------------>
+    <div class="weui-tabbar swiper-no-swiping tabbar-bg">
+        <a href="javascript:;" class="weui-tabbar__item weui-bar__item_on" id="tabbar1">
+            <img src="./images/tabr2.png" class="weui-tabbar__icon">
+            <p class="weui-tabbar__label tab-color">首页</p>
+        </a>
+        <a href="javascript:;" class="weui-tabbar__item" id="tabbar2">
+            <i class="weui_icon_msg weui_icon_success"></i>
+            <img src="./images/tabr1.png" alt="" class="weui-tabbar__icon" >
+            <p class="weui-tabbar__label tab-color">个人中心</p>
+        </a>
+    </div>
+
+</div>
+<!-- 引入 swiper -->
+<script src="../bower_components/weui/dist/lib/jquery-2.1.4.js"></script>
+<script src="../bower_components/weui/dist/js/jquery-weui.js"></script>
+<script src="../bower_components/weui/dist/js/swiper-4.2.2.min.js"></script>
+
+
+<script type="text/javascript">
+    //页面导航js
+    var mySwiper = new Swiper('.swiper-container', {
+//        autoplay: 5000,//可选选项，自动滑动
+        touchRatio : 0.5,
+        onSlideChangeStart: function(swiper){
+            switch(swiper.activeIndex){//swiper滑动页面时底部导航文字也跟着激活
+                case 0: $("#tabbar1").trigger("click");break;
+                case 1: $("#tabbar2").trigger("click");break;
+            }
+        }
+    });
+    $(function(){
+        $('.weui-tabbar__item').on('click', function () {
+            $(this).addClass('weui-bar__item_on').siblings('.weui-bar__item_on').removeClass('weui-bar__item_on');
+            //点击底部导航图标转到指定页面
+            mySwiper.slideTo($(this).attr('id').charAt(6)-1,false);
+        });
+    });
+//    弹框
+    $(document).on("click", "#show-shop", function() {
+        $.alert("先去赚点积分吧", "积分商城还未开放");
+    });
+
+</script>
+</body>

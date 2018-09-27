@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>素材广场</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="description">
+
+    <link rel="stylesheet" href="../bower_components/weui/dist/lib/weui.min.css">
+    <link rel="stylesheet" href="../bower_components/weui/dist/css/jquery-weui.css">
+    <link rel="stylesheet" href="./css/main.css">
+
+</head>
+
+<body ontouchstart>
+    <div class="sc-content">
+        <img src="./images/jd.png" style="width:100%;">
+        <img class="left" src="./images/left.png" alt="">
+        <img class="right" src="./images/right.png" alt="">
+    </div>
+
+    <div class="sc-content-footer" id="save-img">
+        保存图片
+    </div>
+
+<script src="../bower_components/weui/dist/lib/jquery-2.1.4.js"></script>
+<script src="../bower_components/weui/dist/lib/fastclick.js"></script>
+<script src="../bower_components/weui/dist/js/jquery-weui.js"></script>
+<script>
+    $('#save-img').on('click',function(){
+        $.toast('已保存到相册')
+    })
+</script>
+</body>
+</html>

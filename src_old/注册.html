@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>业主登录</title>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+">
+
+<link rel="stylesheet" href="../bower_components/weui/dist/lib/weui.min.css">
+<link rel="stylesheet" href="../bower_components/weui/dist/css/jquery-weui.css">
+<link rel="stylesheet" href="./css/main.css">
+
+  </head>
+
+  <body ontouchstart>
+
+    <div class="weui-cells weui-cells_form" style="margin-top:0px;">
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">手机号</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="number" placeholder="请输入手机号">
+        </div>
+      </div>
+      <div class="weui-cell weui-cell_vcode" style="border-bottom:1px solid #e5e5e5">
+        <div class="weui-cell__hd">
+          <label class="weui-label">验证码</label>
+        </div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="tel" placeholder="请输入短信验证码">
+        </div>
+        <div class="weui-cell__ft">
+          <button class="weui-vcode-btn">获取验证码</button>
+        </div>
+      </div>
+
+      <div class="weui-cells__title">彩店认证</div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">姓名</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="text" placeholder="请输入姓名">
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">身份证号</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="text" placeholder="请输入身份证号">
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">网点编号</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="text" placeholder="请输入网点编号">
+        </div>
+      </div>
+      <div class="weui-cells reg-position" style="margin-top:0;">
+        <a class="weui-cell weui-cell_access" href="javascript:;">
+          <div class="weui-cell__hd"><label class="weui-label">我的积分</label></div>
+          <div class="font-check">选择省市区/县</div>
+          <div class="weui-cell__ft"></div>
+        </a>
+      </div>
+      <div class="weui-cell" style="border-bottom:1px solid #e5e5e5">
+        <div class="weui-cell__hd"><label class="weui-label">详细地址</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="text" placeholder="街道、楼牌号等">
+        </div>
+      </div>
+
+      <div class="weui-cells__title">上传附件</div>
+      <div class="weui-cells reg-position" style="margin-top:0;">
+        <a class="weui-cell weui-cell_access" href="javascript:;">
+          <div class="weui-cell__hd"><label class="weui-label">代销证照片</label></div>
+          <div class="font-middle-zdy font-middle-zdy-check">点击上传</div>
+          <div class="weui-cell__ft"></div>
+        </a>
+      </div>
+      <div class="weui-cells reg-position" style="margin-top:0;">
+        <a class="weui-cell weui-cell_access" href="javascript:;">
+          <div class="weui-cell__hd"><label class="weui-label">身份证正面</label></div>
+          <div class="font-middle-zdy font-middle-zdy-check">点击上传</div>
+          <div class="weui-cell__ft"></div>
+        </a>
+      </div>
+      <div class="weui-cells reg-position" style="margin-top:0;">
+        <a class="weui-cell weui-cell_access" href="javascript:;">
+          <div class="weui-cell__hd"><label class="weui-label">身份证反面</label></div>
+          <div class="font-middle-zdy font-middle-zdy-check">点击上传</div>
+          <div class="weui-cell__ft"></div>
+        </a>
+      </div>
+      <div class="weui-cells reg-position" style="margin-top:0;">
+        <a class="weui-cell weui-cell_access" href="javascript:;">
+          <div class="weui-cell__hd"><label class="weui-label">微信二维码</label></div>
+          <div class="font-middle-zdy font-middle-zdy-check">点击上传</div>
+          <div class="weui-cell__ft"></div>
+        </a>
+      </div>
+    </div>
+
+    <div class="weui-btn-area" style="background-color: #00bfff;">
+      <a class="weui-btn" href="javascript:" id="showTooltips">提交审核</a>
+    </div>
+
+    <script src="../bower_components/weui/dist/lib/jquery-2.1.4.js"></script>
+    <script src="../bower_components/weui/dist/lib/fastclick.js"></script>
+    <script src="../bower_components/weui/dist/js/jquery-weui.js"></script>
+
+<script>
+  $(function() {
+    FastClick.attach(document.body);
+  });
+</script>
+
+
+    <script>
+      $("#showTooltips").click(function() {
+        var tel = $('#tel').val();
+        var code = $('#code').val();
+        if(!tel || !/1[3|4|5|7|8]\d{9}/.test(tel)) $.toptip('请输入手机号');
+        else if(!code || !/\d{6}/.test(code)) $.toptip('请输入六位手机验证码');
+        else $.toptip('提交成功', 'success');
+      });
+    </script>
+  </body>
+</html>

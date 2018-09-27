@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>我的物料</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="description">
+
+    <link rel="stylesheet" href="../bower_components/weui/dist/lib/weui.min.css">
+    <link rel="stylesheet" href="../bower_components/weui/dist/css/jquery-weui.css">
+    <link rel="stylesheet" href="./css/main.css">
+
+</head>
+
+<body ontouchstart>
+<div class="container-pager">
+    <div class="container-wdwl2-box">
+        <div>
+            <img src="./images/wuliao.png" alt="">
+        </div>
+        <p class="container-wdwl2-tit">您将收到</p>
+        <div class="container-wdwl2-con">
+            <span>
+                <img src="./images/wl-icon.png" alt="">
+            </span>
+            <span>如何计划盈利海报</span>
+        </div>
+        <p class="container-wdwl2-tit">默认收货地址（如需修改地址请联系客服）</p>
+        <div class="container-wdwl2-con">
+            <span style="vertical-align: bottom;padding-bottom: 5px;">
+                <img src="./images/add-iocn.png" alt="">
+            </span>
+            <span>
+                <div><b>用户名称 13000000000</b></div>
+                <div>湖北省 武汉市 江汉区 金南一路 中国体育彩票</div>
+            </span>
+        </div>
+        <div class="weui-flex container-wdwl2-footer">
+            <div class="weui-flex__item"><div class="placeholder">支付邮费：￥ <i>0.00</i></div></div>
+            <div class="weui-flex__item container-wdwl2-footer-left" id="apply-wl"><div class="placeholder">申请领取物料</div></div>
+        </div>
+    </div>
+</div>
+
+<script src="../bower_components/weui/dist/lib/jquery-2.1.4.js"></script>
+<script src="../bower_components/weui/dist/lib/fastclick.js"></script>
+<script src="../bower_components/weui/dist/js/jquery-weui.js"></script>
+<script>
+    $('#apply-wl').on('click',function(){
+        $.alert('您申请的物料将很快为您发货，请注意查收快递','申请成功')
+    })
+</script>
+</body>
+</html>
