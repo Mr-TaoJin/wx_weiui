@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <title>客户管理</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="description">
+
+    <link rel="stylesheet" href="../bower_components/weui/dist/lib/weui.min.css">
+    <link rel="stylesheet" href="../bower_components/weui/dist/css/jquery-weui.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+<div class="page">
+    <div class="pro_manage bg_fff">
+        <div class="weui-flex text_center top" style="margin-top:0;">
+            <div class="weui-flex__item">
+                <span>300人</span>
+                <p>累计客户</p>
+            </div>
+            <div class="weui-flex__item">
+                <span>5600元</span>
+                <p>累计预存</p>
+            </div>
+            <div class="weui-flex__item">
+                <span>80元</span>
+                <p>累计提款</p>
+            </div>
+        </div>
+    </div>
+   <div class="recharge_search">
+        <div class="weui-search-bar" id="searchBar">
+            <form class="weui-search-bar__form">
+                <div class="weui-search-bar__box">
+                <i class="weui-icon-search"></i>
+                <input type="search" class="weui-search-bar__input" id="searchInput" placeholder="搜索" required="">
+                <a href="javascript:" class="weui-icon-clear" id="searchClear"></a>
+                </div>
+                <label class="weui-search-bar__label" id="searchText">
+                <i class="weui-icon-search"></i>
+                <span>请输入客户名称</span>
+                </label>
+            </form>
+            <a href="javascript:" class="weui-search-bar__cancel-btn" id="searchCancel">取消</a>
+        </div>
+   </div>
+   <div class="recharge_content bg_fff">
+        <ul>
+            <li class="clear_float">
+                <div class="li_img"><img src="./images/index/gc.png" alt=""></div>
+                <div class="li_cont">
+                    <p class="name">沙夏</p>
+                    <p class="money">余额：100元</p>
+                </div>
+                <div class="li_icon icon_right"></div>
+                <div class="li_btn">
+                    <button onclick="user_cash()">提款</button>
+                </div>
+                <div class="li_btn">
+                    <button onclick="user_withdraw()">充值</button>
+                </div>
+            </li>
+            <li class="clear_float">
+                <div class="li_img"><img src="./images/index/gc.png" alt=""></div>
+                <div class="li_cont">
+                    <p class="name">沙夏</p>
+                    <p class="money">余额：100元</p>
+                </div>
+                <div class="li_icon icon_right"></div>
+                <div class="li_btn">
+                    <button onclick="user_cash()">提款</button>
+                </div>
+                <div class="li_btn">
+                    <button onclick="user_withdraw()">充值</button>
+                </div>
+            </li>
+            <li class="clear_float">
+                <div class="li_img"><img src="./images/index/gc.png" alt=""></div>
+                <div class="li_cont">
+                    <p class="name">沙夏</p>
+                    <p class="money">余额：100元</p>
+                </div>
+                <div class="li_icon icon_right"></div>
+                <div class="li_btn">
+                    <button onclick="user_cash()">提款</button>
+                </div>
+                <div class="li_btn">
+                    <button onclick="user_withdraw()">充值</button>
+                </div>
+            </li>
+                    
+        </ul>
+   </div>
+</div>
+<script src="../bower_components/weui/dist/lib/jquery-2.1.4.js"></script>
+<script src="../bower_components/weui/dist/lib/fastclick.js"></script>
+<script src="../bower_components/weui/dist/js/jquery-weui.js"></script>
+<script src="../bower_components/flexible/flexible.js"></script>
+
+<script>
+    $(function() {
+        FastClick.attach(document.body);
+    });
+</script>
+
+<script type="text/javascript">
+    //用户充值
+    function user_withdraw(){
+        $.prompt_zdy({//自定义内容
+            title: '用户充值',//标题
+            // text: '内容文案',
+            user_name:'沙夏',//用户名称
+            money:'账户余额：100',//充值金额（自定义拼接）
+            warn_msg:'请确认彩民已将充值金额转账给您', //提醒消息(默认空不显示)
+            input: '',//默认输入值
+            empty: true, // 是否允许为空
+            btnOk:'确认充值',//确定按钮文字
+            placeholder:' 请输入充值金额',
+            onOK: function (input) {
+                //点击确认
+            },
+            onCancel: function () {
+                //点击取消
+            }
+        });
+    }
+    //用户提款
+    function user_cash(){
+        $.prompt_zdy({//自定义内容
+            title: '用户提现',//标题
+            // text: '内容文案',
+            user_name:'沙夏',//用户名称
+            money:'账户余额：100',//充值金额（自定义拼接）
+            warn_msg:'请确认已将提现金额转账给彩民', //提醒消息(默认空不显示)
+            input: '',//默认输入值
+            empty: true, // 是否允许为空
+            btnOk:'确认提现',//确定按钮文字
+            placeholder:'请输入提现金额',
+            onOK: function (input) {
+                //点击确认
+            },
+            onCancel: function () {
+                //点击取消
+            }
+        });
+    }
+
+</script>
+</body>

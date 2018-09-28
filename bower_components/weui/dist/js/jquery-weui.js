@@ -3261,8 +3261,8 @@ if (typeof define === 'function' && define.amd) {
     }).join("");
 
     var tpl = '<div class="weui-dialog">' +
-                '<div class="weui-dialog__hd"><strong class="weui-dialog__title font_weight">' + params.title + '</strong></div>' +
-                ( params.text ? '<div class="weui-dialog__bd_zdy">'+params.text+'</div>' : '')+
+                '<div class="weui-dialog__hd" style="border:1px solid #ccc"><strong class="weui-dialog__title font_weight">' + params.title + '</strong></div>' +
+                ( params.text ? '<div class="weui-dialog__bd_zdy" style="padding:5px;">'+params.text+'</div>' : '')+
                 ( params.text2 ? '<div class="weui-dialog__bd_zdy"><i class="weui-icon-warn" style="color:#000;font-size:0.48rem;margin-bottom:5px;"></i>'+params.text2+'</div>' : '')+
                 '<div class="weui-dialog__ft">' + buttonsHtml + '</div>' +
               '</div>';
@@ -3448,6 +3448,64 @@ if (typeof define === 'function' && define.amd) {
       },
       {
         text: defaults.buttonOK,
+        className: "primary",
+        onClick: function() {
+          var input = $("#weui-prompt-input").val();
+          if (!config.empty && (input === "" || input === null)) {
+            modal.find('.weui-prompt-input').focus()[0].select();
+            return false;
+          }
+          $.closeModal();
+          config.onOK && config.onOK.call(modal, input);
+        }
+      }]
+    }, function () {
+      this.find('.weui-prompt-input').focus()[0].select();
+    });
+
+    return modal;
+  };
+//   自定义 传值默认为对象
+  $.prompt_zdy = function(text, title, onOK, onCancel, input) {
+    var config;
+    if (typeof text === 'object') {
+      config = text;
+    } else {
+      if (typeof title === 'function') {
+        input = arguments[3];
+        onCancel = arguments[2];
+        onOK = arguments[1];
+        title = undefined;
+      }
+      config = {
+        text: text,
+        title: title,
+        input: input,
+        onOK: onOK,
+        onCancel: onCancel,
+        empty: false  //allow empty
+      }
+    }
+
+    var modal = $.modal_zdy({
+      text: '<p class="weui-prompt-text text_left font_weight" style="padding-left:25px;color:#000">'+(config.user_name || '')+'</p>'
+      +'<p class="text_left" style="padding-left:25px;color:#000">'+(config.money || '')+'</p>'
+      +'<input type="text" class="weui-input weui-prompt-input" id="weui-prompt-input" placeholder="'+(config.placeholder || '')+'" value="' + (config.input || '') + '" />'
+      +( config.warn_msg ? '<p class="text_left" style="padding:5px 0 0 20px;"><i class="weui-icon-warn" style="color:#000;font-size:0.48rem;margin-bottom:5px;"></i>'+config.warn_msg+'</p>' : ''),
+                
+      title: config.title,
+      autoClose: false,
+      buttons: [
+      {
+        text: defaults.buttonCancel,
+        className: "default",
+        onClick: function () {
+          $.closeModal();
+          config.onCancel && config.onCancel.call(modal);
+        }
+      },
+      {
+        text: config.btnOk,
         className: "primary",
         onClick: function() {
           var input = $("#weui-prompt-input").val();

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <title>客户提现</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="description">
+
+    <link rel="stylesheet" href="../bower_components/weui/dist/lib/weui.min.css">
+    <link rel="stylesheet" href="../bower_components/weui/dist/css/jquery-weui.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+<div class="page">
+   <div class="recharge_search">
+        <div class="weui-search-bar" id="searchBar">
+            <form class="weui-search-bar__form">
+                <div class="weui-search-bar__box">
+                <i class="weui-icon-search"></i>
+                <input type="search" class="weui-search-bar__input" id="searchInput" placeholder="搜索" required="">
+                <a href="javascript:" class="weui-icon-clear" id="searchClear"></a>
+                </div>
+                <label class="weui-search-bar__label" id="searchText">
+                <i class="weui-icon-search"></i>
+                <span>请输入客户名称</span>
+                </label>
+            </form>
+            <a href="javascript:" class="weui-search-bar__cancel-btn" id="searchCancel">取消</a>
+        </div>
+   </div>
+   <div class="withdraw_content bg_fff">
+        <div class="wait_head">
+            <span class="name">沙夏</span>
+            <span class="order_num">余额 100.00元</span>
+        </div>
+        <div class="recharge_content bg_fff" style="border-bottom-right-radius:0.2133rem;border-bottom-left-radius:0.2133rem;border-top:0.0267rem solid #cccccc;margin-top:0;">
+            <ul>
+                <li class="clear_float">
+                    <div class="li_cont">
+                        <p class="name">申请提现 100.00元</p>
+                        <p class="money">2018-09-28 14:25:55</p>
+                    </div>
+                    <div class="li_btn">
+                        <button onclick="refusal()" class="gray">驳回</button>
+                    </div>
+                    <div class="li_btn">
+                        <button onclick="withdraw_isok()">确认</button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+   </div>
+   <div class="withdraw_content bg_fff">
+        <div class="wait_head">
+            <span class="name">沙夏</span>
+            <span class="order_num">余额 100.00元</span>
+        </div>
+        <div class="recharge_content bg_fff" style="border-bottom-right-radius:0.2133rem;border-bottom-left-radius:0.2133rem;border-top:0.0267rem solid #cccccc;margin-top:0;">
+            <ul>
+                <li class="clear_float">
+                    <div class="li_cont">
+                        <p class="name">申请提现 100.00元</p>
+                        <p class="money">2018-09-28 14:25:55</p>
+                    </div>
+                    <div class="li_btn">
+                        <button onclick="refusal()" class="gray">驳回</button>
+                    </div>
+                    <div class="li_btn">
+                        <button onclick="withdraw_isok()">确认</button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+   </div>
+   <div class="multiple_line">
+        <span></span>
+        <span>全部客户</span>
+        <span></span>
+    </div>
+   <div class="recharge_content bg_fff">
+        <ul>
+            <li class="clear_float">
+                <div class="li_img"><img src="./images/index/gc.png" alt=""></div>
+                <div class="li_cont">
+                    <p class="name">沙夏</p>
+                    <p class="money">余额：100元</p>
+                </div>
+                <!-- <div class="li_icon icon_right"></div>
+                <div class="li_btn">
+                    <button>充值</button>
+                </div> -->
+                <div class="li_btn">
+                    <button onclick="withdraw_user()">提现</button>
+                </div>
+            </li>
+            <li class="clear_float">
+                <div class="li_img"><img src="./images/index/gc.png" alt=""></div>
+                <div class="li_cont">
+                    <p class="name">沙夏不是夏</p>
+                    <p class="money">余额：100元</p>
+                </div>
+                <div class="li_btn">
+                    <button onclick="withdraw_user()">提现</button>
+                </div>
+            </li>
+            <li class="clear_float">
+                <div class="li_img"><img src="./images/index/gc.png" alt=""></div>
+                <div class="li_cont">
+                    <p class="name">李时珍的皮</p>
+                    <p class="money">余额：100元</p>
+                </div>
+                <div class="li_btn">
+                    <button onclick="withdraw_user()">提现</button>
+                </div>
+            </li>
+        </ul>
+   </div>
+</div>
+<script src="../bower_components/weui/dist/lib/jquery-2.1.4.js"></script>
+<script src="../bower_components/weui/dist/lib/fastclick.js"></script>
+<script src="../bower_components/weui/dist/js/jquery-weui.js"></script>
+<script src="../bower_components/flexible/flexible.js"></script>
+
+<script>
+    $(function() {
+        FastClick.attach(document.body);
+    });
+</script>
+
+<script type="text/javascript">
+    //用户提现
+    function withdraw_user(){
+        $.prompt_zdy({//自定义内容
+            title: '用户提现',//标题
+            // text: '内容文案',
+            user_name:'沙夏',//用户名称
+            money:'账户余额：100',//充值金额（自定义拼接）
+            warn_msg:'请确认已将提现金额转账给彩民', //提醒消息(默认空不显示)
+            input: '',//默认输入值
+            empty: false, // 是否允许为空
+            btnOk:'确认提现',//确定按钮文字
+            placeholder:'请输入提现金额',
+            onOK: function (input) {
+                //点击确认
+            },
+            onCancel: function () {
+                //点击取消
+            }
+        });
+    }
+    //确认提现
+    function withdraw_isok(){
+        $.confirm_zdy({//此为自定义方法，若想修改请去jquery-weui.js查看
+            title: '确认提现',
+            text: '提现金额为100元，确定提现吗？',
+            text2:'请确认已将提现金额转账给彩民',
+            onOK: function () {
+                //点击确认
+            },
+            onCancel: function () {
+            }
+        });
+    }
+    //驳回
+    function refusal(){
+        $.confirm_zdy({//此为自定义方法，若想修改请去jquery-weui.js查看
+            title: '驳回提现',
+            text: '提现金额为100元，确定驳回吗？',
+            onOK: function () {
+                //点击确认
+            },
+            onCancel: function () {
+            }
+        });
+    }
+
+</script>
+</body>
