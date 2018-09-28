@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <title>固定跟单</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="description">
+
+    <link rel="stylesheet" href="../bower_components/weui/dist/lib/weui.min.css">
+    <link rel="stylesheet" href="../bower_components/weui/dist/css/jquery-weui.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+<div class="page">
+   <div class="order_nav">
+        <div class="weui-flex text_center" style="margin-top:0;">
+            <div class="weui-flex__item checked" >
+                <p>近1个月</p>
+            </div>
+            <div class="weui-flex__item" >
+                <p>近3个月</p>
+            </div>
+            <div class="weui-flex__item" >
+                <p>近6个月</p>
+            </div>
+        </div>
+   </div>
+   <div class="merch_content">
+        <div class="weui-flex text_left" style="margin-top:0;">
+            <div class="weui-flex__item checked" >
+                <p>
+                    <span class="min_box gray">单固总场次</span><span>10</span>
+                </p>
+            </div>
+            <div class="weui-flex__item" >
+                <p>
+                    <span class="min_box green">全场平局场次</span><span>10</span>
+                </p>
+            </div>
+            <div class="weui-flex__item" >
+                <p>
+                    <span class="min_box green">半场平局场次</span><span>10</span>
+                </p>
+            </div>
+        </div>
+        <div class="weui-flex text_left" style="margin-top:0.2667rem;">
+            <div class="weui-flex__item checked" >
+                <p>
+                    <span class="min_box yellow">最低赔率场次</span><span>10</span>
+                </p>
+            </div>
+            <div class="weui-flex__item" >
+                <p>
+                    <span class="min_box blue">中间赔率场次</span><span>10</span>
+                </p>
+            </div>
+            <div class="weui-flex__item" >
+                <p>
+                    <span class="min_box red">最高赔率场次</span><span>10</span>
+                </p>
+            </div>
+        </div>
+    </div>
+   </div>
+</div>
+<script src="../bower_components/weui/dist/lib/jquery-2.1.4.js"></script>
+<script src="../bower_components/weui/dist/lib/fastclick.js"></script>
+<script src="../bower_components/weui/dist/js/jquery-weui.js"></script>
+<script src="../bower_components/flexible/flexible.js"></script>
+
+<script>
+    $(function() {
+        FastClick.attach(document.body);
+    });
+</script>
+
+<script type="text/javascript">
+    //用户充值
+    function user_withdraw(){
+        $.prompt_zdy({//自定义内容
+            title: '用户充值',//标题
+            // text: '内容文案',
+            user_name:'沙夏',//用户名称
+            money:'账户余额：100',//充值金额（自定义拼接）
+            warn_msg:'请确认彩民已将充值金额转账给您', //提醒消息(默认空不显示)
+            input: '',//默认输入值
+            empty: true, // 是否允许为空
+            btnOk:'确认充值',//确定按钮文字
+            placeholder:' 请输入充值金额',
+            onOK: function (input) {
+                //点击确认
+            },
+            onCancel: function () {
+                //点击取消
+            }
+        });
+    }
+    
+    // 切换
+    $(".order_nav .weui-flex__item").click(function(){
+        $(this).addClass('checked').siblings().removeClass('checked');
+    })
+</script>
+</body>

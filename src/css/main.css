@@ -648,3 +648,48 @@ li{
     border:0;
     border-radius:0.1333rem;
 }
+/* 固定跟单 */
+.merch_content{
+    margin-top:10px;
+}
+.merch_content .weui-flex__item{
+    padding:0 0.1333rem;;
+}
+.merch_content .weui-flex__item p{
+    width: 100%;
+    height:0.8rem;
+    background-color:#fff;
+    border-radius:0.4267rem;
+    position: relative;
+}
+.merch_content .weui-flex__item .min_box{
+    display: inline-block;
+    width: 77%;
+    height:0.8rem;
+    line-height:0.8rem;
+    /* background-color:red; */
+    border-radius:0.4267rem;
+    text-align: center;
+    font-size:0.32rem;
+    color:#fff;
+}
+.merch_content .weui-flex__item>p>span:last-child{
+    position: absolute;
+    top:0.1333rem;
+    right:0.1333rem;
+}
+.merch_content .gray{
+    background:#999999;
+}
+.merch_content .green{
+    background:#00CC66;
+}
+.merch_content .yellow{
+    background:#FFCC33;
+}
+.merch_content .blue{
+    background:#0099FF;
+}
+.merch_content .red{
+    background:#ff0000;
+}

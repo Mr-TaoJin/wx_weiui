@@ -3283,6 +3283,37 @@ if (typeof define === 'function' && define.amd) {
 
     return dialog;
   };
+  $.modal_zdy_input = function(params, onOpen) {
+    params = $.extend({}, defaults, params);
+
+
+    var buttons = params.buttons;
+
+    var buttonsHtml = buttons.map(function(d, i) {
+      return '<a href="javascript:;" class="weui-dialog__btn ' + (d.className || "") + '">' + d.text + '</a>';
+    }).join("");
+
+    var tpl = '<div class="weui-dialog">' 
+                +'<input type="text" class="weui-input weui-prompt-input" id="weui-prompt-input" placeholder="'+(params.placeholder || '')+'" value="' + (params.input || '') + '" style="height:36px;margin:25px;font-size:18px;" />'
+                +'<div class="weui-dialog__ft">' + buttonsHtml + '</div>' +
+              '</div>';
+    
+    var dialog = $.openModal(tpl, onOpen);
+
+    dialog.find(".weui-dialog__btn").each(function(i, e) {
+      var el = $(e);
+      el.click(function() {
+        //先关闭对话框，再调用回调函数
+        if(params.autoClose) $.closeModal();
+
+        if(buttons[i].onClick) {
+          buttons[i].onClick.call(dialog);
+        }
+      });
+    });
+
+    return dialog;
+  };
 
   $.openModal = function(tpl, onOpen) {
     var mask = $("<div class='weui-mask'></div>").appendTo(document.body);
