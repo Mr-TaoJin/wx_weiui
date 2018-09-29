@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <title>固定跟踪</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="description">
+
+    <link rel="stylesheet" href="../bower_components/weui/dist/lib/weui.min.css">
+    <link rel="stylesheet" href="../bower_components/weui/dist/css/jquery-weui.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+<div class="page">
+   
+   <div class="img_box" style="margin-bottom:1.8667rem;">
+       <img id="img_url"src="" alt="">
+   </div>
+   
+   <!-- footer -->
+   <div class="merch_share_footer">
+       <div class="weui-flex text_center top" style="margin-top:0;">
+        <div class="weui-flex__item" style="border-right:1px solid #fff;">
+            <button>保存</button>
+        </div>
+        <div class="weui-flex__item">
+            <button>发送给彩民</button>
+        </div>
+    </div>
+   </div>
+</div>
+<script src="../bower_components/weui/dist/lib/jquery-2.1.4.js"></script>
+<script src="../bower_components/weui/dist/lib/fastclick.js"></script>
+<script src="../bower_components/weui/dist/js/jquery-weui.js"></script>
+<script src="../bower_components/flexible/flexible.js"></script>
+
+<script src="../bower_components/html2canvas/html2canvas.min.js"></script>
+<script src="../bower_components/html2canvas/canvas2image.js"></script>
+
+<script>
+    $(function() {
+        FastClick.attach(document.body);
+    });
+</script>
+
+<script type="text/javascript">
+   
+    // 读取localstorage中的img_data
+    var img_url = localStorage.getItem('img_data');
+    console.log(img_url)
+    $("#img_url").attr('src',img_url);
+    
+</script>
+</body>
