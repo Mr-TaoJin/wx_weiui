@@ -678,18 +678,67 @@ li{
     top:0.1333rem;
     right:0.1333rem;
 }
-.merch_content .gray{
+.merch_content .gray,
+.merch_table .gray{
     background:#999999;
 }
-.merch_content .green{
+.merch_content .green,
+.merch_table .green{
     background:#00CC66;
 }
-.merch_content .yellow{
+.merch_content .purple,
+.merch_table .purple{
+    background:#6699FF;
+}
+.merch_content .yellow,
+.merch_table .yellow{
     background:#FFCC33;
 }
-.merch_content .blue{
+.merch_content .blue,
+.merch_table .blue{
     background:#0099FF;
 }
-.merch_content .red{
+.merch_content .red,
+.merch_table .red{
     background:#ff0000;
+}
+
+.merch_table{
+    width: 98%;
+    margin:0.2667rem auto 0;
+}
+.merch_table table{
+    width: 100%;
+    font-size:12px;
+    border-spacing: 0;
+}
+.merch_table table thead{
+    background:#666;
+    color:#fff;
+} 
+.merch_table table thead tr th{
+    font-weight: 100;
+    padding:0.0533rem;
+    border-top:0.0267rem solid #fff;
+    border-right:0.0267rem solid #fff;
+}
+.merch_table table tbody tr td{
+    padding:0.2133rem 0;
+    border-top:0.0267rem solid #ccc;
+    border-right:0.0267rem solid #d9d9d9;
+    color:#000;
+}
+.merch_footer{
+    position: fixed;
+    bottom:0;
+    left:0;
+    width:100%;
+}
+.merch_footer button{
+    width:100%;
+    background:#666;
+    padding:0.3733rem;
+    font-size:0.48rem;
+    border:0;
+    color:#fff;
 }

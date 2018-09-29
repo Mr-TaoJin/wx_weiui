@@ -26,6 +26,7 @@
             </div>
         </div>
    </div>
+   <div id="content">
    <div class="merch_content">
         <div class="weui-flex text_left" style="margin-top:0;">
             <div class="weui-flex__item checked" >
@@ -40,7 +41,7 @@
             </div>
             <div class="weui-flex__item" >
                 <p>
-                    <span class="min_box green">半场平局场次</span><span>10</span>
+                    <span class="min_box purple">半场平局场次</span><span>10</span>
                 </p>
             </div>
         </div>
@@ -61,13 +62,120 @@
                 </p>
             </div>
         </div>
-    </div>
+
    </div>
+   <div class="merch_table">
+        <table class="text_center">
+            <thead>
+                <tr>
+                    <th rowspan="2">日<br>期</th>
+                    <th rowspan="2">星<br>期</th>
+                    <th rowspan="2">场次</th>
+                    <th colspan="3">赔率</th>
+                    <th rowspan="2">半场</th>
+                    <th rowspan="2">全场</th>
+                    <th rowspan="2">进球</th>
+                </tr>
+                <tr>
+                    <th>胜</th>
+                    <th>平</th>
+                    <th>负</th>
+                </tr>
+            </thead>
+            <tbody class="bg_fff">
+                <tr>
+                    <td>9.25</td>
+                    <td>一</td>
+                    <td><span>001</span><span>广岛三箭</span> vs <span>横滨FC</span></td>
+                    <td>1.25</td>
+                    <td>2.55</td>
+                    <td class="green">3.36</td>
+                    <td>1-1</td>
+                    <td>3-1</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>9.25</td>
+                    <td>一</td>
+                    <td><span>001</span><span>广岛三箭</span> vs <span>横滨FC</span></td>
+                    <td>1.25</td>
+                    <td class="purple">2.55</td>
+                    <td>3.36</td>
+                    <td>1-1</td>
+                    <td class="gray">3-1</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>9.25</td>
+                    <td>一</td>
+                    <td><span>001</span><span>广岛三箭</span> vs <span>横滨FC</span></td>
+                    <td>1.25</td>
+                    <td>2.55</td>
+                    <td class="red">3.36</td>
+                    <td>1-1</td>
+                    <td>3-1</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>9.25</td>
+                    <td>一</td>
+                    <td><span>001</span><span>广岛三箭</span> vs <span>横滨FC</span></td>
+                    <td class="yellow">1.25</td>
+                    <td>2.55</td>
+                    <td>3.36</td>
+                    <td>1-1</td>
+                    <td>3-1</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>9.25</td>
+                    <td>一</td>
+                    <td><span>001</span><span>广岛三箭</span> vs <span>横滨FC</span></td>
+                    <td>1.25</td>
+                    <td>2.55</td>
+                    <td>3.36</td>
+                    <td class="green">1-1</td>
+                    <td>3-1</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>9.25</td>
+                    <td>一</td>
+                    <td><span>001</span><span>广岛三箭</span> vs <span>横滨FC</span></td>
+                    <td>1.25</td>
+                    <td>2.55</td>
+                    <td class="red">3.36</td>
+                    <td>1-1</td>
+                    <td>3-1</td>
+                    <td>4</td>
+                </tr>
+            </tbody>
+        </table>
+   </div>
+   </div>
+   <div class="img_box text_center">
+        <img src="">
+   </div>
+   <canvas id="thecanvas" width="100" height="100" style="display: none"></canvas>
+   <!-- footer -->
+   <div class="merch_footer">
+       <button>生成分享图片</button>
+   </div>
+   <style>
+        .img_box img{
+            width:100%;
+            margin: auto;
+        }
+   </style>
 </div>
 <script src="../bower_components/weui/dist/lib/jquery-2.1.4.js"></script>
 <script src="../bower_components/weui/dist/lib/fastclick.js"></script>
 <script src="../bower_components/weui/dist/js/jquery-weui.js"></script>
 <script src="../bower_components/flexible/flexible.js"></script>
+
+<script src="../bower_components/html2canvas/html2canvas.min.js"></script>
+<script src="../bower_components/html2canvas/base64js.min.js"></script>
+<script src="../bower_components/html2canvas/canvas2image.js"></script>
 
 <script>
     $(function() {
@@ -96,10 +204,33 @@
             }
         });
     }
-    
     // 切换
     $(".order_nav .weui-flex__item").click(function(){
         $(this).addClass('checked').siblings().removeClass('checked');
     })
+
+    // 生成图片
+    var canvas = document.querySelector("canvas");
+    var ctx = canvas.getContext("2d");
+        var ctx = canvas.getContext('2d');
+        ctx.beginPath();
+        ctx.arc(75,75,50,0,Math.PI*2,true); // Outer circle
+        ctx.moveTo(110,75);
+        ctx.arc(75,75,35,0,Math.PI,false);   // Mouth (clockwise)
+        ctx.moveTo(65,65);
+        ctx.arc(60,65,5,0,Math.PI*2,true);  // Left eye
+        ctx.moveTo(95,65);
+        ctx.arc(90,65,5,0,Math.PI*2,true);  // Right eye
+        ctx.stroke();
+        document.querySelector("button").addEventListener("click", function() {
+            html2canvas(document.querySelector("#content"), {canvas: canvas}).then(function(canvas) {
+
+            var oCanvas = document.getElementById("thecanvas");
+            // 获取图片资源
+            var img_data1 = Canvas2Image.saveAsPNG(oCanvas, true).getAttribute('src');
+            $('.img_box>img').attr('src',img_data1)
+
+            });
+        }, false);
 </script>
 </body>
