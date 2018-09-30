@@ -1,28 +1,12 @@
 
-# 淘宝镜像-npm
-npm install -g cnpm --registry=https://registry.npm.taobao.org
+#以前的项目在 src_old中
+#现在的src中
 
-# gulp
-
-使用 `gulp` 进行代码编译
-
-关于如何使用 gulp 请参考 [http://gulpjs.com/](http://gulpjs.com/)
-
-可用的 gulp 命令如下：
-安装gulp后直接在gulpfile.js目录下输入一下命令：
-
-cnpm install --global gulp
-cnpm install --save-dev gulp 
-cnpm install --save-dev gulp-clean-css gulp-concat gulp-uglify gulp-rename gulp-jshint gulp-flatten gulp-clean map-stream
-cnpm install --save-dev jshint gulp-jshint
-
-- `gulp` 
-
-# 分支说明
-
-- `dist` 是编译后的源文件
-- `build` 是打包压缩后的文件
-
+#src所用技术  
+jquery+weui+flexible+html2canvas
+#src项目说明
+项目中所引用的jquery-weui.js添加了一些弹窗的方法，请勿使用min.js，若想缩小项目体积，请使用构建工具压缩下
+项目布局采用flexible.js  根元素 设置的是 37.5px;（若想更改样式，请下载vscode,安装px to rem 插件,在User Settings中设置 {"px-to-rem.px-per-rem": 37.5},Alt+Z px和rem可任意切换）
 
 
 

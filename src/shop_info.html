@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <title>店铺资料</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="description">
+
+    <link rel="stylesheet" href="../bower_components/weui/dist/lib/weui.min.css">
+    <link rel="stylesheet" href="../bower_components/weui/dist/css/jquery-weui.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+<div class="page">
+    <div class="shop_info_cont">
+        <div class="shop_info bg_fff">
+            <ul>
+                <li class="clear_float" onclick="shop_name()">
+                    <div class="title">彩店名称</div>
+                    <div class="li_icon icon_right"></div>
+                    <div class="til_content margin_line">未设置</div>
+                </li>
+                <li class="clear_float">
+                    <div class="title">网点编号</div>
+                    <div class="til_content">4201015134</div>
+                </li>
+                <li class="clear_float">
+                    <div class="title">彩店地址</div>
+                    <div class="til_content">湖北省 武汉市 江汉区古田三路 飞帆小区 22号</div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="shop_info_cont">
+        <div class="shop_info bg_fff">
+            <ul>
+                <li class="clear_float">
+                    <div class="title">店主姓名</div>
+                    <div class="til_content">丁久旭</div>
+                </li>
+                <li class="clear_float">
+                    <div class="title">店主电话</div>
+                    <div class="til_content">15007142244</div>
+                </li>
+                <li class="clear_float">
+                    <div class="title">店主身份证号</div>
+                    <div class="til_content">42010015007142244</div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="shop_info_cont">
+        <div class="shop_info bg_fff">
+            <ul>
+                <li class="clear_float" onclick="cddw()">
+                    <div class="title">彩店定位</div>
+                    <div class="li_icon icon_right"></div>
+                    <div class="til_content margin_line">点击定位</div>
+                </li>
+                <li class="clear_float" onclick="shop_pto()">
+                    <div class="title">彩店门头照片</div>
+                    <div class="li_icon icon_right"></div>
+                    <div class="til_content margin_line">点击上传</div>
+                </li>
+                <li class="clear_float">
+                    <div class="title">店主微信二维码</div>
+                    <div class="li_icon icon_right"></div>
+                    <div class="til_content margin_line">点击查看</div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="shop_warn text_center">
+        <span>以上信息如出现错误，修改请 <a href="#">联系客服</a></span>
+    </div>
+    <!-- 自定义弹窗 -->
+    <div class="mask"></div>
+    <div class="popup" >
+        <img id="img_url" src="" alt="">
+        <a href="javascript:;" class="weui-btn weui-btn_primary" style="margin-top:0.6667rem;" onclick="close_popup()">关闭</a>
+    </div>
+</div>
+<script src="../bower_components/weui/dist/lib/jquery-2.1.4.js"></script>
+<script src="../bower_components/weui/dist/lib/fastclick.js"></script>
+<script src="../bower_components/weui/dist/js/jquery-weui.js"></script>
+<script src="../bower_components/flexible/flexible.js"></script>
+
+<script>
+    $(function() {
+        FastClick.attach(document.body);
+    });
+</script>
+
+<script type="text/javascript">
+    //设置彩店名称
+    function shop_name(){
+        $.prompt_zdy({//自定义内容
+            title: '设置彩店名称',//标题
+            // // text: '内容文案',
+            // user_name:'沙夏',//用户名称
+            // money:'账户余额：100',//充值金额（自定义拼接）
+            warn_msg:'彩店名称设置后不可修改', //提醒消息(默认空不显示)
+            input: '',//默认输入值
+            empty: true, // 是否允许为空
+            btnOk:'确认名称',//确定按钮文字
+            placeholder:'  请输入彩店名称',
+            onOK: function (input) {
+                //点击确认
+            },
+            onCancel: function () {
+                //点击取消
+            }
+        });
+    }
+    // 弹窗事件
+    function cddw(){
+        $(".mask").css('display','block');
+        $("#img_url").attr("src",'./images/ewm.png')
+        $(".popup").addClass('main').css('display','block');
+    }
+    function shop_pto(){
+        $(".mask").css('display','block');
+        $("#img_url").attr("src",'./images/index/hb.png')
+        $(".popup").addClass('main').css('display','block');
+    }
+    // 关闭弹窗
+    function close_popup(){
+        $(".mask").css('display','none');
+        $(".popup").css('display','none');
+    }
+
+</script>
+</body>

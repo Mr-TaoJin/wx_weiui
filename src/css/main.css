@@ -8,6 +8,9 @@ img{
 i{
     font-style: inherit;
 }
+em{
+    font-style: inherit;
+}
 body{
     margin:0;
     font:14px "微软雅黑",Arial,Helvetica,sans-serif;
@@ -742,15 +745,15 @@ li{
     border:0;
     color:#fff;
 }
-.img_box img:first-child{
+.img_box>img:first-child{
     width:100%;
     margin: auto;
 }
 .img_box .close{
-    width: 30px;
+    width: 0.8rem;
     position: absolute;
     left:50%;
-    margin-left:-15px;
+    margin-left:-0.4rem;
     bottom:-50px;
 }
 .merch_top{
@@ -776,7 +779,7 @@ li{
 }
 .merch_pur .tit_left{
     float:left;
-    font-size:18px;
+    font-size:0.48rem;
     text-align: left;
     padding:0.4267rem 0 0 0.4267rem;
 }
@@ -797,4 +800,184 @@ li{
     font-size:0.48rem;
     border:0;
     color:#fff;
+}
+/* 买量分布 */
+.order_nav.nav_line{
+    padding:0;
+}
+.order_nav.nav_line .weui-flex__item{
+    padding:0.32rem 0;
+    border-top:0.0267rem solid #ccc;
+}
+.order_nav.nav_line .weui-flex__item:first-child{
+    border-right:0.0267rem solid #ccc;
+}
+.mlfb_content{
+    margin-top:0.2667rem;
+}
+.mlfb_content .cont_tit{
+    padding:0.2133rem;
+    color:#000;
+}
+.mlfb_content .cont_tit span:first-child{
+    float:left;
+    font-size:0.32rem;
+}
+.mlfb_content .cont_tit span:last-child{
+    float:right;
+    font-size:0.32rem;
+}
+
+.mlfb_content .cont_team{
+    border-top:1px solid #ccc;
+}
+.mlfb_content .cont_table{
+    width: 100%;
+}
+.mlfb_content .cont_table thead tr th{
+    font-size:0.32rem;
+    font-weight: 400;
+    color:#999;
+    padding:0.1333rem 0;
+}
+.mlfb_content .cont_table tbody tr td{
+    font-weight: bold;
+    padding:0.16rem 0;
+}
+.zdy_bar{
+    background-color: #ccc;
+    height: 0.5333rem;
+    border-radius:0.2667rem;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+}
+.zdy_inner_bar {
+    width: 0;
+    height: 100%;
+    background-color: #FF9900;
+    border-top-left-radius:0.2667rem;
+    border-bottom-left-radius:0.2667rem;
+}
+.zdy_bar .win_team{
+    color:#fff;
+    position: absolute;
+    top:0;
+    left:0.2667rem;
+}
+/* 数据统计 */
+.statistics{
+    margin-top:0.2133rem;
+}
+.statistics:last-child{
+    margin-bottom:2.6667rem;
+}
+.statistics .title{
+    border-bottom:1px solid #ccc;
+    padding:0.2667rem;
+    font-size:0.48rem;
+}
+.statistics .weui-flex__item{
+    margin:7.9987px 0;
+}
+.statistics .weui-flex__item:nth-child(2){
+    border-left:1px solid #ccc;
+    border-right:1px solid #ccc;
+}
+.statistics .weui-flex__item p{
+    font-size:18px;
+    color:#000;
+}
+.statistics .weui-flex__item .weight_font{
+    margin-top:10px;
+}
+/* 店铺资料 */
+.shop_info_cont{
+    margin-top:10px;
+}
+.shop_info ul li{
+    padding:0.4rem 0.2667rem;
+    border-bottom:1px solid #ececec;
+}
+.shop_info .title{
+    float:left;
+    color:#000;
+    font-size:0.4267rem;
+}
+.shop_info .til_content{
+    float:right;
+    color:#b2b2b2;
+    font-size:0.4267rem;
+    width:5.3333rem;
+    text-align: right;
+}
+.shop_info .margin_line{
+    margin-right:0.2667rem;
+}
+.shop_warn{
+    padding: 10px;
+    margin-top:0.0533rem;
+    font-size:0.4267rem;
+    color:#888;
+}
+.shop_warn a{
+    color:#00bfff;
+}
+/* 自定义弹框 */
+.mask{
+    position:fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    overflow:hidden;
+    z-index:100;
+    display:none;
+    background: rgba(0, 0, 0, 0.3);
+}
+.popup{
+    width:6.1333rem;
+    height:8rem;
+    position:absolute;
+    margin:auto;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    background:#fff;
+    z-index:100;
+    display: none;
+    padding:0.4rem 0.2133rem;
+    border-radius:0.4rem;
+}
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale3d(0.3, 0.3, 0.3);
+    }
+    50% {
+        opacity: 1;
+    }
+}
+.popup.main {
+    animation: zoomIn 0.3s;
+    display: flex;
+    flex-wrap: wrap;
+    opacity: 1;
+}
+.popup img{
+    width:100%;
+}
+/* 店铺推广码 */
+.no_data{
+    padding:1.5467rem 0.2667rem;
+}
+.no_data>img,.no_data>p{
+    float:left;
+    margin:0.3733rem 0 0 0.2667rem;
+}
+.no_data a{
+    color:#00bfff;
 }
