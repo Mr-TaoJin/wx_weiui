@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title>龙眼彩服</title>
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="css/bui.css" />
+    <link rel="stylesheet" type="text/css" href="css/app.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+<body>
+    <!-- 依赖库 手机调试的js引用顺序如下 -->
+    <script src="js/zepto.js"></script>
+    <script src="js/plugins/fastclick.js"></script>
+    <!-- BUI库 -->
+    <script src="js/bui.js"></script>
+    <script src="js/app/_config.js"></script>
+    <div class="bui-page">
+        <header class="bui-bar white-bg">
+            <div class="bui-bar-left">
+                <!-- 左边按钮 -->
+                <!-- <a class="bui-btn" onclick="bui.back();"><i class="icon-back"></i></a> -->
+            </div>
+            <div class="bui-bar-main">下单记录</div>
+            <div class="bui-bar-right">
+                <!-- 右边按钮 -->
+                <!--<a href="#" class="bui-btn">退出</a>-->
+            </div>
+        </header>
+        <main>
+			<div class="filter-box">
+				<div class="bui-box">
+					<div id="searchPlan" class="bui-dropdown bui-arrow-center span1">
+						<a href="#" class="bui-btn">全部方案<i class="icon-dropdown"></i></a>
+						<ul class="bui-list round">
+							<li class="bui-btn" value="01">全部</li>
+							<li class="bui-btn" value="02">生成方案图片</li>
+							<li class="bui-btn" value="03">店内预存支付</li>
+						</ul>
+					</div>
+					<div id="searchZt" class="bui-dropdown bui-arrow-center span1">
+						<a href="#" class="bui-btn">中奖状态<i class="icon-dropdown"></i></a>
+						<ul class="bui-list round">
+							<li class="bui-btn" value="01">全部</li>
+							<li class="bui-btn" value="02">待开奖</li>
+							<li class="bui-btn" value="03">已中奖</li>
+							<li class="bui-btn" value="04">未中奖</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<script type="text/javascript">
+				var searchPlan = bui.dropdown({
+				id: "#searchPlan",
+				//设置relative为false,二级菜单继承父层宽度
+				relative: false,
+				callback: function () {
+					alert( searchPlan.value() )
+				}
+			});
+			var searchZt = bui.dropdown({
+				id: "#searchZt",
+				//设置relative为false,二级菜单继承父层宽度
+				relative: false,
+				callback: function () {
+					alert( searchZt.value() )
+				}
+			})
+			</script>
+		    <ul class="sm-list record-list">
+		    	<li class="bui-btn bui-box sm-item">
+		    		<div class="span7">
+		    			<div class="sm-plan"><span>龙眼3号</span></div>
+		    			<div class="sm-sj">
+		    				<span>08-16 16:45</span>
+		    				<span>生成方案图片</span>
+		    			</div>
+		    		</div>
+		    		<div class="span4">
+	    				<div class="sm-jd sm-jd-ing">待开奖</div>
+	    				<div class="sm-zt">¥100.00</div>
+		    		</div>
+		    		<i class="icon-listright"></i>
+		    	</li>
+		    	<li class="bui-btn bui-box sm-item">
+		    		<div class="span7">
+		    			<div class="sm-plan"><span>龙眼6号</span></div>
+		    			<div class="sm-sj">
+		    				<span>08-16 16:45</span>
+		    				<span>生成方案图片</span>
+		    			</div>
+		    		</div>
+		    		<div class="span4">
+	    				<div class="sm-jd sm-jd-win">已中奖</div>
+	    				<div class="sm-zt">¥100.00</div>
+		    		</div>
+		    		<i class="icon-listright"></i>
+		    	</li>
+		    	<li class="bui-btn bui-box sm-item">
+		    		<div class="span7">
+		    			<div class="sm-plan"><span>龙眼7号</span></div>
+		    			<div class="sm-sj">
+		    				<span>08-16 16:45</span>
+		    				<span>生成方案图片</span>
+		    			</div>
+		    		</div>
+		    		<div class="span4">
+	    				<div class="sm-jd s-jd-lose">未中奖</div>
+	    				<div class="sm-zt">¥100.00</div>
+		    		</div>
+		    		<i class="icon-listright"></i>
+		    	</li>
+		    </ul>
+        </main>
+    </div>
+</body>
+</html>

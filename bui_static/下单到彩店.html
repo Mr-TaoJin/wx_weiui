@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title>龙眼彩服</title>
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="css/bui.css"/>
+    <link rel="stylesheet" type="text/css" href="css/app.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+<body>
+    <!-- 依赖库 手机调试的js引用顺序如下 -->
+    <script src="js/zepto.js"></script>
+    <script src="js/plugins/fastclick.js"></script>
+    <!-- BUI库 -->
+    <script src="js/bui.js"></script>
+    <script src="js/app/_config.js"></script>
+    <div class="bui-page">
+        <header class="bui-bar white-bg">
+            <div class="bui-bar-left">
+                <!-- 左边按钮 -->
+                <!-- <a class="bui-btn" onclick="bui.back();"><i class="icon-back"></i></a> -->
+            </div>
+            <div class="bui-bar-main">下单到彩店</div>
+            <div class="bui-bar-right">
+                <!-- 右边按钮 -->
+                <!--<a href="#" class="bui-btn"></a>-->
+            </div>
+        </header>
+        <main>
+        	<div class="bui-box plan-money">
+        		<div class="span1 bui-align-left">方案金额</div>
+        		<div class="bui-align-right">100.00元</div>
+        	</div>
+        	<div class="bui-list plan-xd-chose">
+	            <div class="bui-btn bui-btn-line bui-box xd-chose">
+	                <div class="span1">
+	                	<label for="fs01">
+	                		<div class="bui-box">
+	                			<div class="icon"><img src="img/img-pic.png"></div>
+		                		<div class="span1">
+		                			<h2>生成方案图片</h2>
+		                			<p>发送方案图片到店主<font>丁久旭</font>的微信并转账</p>
+		                		</div>
+	                		</div>
+	                	</label>
+	                </div>
+	                <input id="fs01" type="radio" class="bui-choose" name="01" value="1" checked="checked">
+	            </div>
+	            <div class="bui-btn bui-btn-line bui-box xd-chose">
+	                <div class="span1">
+	                	<label for="fs02">
+	                		<div class="bui-box">
+	                			<div class="icon"><img src="img/img-ye.png"></div>
+		                		<div class="span1">
+		                			<h2>店内余额支付</h2>
+		                			<p>店内余额:<span>600.65元</span><a href="#">预存</a></p>
+		                		</div>
+	                		</div>
+	                	</label>
+	                </div>
+	                <input id="fs02" type="radio" class="bui-choose" name="01">
+	            </div>
+	        </div>
+	        <div class="container-xy save-btn tz-btn">
+	            <div class="bui-btn round success">生成方案图片</div> 
+	        </div>
+    	</main>
+    </div>
+    <!--tanchuang01-->
+    <div class="alert-container" style="display: none;">
+    	<div class="bui-mask"></div>
+		<div class="bui-dialog bui-dialog-center bui-confirm">
+			<div class="bui-dialog-head">确认下单</div>
+			<div class="bui-dialog-main">
+				<div class="bui-dialog-text bui-box-center">此方案为100元，确定要付款吗？</div>
+			</div>
+			<div class="bui-dialog-foot bui-box double-btn">
+				<a href="#" class="bui-btn span1">取消</a>
+				<a href="#" class="bui-btn span1 sure-btn">确定</a>
+			</div>
+		</div>
+    </div>
+    <!--tanchuang02-->
+    <div class="alert-container">
+    	<div class="bui-mask"></div>
+		<div class="bui-dialog bui-confirm bound-box">
+			<div class="bui-dialog-head">绑定手机号码</div>
+			<p class="bui-align-left bound-notice">为了方便彩店店主可以及时联系到您，请您绑定您的手机号</p>
+			
+			<div class="bui-dialog-main">
+				<div class="bui-list">
+					<div class="bui-btn bui-box">
+						<p class="bui-label">手机号</p>
+						<div class="span1">
+							<div class="bui-input">
+								<input type="number" placeholder="请输入手机号码" />
+							</div>
+						</div>
+					</div>
+					<div class="bui-btn bui-box">
+						<p class="bui-label">验证码</label>
+						<div class="span1">
+							<div class="bui-input code-input">
+								<input type="number" placeholder="请输入验证码" />
+							</div>
+						</div>
+						<a href="#" class="bui-btn btn-send">发送验证码</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="bui-dialog-foot bui-box">
+				<a href="#" class="bui-btn span1 sure-btn">绑定</a>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

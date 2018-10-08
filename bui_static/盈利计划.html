@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title>龙眼彩服</title>
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="css/bui.css"/>
+    <link rel="stylesheet" type="text/css" href="css/app.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+<body>
+    <!-- 依赖库 手机调试的js引用顺序如下 -->
+    <script src="js/zepto.js"></script>
+    <script src="js/plugins/fastclick.js"></script>
+    <!-- BUI库 -->
+    <script src="js/bui.js"></script>
+    <script src="js/app/_config.js"></script>
+    <div class="bui-page">
+        <header class="bui-bar white-bg">
+            <div class="bui-bar-left">
+                <!-- 左边按钮 -->
+                <!-- <a class="bui-btn" onclick="bui.back();"><i class="icon-back"></i></a> -->
+            </div>
+            <div class="bui-bar-main">定制计划</div>
+            <div class="bui-bar-right">
+                <!-- 右边按钮 -->
+                <!--<a href="#" class="bui-btn"></a>-->
+            </div>
+        </header>
+        <main>
+        	<div class="dz-box">
+        		<div class="dz-je-box">
+        			<p class="dz-tit">请根据个人实际资金情况，选择计划起步金额</p>	
+        			<div class="dz-je">
+        				<ul class="bui-box-space">
+		        			<li class="span1 dz-je-chose">10元起步</li>
+		        			<li class="span1">20元起步</li>
+		        			<li class="span1">50元起步</li>
+		        			<li class="span1">100元起步</li>
+		        		</ul>
+		        		<ul class="bui-box-space">
+		        			<li class="span1">200元起步</li>
+		        			<li class="span1">500元起步</li>
+		        			<li class="span1">1000元起步</li>
+		        			<li class="span1"><input type="text" placeholder="自定义"></li>
+		        		</ul>
+        			</div>
+        		</div>
+        		<div class="dz-plan">
+        			<table border="0" cellspacing="0" cellpadding="0">
+        				<tr>
+        					<th>第一期投</th>
+        					<th>第二期投</th>
+        					<th>第三期投</th>
+        					<th>第四期投</th>
+        					<th>第五期投</th>
+        					<th>第六期投</th>
+        					<th>第七期投</th>
+        				</tr>
+        				<tr>
+        					<td>10元</td>
+        					<td>20元</td>
+        					<td>40元</td>
+        					<td>80元</td>
+        					<td>160元</td>
+        					<td>32元</td>
+        					<td>640元</td>
+        				</tr>
+        			</table>
+        		</div>
+        		<div class="dz-profit">
+        			<p class="dz-profit-zj">10元起步建议准备资金:<span>1270元</span></p>
+        			<p class="dz-profit-sy">预计月收米:<span>200</span>-<span>500元</span>，相比余额宝高<span>18.86%</span></p>
+        		</div>
+        		<div class="dz-notice">*虽然龙眼计划平均4期内能打出红单，但建议您准备7期的计划资金，防止冷赛事出现的风险</div>
+        	</div>
+        	<div class="container-xy save-btn tz-btn">
+        		<a href="#" class="bui-btn success round">确定起步金额为<span>10</span>元</a>
+        	</div>
+	    </main>
+    </div>
+    <!--tanchuang01-->
+    <div class="alert-container">
+    	<div class="bui-mask"></div>
+		<div class="bui-dialog bui-dialog-center bui-confirm">
+			<div class="bui-dialog-head">绑定提醒</div>
+			<div class="bui-dialog-main">
+				<div class="bui-dialog-text bui-box-center">您需要去绑定彩店，才可以定制计划哦！</div>
+			</div>
+			<div class="bui-dialog-foot bui-box">
+				<a href="#" class="bui-btn span1 sure-btn">前往绑定</a>
+			</div>
+		</div>
+    </div>
+    <!--tanchuang02-->
+    <div class="alert-container" style="display: none;">
+    	<div class="bui-mask"></div>
+		<div class="bui-dialog bui-dialog-center bui-prompt">
+			<!--<div class="bui-dialog-head">输入计划起步金额</div>-->
+			<div class="bui-prompt-main bui-box-vertical">
+				<div class="bui-prompt-label">输入计划起步金额</div>
+				<div class="span1">
+					<textarea class="bui-prompt-text" rows="1" placeholder="请输入整数"></textarea>
+				</div>
+			</div>
+			<div class="bui-dialog-foot bui-box">
+				<a href="#" class="bui-btn span1 sure-btn">确认</a>
+			</div>
+		</div>
+    </div>
+</body>
+</html>

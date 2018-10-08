@@ -1,0 +1,159 @@
+.con-tab{
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+}
+.con-container{
+    display: -webkit-box;
+    -webkit-box-align: start;
+    -webkit-box-pack: center;
+    width: 100%;
+}
+.con-container li{
+    -webkit-box-flex: 1;
+    width: 100%;
+    overflow: auto;
+}
+.bui-nav .bui-btn{
+	border: none;
+}
+.bui-nav>.active{
+	color: #ff9c00;
+}
+.con-head{
+	padding: 0.1rem 0.35rem;
+	background: #eee;
+}
+.con-head:after{
+	display: block;
+	content: "";
+	clear: both;
+}
+.con-head li{
+	font-size: 0.16rem;
+	color: #999;
+	text-align: center;
+}
+.con-head li .dot{
+	display: inline-block;
+	width: 0.12rem;
+	height: 0.12rem;
+	border-radius: 0.12rem;
+	margin-right: 0.08rem;
+}
+.con-main{
+	width: 96%;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+	margin-bottom: 0.2rem;
+}
+.con-main table tr th,.con-main table tr td{	
+	padding: 0.12rem 0;
+	border-left: 1px solid #e0e0e0;
+	border-top: 1px solid #e0e0e0;
+}
+.con-main table tr th{
+	font-size: 0.18rem;	
+	font-weight: normal;	
+	color: #fff;
+	background: #333;	
+}
+.con-main table tr th:first-child{
+	border-radius: 0.06rem 0 0 0;
+}
+.con-main table tr th:last-child{
+	border-radius: 0 0.06rem 0 0;
+	border-right: 1px solid #e0e0e0;
+}
+.con-main table tr td{
+	font-size: 0.14rem;
+	position: relative;
+	color: #333;
+}
+.con-main table tr:last-child td:first-child{
+	border-radius: 0 0 0 0.06rem;
+}
+.con-main table tr:last-child td:last-child{
+	border-radius: 0 0 0.06rem 0;
+}
+.con-main table tr td:last-child{
+	border-right: 1px solid #e0e0e0;
+}
+.con-main table tr:nth-child(odd) td{
+	background: #f3f3f3;
+}
+.con-main table tr:nth-child(even) td{
+	background: #fff;
+}
+.con-main table tr td .con-mz-icon{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 0.2rem;
+    background: #ff0000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.con-main table tr td .con-gs{
+	background: #333;
+}
+.con-main table .today-plan-con td,
+.con-main table .today-plan-yh td{
+	background: #fff !important;
+}
+.con-main table tr td ul li{
+	margin-bottom: 0.05rem;
+}
+.con-main table tr td ul li:last-child{
+	margin-bottom: 0;
+}
+.con-main table tr .con-mz li{
+	font-weight: 600;
+	color: #ff0000;
+}
+.con-main .today-plan-con td{
+	border-top: 5px solid #ff0000;
+	font-weight: bold;
+}
+.con-main table tr td .con-btn{
+	display: block;
+	width: 80%;
+	margin: 0.05rem auto 0 auto;
+	padding-top: 0.03rem;
+	padding-bottom: 0.03rem;
+	color: #fff;
+	border-radius: 0.15rem;
+	font-weight: normal;
+}
+.con-main table tr td .able-btn{
+	background: #FF9C00;
+}
+.con-main table tr td .disable-btn{
+	background: #ccc;
+}
+.con-main .today-plan-yh td{
+	font-weight: bold;
+	border-bottom: 1px solid #e0e0e0;
+}
+.jz-box{
+	margin-top: 0.2rem;
+}
+.jz-box table tr .jz-mz{
+	background: #ff0000 !important;
+	color: #fff;
+}
+.jz-box table .today-plan-con td{
+	padding: 0;
+}
+.jz-box table .today-plan-con td div{
+	padding: 0.12rem 0;
+	border-bottom: 1px solid #e0e0e0;
+}
+.jz-box table .today-plan-con td div:last-child{
+	border: none;
+}
+

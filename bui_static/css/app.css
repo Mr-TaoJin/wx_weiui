@@ -1,0 +1,73 @@
+﻿
+header.bui-bar {
+    background: #4CA4FE;
+}
+
+/*焦点图*/
+.slide {
+    width: 100%;
+    margin-bottom: .57rem;
+}
+.slide img {
+    width: 100%;
+}
+
+/*应用列表*/
+.app .span3 {
+    margin-bottom: .57rem;
+}
+.app .app-icon {
+    width: .72rem;
+    height: .72rem;
+    margin: 0 auto .12rem auto;
+}
+.app .app-icon img {
+    width: 100%;
+}
+.app .app-text {
+    text-align: center;
+    color: #333;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.app-menu {
+    width: .3rem;
+    height: .3rem;
+    margin: 0 auto .04rem auto;
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.main-menu {
+    background: #f8f8f8;
+    height: .73rem;
+    border-top: 1px solid #ddd;
+}
+.main-menu .bui-btn {
+    border: 0;
+    background: #f8f8f8;
+    font-size: .18rem;
+}
+.main-menu .active {
+    color: #4CA4FE;
+}
+.app-menu1 {
+    background-image: url(../images/icons/icon-menu1.png);
+}
+.app-menu2 {
+    background-image: url(../images/icons/icon-menu2.png);
+}
+.app-menu3 {
+    background-image: url(../images/icons/icon-menu3.png);
+}
+.main-menu .active .app-menu1 {
+    background-image: url(../images/icons/icon-menu1-active.png) ;
+}
+.main-menu .active .app-menu2 {
+    background-image: url(../images/icons/icon-menu2-active.png) ;
+}
+.main-menu .active .app-menu3 {
+    background-image: url(../images/icons/icon-menu3-active.png) ;
+}
