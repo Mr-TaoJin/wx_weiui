@@ -844,6 +844,12 @@ li{
     font-weight: bold;
     padding:0.16rem 0;
 }
+.mlfb_content .ml_num{
+    position: absolute;
+    top: 0;
+    right: 0.2667rem;
+    font-weight: 400;
+}
 .zdy_bar{
     background-color: #ccc;
     height: 0.5333rem;
