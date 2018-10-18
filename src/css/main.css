@@ -987,3 +987,55 @@ li{
 .no_data a{
     color:#00bfff;
 }
+/* 海报列表 */
+.poster_nav{
+    position: relative;
+    width: 100%;
+    overflow-y:hidden;
+    background: #fff;
+}
+.poster_nav ul.full_ul_row{
+    display: block;
+    white-space:nowrap;
+}
+.poster_nav ul.full_ul_row li{
+    display: inline-block;
+    width: 2.4rem;
+    text-align: center;
+    font-size: 0.4267rem;
+    padding:0.2133rem 0.1333rem;
+}
+.poster_nav ul.full_ul_row li.active{
+    color:#ffb300b3;
+}
+.poster_content{
+    position: relative;
+    width: 100%;
+}
+.poster_content .cont_img{
+    width: 100%;
+}
+.poster_content .cont_title{
+    position: absolute;
+    top:0.1333rem;
+    width: 95%;
+    background:#fff;
+    padding:5px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+.poster_content .cont_title img{
+    width: 90px;
+}
+.poster_content .cont_title span:nth-child(2){
+    padding-left:10px;
+    border-left:3px solid #000;
+}
+.poster_content .cont_title span:last-child{
+    float: right;
+}
+.poster_content .cont_details{
+    position: absolute;
+    top:50px;
+    margin:auto;
+}
