@@ -140,9 +140,17 @@ li{
 .font_weight{
     font-weight: bold;
 }
+.font_weight_16{
+    font-size:0.4267rem;
+    color:#000;
+    font-weight: bold;
+}
+.font_weight_12{
+    font-size:12px;
+}
 /* index */
 .page{
-    position: absolute;
+    position: relative;
     width: 100%;
     height: 100%;
     background-color:#ddd;
@@ -1006,7 +1014,7 @@ li{
     padding:0.2133rem 0.1333rem;
 }
 .poster_nav ul.full_ul_row li.active{
-    color:#ffb300b3;
+    color:yellow;
 }
 .poster_content{
     position: relative;
@@ -1021,21 +1029,109 @@ li{
     width: 95%;
     background:#fff;
     padding:5px;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
+    border-top-right-radius: 0.4rem;
+    border-bottom-right-radius: 0.4rem;
 }
 .poster_content .cont_title img{
-    width: 90px;
+    width: 2.4rem;
 }
 .poster_content .cont_title span:nth-child(2){
-    padding-left:10px;
-    border-left:3px solid #000;
+    padding-left:0.2667rem;
+    border-left:0.08rem solid #000;
 }
 .poster_content .cont_title span:last-child{
     float: right;
 }
 .poster_content .cont_details{
     position: absolute;
-    top:50px;
-    margin:auto;
+    top:1.3333rem;
+    width:100%;
+}
+.poster_content .cont_details>p:first-child{
+    font-size:0.48rem;
+    color:#000;
+    font-weight: 600;
+    text-align:center;
+}
+.poster_content .cont_details .team_cont{
+    width: 88%;
+    background:#fff;
+    margin:0.5333rem auto 0;
+    border-radius: 0.2133rem;
+}
+.poster_content .cont_details .team_cont .top{
+    position: relative;
+    padding:0.2667rem 0 0.16rem;
+    text-align:center;
+}
+.poster_content .cont_details .team_cont .top img{
+    width: 0.6667rem;
+}
+.poster_content .cont_details .team_cont .top span:first-child img{
+    position: absolute;
+    left:10%;
+    bottom:0.2667rem;
+}
+.poster_content .cont_details .team_cont .top span:last-child img{
+    position: absolute;
+    right:10%;
+    bottom:0.2667rem;
+}
+.poster_content .cont_details .team_cont .team_mid .te_li{
+    position: relative;
+    padding-bottom: 0.1333rem;
+}
+.poster_content .cont_details .team_cont .team_mid .te_li img{
+    width: 0.32rem;
+    margin-left:0.2667rem;
+}
+.poster_content .cont_details .team_cont .team_mid .te_li span{
+    font-size: 0.4533rem;
+    color:#000;
+    font-weight: bold;
+    margin-left:0.4267rem;
+}
+.poster_content .cont_details .team_cont .team_mid .te_li .win{
+    color:#ff0000;
+}
+.poster_content .cont_details .team_cont .team_mid .te_li span:last-child{
+    font-size: 10px;
+    position: absolute;
+    right:0;
+    background: yellow;
+    color:#fff;
+    padding:0.0534rem 0.2667rem;
+    border-top-left-radius: 0.2667rem;
+    border-bottom-left-radius: 0.2667rem;
+    font-weight: 300;
+}
+.poster_content .cont_details .team_cont .team_mid .te_li span:nth-child(5){
+    margin-left:0.2667rem;
+}
+.poster_content .cont_details .footer_cont{
+    width: 88%;
+    background:#fff;
+    margin:0.5333rem auto 0;
+    border-radius: 0.2133rem;
+    box-sizing: border-box;
+    padding:10px 5px;
+}
+.poster_content .cont_details .footer_cont img{
+    width: 45px;
+}
+.poster_content .footer_cont .left_img{
+    float:left;
+}
+.poster_content .footer_cont  img.left_img{
+    border-radius: 50%;
+}
+.poster_content .footer_cont .right_img{
+    float:right;
+}
+.poster_content .footer_cont .bold_font{
+    display: inline-block;
+    padding-left:10x;
+    font-size:0.48rem;
+    color:#000;
+    font-weight: bold;
 }
