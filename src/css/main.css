@@ -1086,16 +1086,26 @@ li{
     margin-left:0.2667rem;
 }
 .poster_content .cont_details .team_cont .team_mid .te_li span{
+    display:inline-block;
     font-size: 0.4533rem;
     color:#000;
     font-weight: bold;
-    margin-left:0.4267rem;
+    margin-left:0.5333rem;
 }
 .poster_content .cont_details .team_cont .team_mid .te_li .win{
     color:#ff0000;
 }
+.poster_content .cont_details .team_cont .team_mid .te_li span:first-child{
+    width: 0.2667rem;
+}
+.poster_content .cont_details .team_cont .team_mid .te_li span:nth-child(2){
+    width: 0.8rem;
+}
+.poster_content .cont_details .team_cont .team_mid .te_li span:nth-child(3){
+    margin-left:1.0133rem;
+}
 .poster_content .cont_details .team_cont .team_mid .te_li span:last-child{
-    font-size: 10px;
+    font-size: 0.32rem;
     position: absolute;
     right:0;
     background: yellow;
@@ -1114,10 +1124,21 @@ li{
     margin:0.5333rem auto 0;
     border-radius: 0.2133rem;
     box-sizing: border-box;
-    padding:10px 5px;
+    padding:0.1333rem;
+    position: relative;
 }
 .poster_content .cont_details .footer_cont img{
-    width: 45px;
+    width: 1.2rem;
+}
+.poster_content .cont_details .footer_cont .shop_name{
+    position:absolute;
+    bottom:5px;
+    left:10px;
+    background:blue;
+    color:#fff;
+    font-size:12px;
+    padding:0 5px;
+    border-radius: 10px;
 }
 .poster_content .footer_cont .left_img{
     float:left;
@@ -1130,8 +1151,136 @@ li{
 }
 .poster_content .footer_cont .bold_font{
     display: inline-block;
-    padding-left:10x;
-    font-size:0.48rem;
+    font-size:0.4533rem;
     color:#000;
     font-weight: bold;
+    font-style:italic;
+}
+.poster_footer{
+    position: fixed;
+    bottom:0;
+    left:0;
+    width:100%;
+}
+.poster_footer button{
+    width:100%;
+    background:rgb(213, 216, 15);
+    padding:0.3733rem;
+    font-size:0.48rem;
+    border:0;
+    color:#fff;
+}
+.hot_play{
+    width: 96%;
+    background:#fff;
+    margin:0 auto 0;
+    border-radius: 0.2133rem;
+}
+.hot_play .hot_tit{
+    width: 50%;
+    margin:auto;
+    background:#ff0000;
+    color:#fff;
+    font-size:0.48rem;
+    font-weight: bold;
+    text-align: center;
+    padding:0.08rem 0 0.1333rem;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.poster_content .cont_details .hot_play .top{
+    position: relative;
+    padding:0.2667rem 0 0.16rem;
+    text-align:center;
+}
+.poster_content .cont_details .hot_play .top img{
+    width: 0.8rem;
+}
+.poster_content .cont_details .hot_play .top span:first-child img{
+    position: absolute;
+    left:8%;
+    bottom:0.5333rem;
+}
+.poster_content .cont_details .hot_play .top span:last-child img{
+    position: absolute;
+    right:8%;
+    bottom:0.5333rem;
+}
+.font_weight_22{
+    font-size:0.5867rem;
+    color:#000;
+    font-weight: bold;
+}
+.hot_play table{
+    width:100%;
+    text-align: center;
+    border-spacing: 0;
+    font-size:0.32rem;
+    margin-bottom:0.2667rem;
+}
+.hot_play table tbody td{
+    border-top:0.0267rem solid #ccc;
+    border-right:0.0267rem solid #d9d9d9;
+    padding:0.0533rem 0;
+}
+.hot_play table tbody tr:last-child td{
+    border-bottom:0.0267rem solid #d9d9d9;
+}
+.hot_table1 tbody tr td{
+    width: 30%;
+}
+.hot_table2 tbody tr td{
+    width: 12.9%;
+}
+.hot_table3 tbody tr td{
+    width: 22.5%;
+}
+.hot_table4 tbody tr td{
+    width: 18%;
+}
+.hot_play table tbody td:first-child,
+.hot_play table tbody td:last-child{
+    width: 5%;
+}
+.hot_play table tbody td .font_size_14{
+    font-size:0.3733rem;
+}
+.hot_play table tbody td em{
+    color:#999;
+}
+.hot_play .gray_bg{
+    background:#666;
+    color:#fff;
+}
+.hot_play .gray_bg2{
+    background:#ccc;
+    color:#fff;
+}
+.hot_play .green_bg{
+    background:#00CC66;
+    color:#fff;
+}
+.hot_play .purple_bg{
+    background:#6699FF;
+    color:#fff;
+}
+.hot_play .yellow_bg{
+    background:#FFCC33;
+    color:#fff;
+}
+.hot_play .yellow_bg2{
+    background:#ff9800;
+    color:#fff;
+}
+.hot_play .zs_bg{
+    background:#9c27b0;
+    color:#fff;
+}
+.hot_play .blue_bg{
+    background:#0099FF;
+    color:#fff;
+}
+.hot_play .red_bg{
+    background:#ff0000;
+    color:#fff;
 }
