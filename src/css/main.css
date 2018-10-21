@@ -1022,6 +1022,7 @@ li{
 }
 .poster_content .cont_img{
     width: 100%;
+    height: 100%;
 }
 .poster_content .cont_title{
     position: absolute;
@@ -1047,11 +1048,22 @@ li{
     top:1.3333rem;
     width:100%;
 }
-.poster_content .cont_details>p:first-child{
+.poster_content .cont_details .jrdg{
+    font-size:2.0267rem;
+    color:#fff;
+    font-weight: 600;
+    text-align:center;
+    text-shadow: 3px -1px 7px #ff0000;
+}
+.poster_content .cont_details .jrdg2{
     font-size:0.48rem;
     color:#000;
     font-weight: 600;
     text-align:center;
+    width: 82%;
+    margin:auto;
+    background: rgb(255, 255, 19);
+    box-shadow: 3px -7px 0px 1px yellow;
 }
 .poster_content .cont_details .team_cont{
     width: 88%;
@@ -1128,7 +1140,7 @@ li{
     position: relative;
 }
 .poster_content .cont_details .footer_cont img{
-    width: 1.2rem;
+    width: 1.8667rem;
 }
 .poster_content .cont_details .footer_cont .shop_name{
     position:absolute;
@@ -1216,15 +1228,18 @@ li{
     text-align: center;
     border-spacing: 0;
     font-size:0.32rem;
-    margin-bottom:0.2667rem;
+    
 }
 .hot_play table tbody td{
     border-top:0.0267rem solid #ccc;
     border-right:0.0267rem solid #d9d9d9;
-    padding:0.0533rem 0;
+    padding:0.08rem 0;
 }
 .hot_play table tbody tr:last-child td{
     border-bottom:0.0267rem solid #d9d9d9;
+}
+.hot_table1,.hot_table2,.hot_table3,.hot_table4{
+    margin-bottom:0.2667rem;
 }
 .hot_table1 tbody tr td{
     width: 30%;
@@ -1247,10 +1262,6 @@ li{
 }
 .hot_play table tbody td em{
     color:#999;
-}
-.hot_play .gray_bg{
-    background:#666;
-    color:#fff;
 }
 .hot_play .gray_bg2{
     background:#ccc;
@@ -1281,6 +1292,72 @@ li{
     color:#fff;
 }
 .hot_play .red_bg{
+    border:1px solid #ff0000;
+}
+.hot_play .red_bg tr:first-child td:last-child{
     background:#ff0000;
     color:#fff;
+}.hot_play .gray_bg{
+    border:1px solid #000;
+}
+.hot_play .gray_bg tr:first-child td:last-child{
+    background:#666;
+    color:#fff;
+}
+.myposter{
+    width: 96%;
+    margin:auto;
+    margin-top:0.2667rem;
+    background: #fff;
+    border-radius: 1.0667rem;
+}
+.myposter .left{
+    float: left;
+    width: 1.8667rem;
+    height: 1.8667rem;
+    text-align: center;
+    border-radius: 50%;;
+}
+.myposter .left img{
+    width: 0.9333rem;
+    margin-top:0.48rem;
+}
+.myposter .left.hb1{
+    background: url('../images/poster/hb1.png') no-repeat top left;
+    background-size:100% 100%;
+}
+.myposter .left.hb2{
+    background: url('../images/poster/hb2.png') no-repeat top left;
+    background-size:100% 100%;
+}
+.myposter .left.hb3{
+    background: url('../images/poster/hb3.png') no-repeat top left;
+    background-size:100% 100%;
+}
+.myposter .left.hb4{
+    background: url('../images/poster/hb4.png') no-repeat top left;
+    background-size:100% 100%;
+}
+.myposter .left.hb5{
+    background: url('../images/poster/hb5.png') no-repeat top left;
+    background-size:100% 100%;
+}
+.myposter .mid{
+    float: left;
+    margin:0.2667rem 0 0 0.2667rem;
+}
+.myposter .mid p:first-child{
+    font-size:0.5333rem;
+    font-weight: bold;
+}
+.myposter .mid p:last-child{
+    font-size:0.3733rem;
+    margin-top:0.1333rem;
+}
+.myposter .right{
+    float: right;
+    color:#ff0000;
+    font-size:0.48rem;
+    margin-top:0.5867rem;
+    margin-right:1.0667rem;
 }
