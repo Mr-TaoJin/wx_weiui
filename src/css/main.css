@@ -1045,7 +1045,7 @@ li{
 }
 .poster_content .cont_details{
     position: absolute;
-    top:1.3333rem;
+    top:0.8rem;
     width:100%;
 }
 .poster_content .cont_details .jrdg{
@@ -1056,14 +1056,16 @@ li{
     text-shadow: 3px -1px 7px #ff0000;
 }
 .poster_content .cont_details .jrdg2{
-    font-size:0.48rem;
+    font-size:0.4rem;
     color:#000;
     font-weight: 600;
     text-align:center;
-    width: 82%;
-    margin:auto;
-    background: rgb(255, 255, 19);
-    box-shadow: 3px -7px 0px 1px yellow;
+    width: 90%;
+    margin:-0.8533rem auto 0;
+    padding-right:0.5333rem;
+}
+.poster_content .cont_details .jrdg_img{
+    width: 100%;
 }
 .poster_content .cont_details .team_cont{
     width: 88%;
