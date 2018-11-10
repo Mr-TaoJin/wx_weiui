@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <title>发布推荐</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="description">
+
+    <link rel="stylesheet" href="../bower_components/weui/dist/lib/weui.min.css">
+    <link rel="stylesheet" href="../bower_components/weui/dist/css/jquery-weui.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+<div class="page_two">
+   <div class="fb_recommend new text_center">
+        <img src="./images/recommended/fb_io.png" alt="">
+        <span>创建新推荐</span>
+   </div>
+   <div class="fb_recommend">
+       <p class="team_tit_fb clear_float">
+           <span>测试推荐一号单-竞足总进球</span>
+           <img src="./images/recommended/warn.png" alt="" onclick="cddw()">
+        </p>
+        <div class="weui-flex team_cont_fb">
+            <div class="weui-flex__item">
+                <p class="ck_fb">
+                    <img src="./images/recommended/time.png" alt=""><span>查看推荐</span>
+                </p>
+            </div>
+            <div class="weui-flex__item">
+                <button class="is_fb_btn">今日推荐已发布</button>
+            </div>
+        </div>
+   </div>
+   <div class="fb_recommend">
+        <p class="team_tit_fb clear_float">
+            <span>测试推荐一号单-竞足2X1</span>
+            <img src="./images/recommended/warn.png" alt="">
+         </p>
+         <div class="weui-flex team_cont_fb">
+             <div class="weui-flex__item">
+                 <p class="ck_fb">
+                     <img src="./images/recommended/time.png" alt=""><span>查看推荐</span>
+                 </p>
+             </div>
+             <div class="weui-flex__item flex_box">
+                 <button class="no_fb_btn1">发布今日推荐</butzton>
+                 <button class="no_fb_btn2" onclick="rest();">休息</butzton>
+            </div>
+         </div>
+    </div>
+    <div class="fb_recommend">
+        <p class="team_tit_fb clear_float">
+        <span>测试推荐一号单-竞足半全场</span>
+        <img src="./images/recommended/warn.png" alt="">
+        </p>
+        <div class="weui-flex team_cont_fb">
+            <div class="weui-flex__item">
+                <p class="ck_fb">
+                    <img src="./images/recommended/time.png" alt=""><span>查看推荐</span>
+                </p>
+            </div>
+            <div class="weui-flex__item flex_box">
+                <button class="no_fb_btn1">发布今日推荐</butzton>
+                <button class="no_fb_btn2" onclick="rest();">休息</butzton>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- 自定义弹窗 -->
+<div class="mask"></div>
+<div class="popup_fb" >
+    <p class="title">方案信息</p>
+    <div class="weui-flex cont">
+        <div class="left_text">方案名称</div>
+        <div class="weui-flex__item">
+            <input class="weui-input" type="text" placeholder="测试推荐1号单">
+        </div>
+    </div>
+    <div class="weui-flex cont">
+        <div class="left_text">玩法类型</div>
+        <div class="weui-flex__item">竞彩足球</div>
+    </div>
+    <div class="weui-flex cont">
+        <div class="left_text">推荐类型</div>
+        <div class="weui-flex__item">2X1</div>
+    </div>
+    <div class="weui-flex cont">
+        <div class="left_text">推荐属性</div>
+        <div class="weui-flex__item">混合投注</div>
+    </div>
+    <div class="weui-flex">
+        <div class="weui-flex__item" style="border-right:0.0267rem solid #d9d9d9;"><button class="cancel" onclick="close_popup()">取消</button></div>
+        <div class="weui-flex__item"><button class="ok" onclick="onok()">确定</button></div>
+    </div>
+</div>
+<script src="../bower_components/weui/dist/lib/jquery-2.1.4.js"></script>
+<script src="../bower_components/weui/dist/lib/fastclick.js"></script>
+<script src="../bower_components/weui/dist/js/jquery-weui.js"></script>
+<script src="../bower_components/flexible/flexible.js"></script>
+
+<script>
+    $(function() {
+        FastClick.attach(document.body);
+    });
+</script>
+
+<script type="text/javascript">
+    // 休息
+    function  rest(){
+        $.confirm_zdy({//此为自定义方法，若想修改请去jquery-weui.js查看
+            // title: '确认出票失败',
+            text: '确定今天推荐为休息吗？确定后不可更改',
+            // text2:'退回订单后请联系彩民解释失败原因',
+            onOK: function () {
+                //点击确认
+            },
+            onCancel: function () {
+            }
+        });
+    }
+     // 打开弹窗
+     function cddw(){
+        $(".mask").css('display','block');
+        $(".popup_fb").addClass('main').css('display','block');
+    }
+    function onok(){
+        // 执行操作..
+
+
+        close_popup();
+    }
+    // 关闭弹窗
+    function close_popup(){
+        $(".mask").css('display','none');
+        $(".popup_fb").css('display','none');
+    }
+    
+</script>
+</body>
+</html>

@@ -255,6 +255,10 @@ li{
     border-bottom:0.08rem solid #b2b2b2;
     font-weight:bold;
 }
+.order_nav .weui-flex__item.checked2{
+    border-bottom:0.08rem solid #FF9900;
+    font-weight:bold;
+}
 .order_warn{
     padding: 0.16rem;
     margin-top:0.0533rem;
@@ -1432,4 +1436,265 @@ li{
 }
 .merch_table table tbody tr td:first-child {
     border-left: 0.0267rem solid #d9d9d9;
+}
+
+/* ==================================彩店助手2.1样式========================= */
+/* 重置weiui样式 */
+.weui-dialog.weui-dialog--visible{
+    border-radius: 10px;
+}
+.page_two{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color:#ddd;
+    font-size:0.3733rem;
+}
+
+/* 发布推荐 */
+.release_rec{
+    padding:0.5333rem;
+}
+.release_rec img{
+    width: 100%;
+}
+.release_btn{
+    margin-top:1.3333rem;
+    padding:0 0.5333rem;
+}
+/* 创建推荐 */
+.recommend_tit{
+    padding:0.2667rem;
+    font-size:0.4267rem;
+}
+.recommend_cont{
+    background: #fff;
+    font-size:0.4267rem;
+}
+.recommend_cont .left_text{
+    width: 2.4rem;
+    text-align: center;
+}
+.recommend_cont .top,
+.recommend_cont .top_cont{
+    padding:0.2667rem 0;
+}
+.recommend_cont .top_cont{
+    border-top:1px solid #ddd;
+}
+.recommend_cont .top_cont .zdy_attach{
+    padding:0;width: 49%;display: inline-block;
+    margin-bottom:0.1333rem;
+}
+/* 添加推荐 */
+.add_recommend .auto_cont{
+    display: inline-block;
+    position: relative;
+    width: 49%;
+}
+.add_recommend .auto_cont .auto_cont_mid{
+    width: 94%;
+    margin: 0 auto 0.2667rem;
+    background: #fff;
+    border-radius: 0.1333rem;
+    padding:0.2667rem 0;
+}
+.add_recommend .auto_cont .auto_cont_mid .re_tit{
+    font-size:0.4267rem;
+    font-weight: bold;
+    margin-bottom: 0.08rem;
+}
+.add_recommend .auto_cont .auto_cont_mid .re_num{
+    font-size:0.32rem;
+}
+.add_recommend .auto_cont .auto_cont_mid .add_class{
+    position: relative;
+    width: 42%;;
+}
+.add_recommend .auto_cont .auto_cont_mid .add_img{
+    width: 0.5867rem;
+    position: absolute;
+    top:0.2667rem;
+    left: 0;
+}
+.add_recommend .auto_cont .auto_cont_mid .add_sp{
+    position: absolute;
+    top:0.2933rem;
+    left: 0.6667rem;
+}
+.add_recommend .auto_cont .auto_cont_mid .bule_color{
+    color:#0099FF;
+}
+.add_recommend .auto_cont .auto_cont_mid .red_color{
+    color:#ff0000;
+}
+/* 查看专家推荐 */
+.dev_recommend{
+    width: 100%;
+    margin:0 auto;
+}
+.dev_recommend table{
+    width: 100%;
+    font-size:0.32rem;
+    border-spacing: 0;
+}
+.dev_recommend table thead{
+    background:#666;
+    color:#fff;
+} 
+.dev_recommend table thead tr th{
+    font-weight: 100;
+    padding:0.1333rem;
+}
+.dev_recommend table tbody tr td{
+    border-top:0.0267rem solid #ccc;
+    border-right:0.0267rem solid #d9d9d9;
+    color:#000;
+    height: 1.12rem;
+}
+.dev_recommend tbody tr td p{
+    padding:0.0533rem 0;
+}
+.dev_recommend .border_line{
+    border-bottom:0.0267rem solid #d9d9d9;
+}
+.dev_recommend table tbody tr.win td{
+    color:#ff0000;
+}
+.dev_recommend table tbody tr.wait td{
+    color:#000;
+    font-weight: bold;
+}
+/* 发布推荐（列表） */
+.fb_recommend{
+    width: 94%;
+    margin: 0.2667rem auto;
+    background:#fff;
+    border-radius: 0.16rem;
+}
+.fb_recommend.new{
+    font-size:0.48rem;
+    padding:0.2667rem 0;
+}
+.fb_recommend .team_tit_fb{
+    font-size: 0.4267rem;
+    font-weight: bold;
+    padding:0.2667rem 0.2667rem;
+    border-bottom:0.0267rem solid #d9d9d9;
+}
+.fb_recommend .team_tit_fb>span{
+    float: left;
+}
+.fb_recommend .team_tit_fb>img{
+    float: right;
+}
+.fb_recommend .team_cont_fb{
+    font-size: 0.4267rem;
+    font-weight: bold;
+    padding:10px 0.2667rem;
+}
+.fb_recommend .team_cont_fb img{
+    width: 0.5333rem;
+}
+.fb_recommend .team_cont_fb button{
+    height: 1.0667rem;
+    border-radius: 0.1333rem;
+    border: 0;
+    color:#fff;
+}
+.fb_recommend .team_cont_fb button.is_fb_btn{
+    width: 100%;
+    background: #999999;
+}
+.fb_recommend .team_cont_fb .ck_fb{
+    position: relative;
+    top:0.2667rem;
+    left:0px;
+}
+.fb_recommend .team_cont_fb .ck_fb span{
+    padding-left:0.2667rem;
+}
+.fb_recommend .flex_box{
+    display: -webkit-flex; /* Safari */
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content:space-between
+}
+.fb_recommend .team_cont_fb .no_fb_btn1{
+    width: 70%;
+    background: #FF9900;
+}
+.fb_recommend .team_cont_fb .no_fb_btn2{
+    width: 28%;
+    background: #cccccc;
+}
+/* 自定义弹框 */
+.mask{
+    position:fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    overflow:hidden;
+    z-index:100;
+    display:none;
+    background: rgba(0, 0, 0, 0.3);
+}
+.popup_fb{
+    width:80%;
+    height:6.9467rem;
+    position:absolute;
+    margin:auto;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    background:#fff;
+    z-index:100;
+    display: none;
+    padding:0.4rem 0.2133rem 0;
+    border-radius:0.4rem;
+    font-size:0.4533rem;
+}
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale3d(0.3, 0.3, 0.3);
+    }
+    50% {
+        opacity: 1;
+    }
+}
+.popup_fb.main {
+    animation: zoomIn 0.3s;
+    display: flex;
+    flex-wrap: wrap;
+    opacity: 1;
+}
+.popup_fb .title{
+    font-size:0.48rem;
+    font-weight: bold; 
+    text-align: center;
+    padding-bottom:0.2667rem;
+}
+.popup_fb .cont{
+    padding:0.2667rem 0.2133rem;
+    border-bottom:0.0267rem solid #d9d9d9;
+    color:#000;
+}
+.popup_fb .left_text{
+    padding-right:8px;
+}
+.popup_fb button{
+    width: 100%;
+    height: 1.3334rem;
+    border: 0;
+    background: #fff;
+    font-size:0.5333rem;
+}
+.popup_fb button.cancel{
+    border-right:0.0267rem solid #d9d9d9;
+}
+.popup_fb button.ok{
+    color:#3cc51f;
 }

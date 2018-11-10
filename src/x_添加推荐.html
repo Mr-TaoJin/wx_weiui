@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <title>创建推荐</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="description">
+
+    <link rel="stylesheet" href="../bower_components/weui/dist/lib/weui.min.css">
+    <link rel="stylesheet" href="../bower_components/weui/dist/css/jquery-weui.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+<div class="page_two">
+    <div class="order_nav nav_line">
+        <div class="weui-flex text_center" style="margin-top:0;">
+            <div class="weui-flex__item checked2" >
+                <p>竞足2X1</p>
+            </div>
+            <div class="weui-flex__item" style="border-right: 0.0267rem solid #ccc">
+                <p>竞足半全场</p>
+            </div>
+            <div class="weui-flex__item" style="border-right: 0.0267rem solid #ccc">
+                <p>竞足总进球</p>
+            </div>
+            <div class="weui-flex__item" style="border-right: 0.0267rem solid #ccc">
+                <p>中高赔推荐</p>
+            </div>
+        </div>
+    </div>
+    <p class="recommend_tit">*您可以添加6个专家为您的彩店助力</p>
+    <div class="add_recommend">
+        <div class="auto_cont text_center">
+            <div class="auto_cont_mid">
+                <div class="weui-flex">
+                    <div class="weui-flex__item" >
+                        <p class="re_tit">飞龙在天</p>
+                        <p class="re_num">56 个店主添加</p>
+                    </div>
+                    <div class="add_class bule_color">
+                        <img class="add_img" src="./images/recommended/add.png" alt="">
+                        <span class="add_sp">添加</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="auto_cont text_center">
+            <div class="auto_cont_mid">
+                <div class="weui-flex">
+                    <div class="weui-flex__item" >
+                        <p class="re_tit">飞龙在天</p>
+                        <p class="re_num">56 个店主添加</p>
+                    </div>
+                    <div class="add_class red_color">
+                        <img class="add_img" src="./images/recommended/ok.png" alt="">
+                        <span class="add_sp">已添加</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="auto_cont text_center">
+            <div class="auto_cont_mid">
+                <div class="weui-flex">
+                    <div class="weui-flex__item" >
+                        <p class="re_tit">步步为赢</p>
+                        <p class="re_num">56 个店主添加</p>
+                    </div>
+                    <div class="add_class red_color">
+                        <img class="add_img" src="./images/recommended/ok.png" alt="">
+                        <span class="add_sp">已添加</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="auto_cont text_center">
+            <div class="auto_cont_mid">
+                <div class="weui-flex">
+                    <div class="weui-flex__item" >
+                        <p class="re_tit">战神</p>
+                        <p class="re_num">56 个店主添加</p>
+                    </div>
+                    <div class="add_class red_color">
+                        <img class="add_img" src="./images/recommended/ok.png" alt="">
+                        <span class="add_sp">已添加</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="auto_cont text_center">
+            <div class="auto_cont_mid">
+                <div class="weui-flex">
+                    <div class="weui-flex__item" >
+                        <p class="re_tit">飞龙在天</p>
+                        <p class="re_num">56 个店主添加</p>
+                    </div>
+                    <div class="add_class bule_color">
+                        <img class="add_img" src="./images/recommended/add.png" alt="">
+                        <span class="add_sp">添加</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="shop_warn text_center">
+        <i class="weui-icon-warn" style="color:#000;font-size:0.4267rem;margin-bottom:5px;"></i>
+        <span>没有找到您要的推荐，请反馈给<a href="#">在线客服</a></span>
+    </div>
+</div>
+<script src="../bower_components/weui/dist/lib/jquery-2.1.4.js"></script>
+<script src="../bower_components/weui/dist/lib/fastclick.js"></script>
+<script src="../bower_components/weui/dist/js/jquery-weui.js"></script>
+<script src="../bower_components/flexible/flexible.js"></script>
+
+<script>
+    $(function() {
+        FastClick.attach(document.body);
+    });
+</script>
+
+<script type="text/javascript">
+// 切换
+$(".order_nav .weui-flex__item").click(function(){
+    console.log('123')
+    $(this).addClass('checked2').siblings().removeClass('checked2');
+    // $('.order_content>ul:first-child').css('display','block');
+    // $('.order_content>ul:last-child').css('display','none');
+})
+</script>
+</body>
+</html>
