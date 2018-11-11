@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <title>发布今日推荐（篮球）</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="description">
+
+    <link rel="stylesheet" href="../bower_components/weui/dist/lib/weui.min.css">
+    <link rel="stylesheet" href="../bower_components/weui/dist/css/jquery-weui.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+<div class="page_two">
+   <div class="jr_recommend_detail">
+        <div class="weui-flex text_center top">
+            <div class="weui-flex__item">老鹰</div>
+            <div class="weui-flex__item">VS</div>
+            <div class="weui-flex__item">黄蜂</div>
+        </div>
+        <div class="team_detail">
+            <table class="table_one text_center">
+                <tbody>
+                    <tr>
+                        <td style="width: 20px;">非让分</td>
+                        <td class="red_dan_bg">胜 2.15</td>
+                        <td>平 3.33</td>
+                    </tr>
+                    <tr>
+                        <td style="width: 20px;" class="red_color">让分</td>
+                        <td>-1 胜 2.33</td>
+                        <td>-1平 1.33</td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table_one text_center">
+                <tbody>
+                    <tr>
+                        <td style="width: 20px;" class="red_color">大小分</td>
+                        <td class="po_re">大分 2.01
+                            <span class="po_ab">232.5</span>
+                        </td>
+                        <td>大分 2.01</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="red_bg text_center">单</p>
+            <table class="table_two text_center">
+                <tbody>
+                    <tr>
+                        <td rowspan="2" style="width: 20px;" class="red_color">主负</td>
+                        <td>
+                            <p>1-5</p>
+                            <p>6.75</p>
+                        </td>
+                        <td>
+                            <p>1-5</p>
+                            <p>6.75</p>
+                        </td>
+                        <td>
+                            <p>1-5</p>
+                            <p>6.75</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <!-- <td rowspan="2" style="width: 20px;">胜</td> -->
+                        <td style="border-left:0;">
+                            <p>1-5</p>
+                            <p>6.75</p>
+                        </td>
+                        <td>
+                            <p>1-5</p>
+                            <p>6.75</p>
+                        </td>
+                        <td>
+                            <p>1-5</p>
+                            <p>6.75</p>
+                        </td>
+                    </tr>
+                    <tr>
+                            <td rowspan="2" style="width: 20px;" class="red_color">主胜</td>
+                            <td>
+                                <p>1-5</p>
+                                <p>6.75</p>
+                            </td>
+                            <td>
+                                <p>1-5</p>
+                                <p>6.75</p>
+                            </td>
+                            <td>
+                                <p>1-5</p>
+                                <p>6.75</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <!-- <td rowspan="2" style="width: 20px;">胜</td> -->
+                            <td style="border-left:0;">
+                                <p>1-5</p>
+                                <p>6.75</p>
+                            </td>
+                            <td>
+                                <p>1-5</p>
+                                <p>6.75</p>
+                            </td>
+                            <td>
+                                <p>1-5</p>
+                                <p>6.75</p>
+                            </td>
+                        </tr>
+                </tbody>
+            </table>
+        </div>
+   </div>
+   <div class="jr_recommend_fot">
+        <div class="weui-flex text_center">
+            <div class="weui-flex__item"><button class="cancel">取消</button></div>
+            <div class="weui-flex__item"><button class="qd">确定</button></div>
+        </div>
+    </div>
+</div>
+
+<script src="../bower_components/weui/dist/lib/jquery-2.1.4.js"></script>
+<script src="../bower_components/weui/dist/lib/fastclick.js"></script>
+<script src="../bower_components/weui/dist/js/jquery-weui.js"></script>
+<script src="../bower_components/flexible/flexible.js"></script>
+
+<script>
+    $(function() {
+        FastClick.attach(document.body);
+    });
+</script>
+
+<script type="text/javascript">
+    $.toast("选择比赛场次错误", "forbidden");
+</script>
+</body>
+</html>

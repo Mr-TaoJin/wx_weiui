@@ -1642,7 +1642,7 @@ li{
 }
 .popup_fb{
     width:80%;
-    height:6.9467rem;
+    height:7rem;
     position:absolute;
     margin:auto;
     top:0;
@@ -1697,4 +1697,298 @@ li{
 }
 .popup_fb button.ok{
     color:#3cc51f;
+}
+/* 发布今日推荐（足球） */
+.icon_top{/*向上图标*/
+    float:right;
+}
+.icon_top::before{
+    content: " ";
+    display: inline-block;
+    height: 6px;
+    width: 6px;
+    border-width:  2px 0 0 2px;
+    border-color: #c8c8cd;
+    border-style: solid;
+    -webkit-transform: matrix(.71,.71,-.71,.71,0,0);
+    transform: matrix(.71,.71,-.71,.71,0,0);
+}
+.jr_recommend_top{
+    padding:0.2667rem 0.2667rem;
+    font-size:0.3467rem;
+    background: #F2F2F2;
+}
+.jr_recommend_mid{
+    background: #fff;
+    margin:10px auto 60px;
+}
+.jr_recommend_mid li{
+    border-bottom:1px solid #d9d9d9;
+}
+.jr_recommend_mid .team_time{
+    width: 22%;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top:1.3333rem;
+}
+.jr_recommend_mid .team_cont_fb{
+    padding:0.2667rem 0;
+}
+.jr_recommend_mid .team_detail .vs{
+    width: 1.3333rem;
+}
+.jr_recommend_mid .team_detail .team_a{
+    padding:0 0 0.2667rem;
+}
+.jr_recommend_mid .team_detail .team_a .bold_a{
+    font-size:0.4267rem;
+    color:#000;
+    font-weight: bold;
+}
+.jr_recommend_mid .team_detail .team_a .frq{
+    font-size:12px;
+    margin-bottom:5px;
+}
+.jr_recommend_mid .team_detail .team_b .frq{
+    font-size:12px;
+    width: 15px;
+    box-sizing: border-box;
+}
+.jr_recommend_mid .team_detail .team_b .hhtz_spf{
+    display:inline-block;
+    width: 86%;
+}
+.jr_recommend_mid .team_detail .team_b{
+    position: relative;
+}
+.jr_recommend_mid .team_detail .team_b .hhtz{
+    position: absolute;
+    display:inline-block;
+    width: 12%;
+    height: 98px;
+    border:1px solid #d9d9d9;
+    box-sizing: border-box;
+    padding-top:27px;
+}
+.jr_recommend_mid .team_detail .team_b .hhtz_spf .spf{
+    height: 50px;
+}
+.jr_recommend_mid .team_detail .team_b .hhtz_spf .spf div{
+    border:1px solid #d9d9d9;
+    margin-bottom:2px;
+    margin-right:2px;
+    
+}
+.jr_recommend_mid .team_detail .team_b .hhtz_spf .spf .weui-flex__item{
+    line-height: 48px;
+}
+.jr_recommend_mid .red_color{
+    color:#ff0000;
+}
+.jr_recommend_mid .red_dan_bg{
+    background: url('../images/recommended/dan.png') no-repeat top left;
+}
+.jr_recommend_fot{
+    position: fixed;
+    bottom:0;
+    left:0;
+    width:100%;
+    background: #fff;
+    padding:10px 0 ;
+}
+.jr_recommend_fot .del{
+    width: 2.1333rem;
+    box-sizing: border-box;
+    padding-top:5px;
+}
+.jr_recommend_fot .ms{
+    box-sizing: border-box;
+    padding-top:10px;
+    font-size: 0.4267rem;
+}
+.jr_recommend_fot .ok{
+    width: 2.6667rem;
+}
+.jr_recommend_fot .ok .ok_q{
+    background: #ff9800;    
+}
+.jr_recommend_fot button{
+    width: 2rem;
+    height: 40px;
+    border-radius: 0.2133rem;
+    border:0;
+    font-size: 0.4267rem;
+    color:#fff;
+}
+.jr_recommend_fot .cancel{
+    width: 4.4rem;
+    border:1px solid #d9d9d9;
+    background: #fff;
+    color:#9e9e9e;
+}
+.jr_recommend_fot .qd{
+    width: 4.4rem;
+    background: #ff9800;
+}
+/* 赛事详情 */
+.jr_recommend_detail{
+    background: #fff;
+    margin-bottom:60px;
+}
+.jr_recommend_detail .top{
+    padding:10px 0;
+    border-bottom:1px solid #d9d9d9;
+}
+.jr_recommend_detail .top .weui-flex__item:first-child,
+.jr_recommend_detail .top .weui-flex__item:last-child{
+    font-size: 0.4267rem;
+    font-weight: bold;
+    color:#000;
+}
+.jr_recommend_detail .team_detail{
+    padding:0 0.2667rem 10px;
+}
+.jr_recommend_detail table{
+    border-spacing: 0;
+    width: 100%;
+}
+.jr_recommend_detail table tbody td{
+    border-right:1px solid #d9d9d9;
+    border-bottom:1px solid #d9d9d9;
+}
+.jr_recommend_detail table tbody tr:first-child td{
+    border-top:1px solid #d9d9d9;
+}
+.jr_recommend_detail table tbody tr td:first-child{
+    border-left:1px solid #d9d9d9;
+}
+.jr_recommend_detail .table_one{
+    margin-top:10px;
+}
+.jr_recommend_detail .table_one td{
+    height: 60px;
+}
+.jr_recommend_detail .table_two td{
+    padding:3px 0;
+}
+.jr_recommend_detail .table_three td{
+    padding:8px 0;
+}
+.jr_recommend_detail .table_four td{
+    padding:3px 0;
+}
+.jr_recommend_detail .table_one .po_re{
+    position: relative;
+}
+.jr_recommend_detail .table_one .po_ab{
+    position: absolute;
+    top:0.4rem;
+    right:-0.8rem;
+    background: #ff0000;
+    padding:0.1333rem 0.2667rem;
+    color:#fff;
+    border-radius: 0.4rem;
+}
+.jr_recommend_detail .red_color{
+    color:#ff0000;
+}
+.jr_recommend_detail .red_bg{
+    background:#ff0000;
+    color:#fff;
+    margin-top:0.2667rem;
+}
+.jr_recommend_detail .yellow_bg{
+    background:#ff9800;
+    color:#fff;
+    margin-top:10px;
+}
+.jr_recommend_detail .red_dan_bg{
+    background: url('../images/recommended/dan.png') no-repeat top left;
+}
+/* 确定发布 */
+.sure_fb{
+    background: #fff;
+    border-radius: 0.2133rem;
+    margin:0.2667rem auto 0;
+    width: 94%;
+}
+.sure_top .tit_t{
+    padding:8px 10px;
+    border-bottom:1px solid #d9d9d9;
+}
+.sure_top .tit_t .dh{
+    font-size: 0.4267rem;
+    color:#000;
+    font-weight: bold;
+}
+.sure_top .tit_t .fa{
+    float: right;
+}
+.sure_top .tit_ss{
+    width: 95%;
+    margin: auto;
+    border-bottom:1px solid #d9d9d9;
+}
+.sure_top .tit_ss:last-child{
+    border-bottom:0;
+}
+.sure_top .tit_ss .team_name,
+.sure_top .tit_ss .team_ret{
+    display: inline-block;
+    width: 100%;
+    padding:0.1333rem 0;
+}
+.sure_top .tit_ss .team_ret span{
+    display: inline-block;
+    width: 32.3%;
+    margin-top:0.08rem; 
+}
+.sure_top .tit_ss .team_ret span em{
+    display: inline-block;
+    width: 100%;
+    background: #FF9900;
+    color:#fff;
+    padding:5px 0;
+    border-top-left-radius: 0.2133rem;
+    border-top-right-radius: 0.2133rem;
+}
+.sure_top .tit_ss .team_ret span i{
+    display: inline-block;
+    width: 100%;
+    background: #F2F2F2;
+    padding:5px 0;
+    color:#000;
+    font-weight: bold;
+}
+.sure_mid .tit_t{
+    padding:0.2133rem 0.2667rem;
+}
+.sure_mid .tit_t .dh{
+    font-size: 0.4rem;
+}
+.sure_mid .tit_t .fa{
+    float: right;
+    font-size: 0.3733rem;
+    color:#000;
+    font-weight: bold;
+}
+.sure_fot .tit_t{
+    padding:0.2133rem 0.2667rem;
+}
+.sure_fot .tit_t .dh{
+    font-size: 0.4rem;
+}
+.sure_fot .btn_s{
+    padding:0.1333rem 0 0.4rem;
+}
+.sure_fot .btn_s button{
+    padding:0.1333rem;
+    width: 1.8667rem;
+    border:0.0267rem solid #ff9800;
+    border-radius: 0.1333rem;
+    background: #fff;
+}
+.sure_fot .btn_s button.yellow_bg{
+    background: #ff9800;
+    color:#fff;
 }
