@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ch">
 <head>
-    <title>创建推荐</title>
+    <title>查看推荐</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -13,9 +13,17 @@
 </head>
 <body>
 <div class="page_two">
-    <div class="wait_head bg_fff">
+    <div class="canvas">
+
+    <div class="ck_wait_head bg_fff">
         <span class="name">类型：竞足2X1</span>
-        <span class="order_num">2018年11月<i class="icon_right"></i></span>
+        <span class="order_num">
+            <span class="set" onclick="tj_set()">
+                <img src="./images/recommended/setting.png" alt="">设置
+            </span>
+            <span>2018年11月</span>
+            <i class="icon_right"></i>
+        </span>
     </div>
     <div class="dev_recommend" style="margin-bottom: 2.3333rem;">
             <table class="text_center">
@@ -109,15 +117,42 @@
             </table>
     </div>
 
-    <div class="merch_footer">
-        <button style="background: #FF9900" onclick="add()">添加专家推荐到本店</button>
+    </div>
+    <div class="ck_merch_footer">
+        <button class="btn_1" onclick="del()">删除推荐</button>
+        <button class="btn_2">生成分享图片</button>
+    </div>
+</div>
+
+<!-- 自定义弹窗 -->
+<div class="mask"></div>
+<div class="popup_set" >
+    <div class="title">推荐参数设置</div>
+    <div class="content">
+        <p>起步金额(起步金额为50-10000的整数，默认100)</p>
+        <input type="text" placeholder="">
+        <p>计划周期(计划周期为3-15的整数，默认7)</p>
+        <input type="text" placeholder="">
+        <p>投注模式</p>
+        <div class="def_bg">
+            <span class="model_one yellow_bg">翻倍模式</span>
+            <span class="model_two">定投模式</span>
+        </div>
+        <div class="weui-flex fb_mod text_center">
+            <div class="reduce">-</div>
+            <div class="weui-flex__item" style="padding:10px;">2</div>
+            <div class="add">+</div>
+        </div>
+    </div>
+    <div class="bottom_tab">
+        <span class="cancel" onclick="close_popup()">取消</span>
+        <span class="ok" onclick="onok()">确定</span>
     </div>
 </div>
 <script src="../bower_components/weui/dist/lib/jquery-2.1.4.js"></script>
 <script src="../bower_components/weui/dist/lib/fastclick.js"></script>
 <script src="../bower_components/weui/dist/js/jquery-weui.js"></script>
 <script src="../bower_components/flexible/flexible.js"></script>
-
 
 <script>
     $(function() {
@@ -126,25 +161,36 @@
 </script>
 
 <script type="text/javascript">
-    //添加
-    function add(){
-        $.prompt_zdy({//自定义内容
-            title: '添加专家',//标题
-            // text: '内容文案',
-            // user_name:'沙夏',//用户名称
-            money:'方案名称(默认为原推荐专家名称)',//
-            // warn_msg:'请确认彩民已将充值金额转账给您', //提醒消息(默认空不显示)
-            input: '',//默认输入值
-            empty: false, // 是否允许为空
-            btnOk:'确定',//确定按钮文字
-            placeholder:'请输入方案名称',
-            onOK: function (input) {
+    // 删除
+    function  del(){
+        $.confirm_zdy({//此为自定义方法，若想修改请去jquery-weui.js查看
+            // title: '确认出票失败',
+            text: '确定今天推荐为休息吗？确定后不可更改',
+            // text2:'退回订单后请联系彩民解释失败原因',
+            onOK: function () {
                 //点击确认
             },
             onCancel: function () {
-                //点击取消
             }
         });
+    }
+
+    // 打开弹窗
+    function tj_set(){
+        $(".mask").css('display','block');
+        $(".popup_set").addClass('main').css('display','block');
+    }
+    tj_set();
+    function onok(){
+        // 执行操作..
+
+
+        close_popup();
+    }
+    // 关闭弹窗
+    function close_popup(){
+        $(".mask").css('display','none');
+        $(".popup_set").css('display','none');
     }
 </script>
 </body>

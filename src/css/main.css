@@ -1552,6 +1552,9 @@ li{
     color:#000;
     height: 1.12rem;
 }
+.dev_recommend table tbody tr:nth-child(even) td{
+    background: #f2f2f2;
+}
 .dev_recommend tbody tr td p{
     padding:0.0533rem 0;
 }
@@ -1991,4 +1994,293 @@ li{
 .sure_fot .btn_s button.yellow_bg{
     background: #ff9800;
     color:#fff;
+}
+/* 查看推荐（列表） */
+.ck_tj_top .weui-flex__item{
+    padding:0.2667rem;
+}
+.ck_tj_top .weui-flex__item .cont{
+    background: #fff;
+    font-size:0.48rem;
+    padding:0.32rem;
+    border-radius: 0.2133rem;
+}
+.ck_tj_con .tit_t{
+    padding:0.2133rem 0.2667rem;
+    border-bottom:1px solid #d9d9d9;
+}
+.ck_tj_con .tit_t .dh{
+    font-size: 0.4267rem;
+    color:#000;
+    font-weight: bold;
+}
+.ck_tj_con .tit_t .fa{
+    float: right;
+}
+.ck_tj_con table{
+    border-spacing: 0;
+    width: 100%;
+}
+.ck_tj_con table th{
+    background: #666;
+    color:#fff;
+}
+.ck_tj_con table td{
+    padding:8px 0;
+    border-left: 1px solid #d9d9d9;
+}
+.multiple_line_tj{
+    width: 80%;
+    margin: 0.2667rem auto 0;
+}
+.multiple_line_tj span{
+    display:inline-block;
+    width: 20%;
+}
+.multiple_line_tj span:nth-child(2){
+    width:55%;
+    text-align: center;
+}
+.multiple_line_tj span:first-child,
+.multiple_line_tj span:last-child{
+    border-bottom:0.0267rem solid #ccc;
+    margin-bottom:0.1067rem; 
+}
+.ck_wait_head{
+    padding:0.2667rem;
+}
+.ck_wait_head .name,
+.ck_wait_head .order_num{
+    display: inline-block;
+    width: 49%;
+    font-size:0.4267rem;
+}
+.ck_wait_head .name{
+    color:#000;
+    font-weight: bold;
+}
+.ck_wait_head .order_num{
+    text-align: right;
+}
+.ck_wait_head .set{
+    padding-right: 0.5333rem;
+}
+.ck_merch_footer{
+    position: fixed;
+    bottom:0;
+    left:0;
+    width:100%;
+    background: #FF9900;
+}
+.ck_merch_footer button{
+    background:#666;
+    padding:0.3733rem;
+    font-size:0.48rem;
+    border:0;
+}
+.ck_merch_footer button.btn_1{
+    width:32%;
+    color:#9e9e9e;
+    background: #fff;
+}
+.ck_merch_footer button.btn_2{
+    width:65%;
+    color:#fff;
+    background: #FF9900;
+}
+/* 弹窗 */
+.popup_set{
+    width:90%;
+    position:fixed;
+    margin:0px auto;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    z-index:100; 
+    background:#fff;
+    border-radius:0.4rem;
+    box-sizing: border-box;
+}
+@keyframes zoomIn2 {
+    from {
+        opacity: 0;
+        transform: scale3d(0, 0, 0);
+    }
+    50% {
+        opacity: 1;
+    }
+}
+.popup_set.main {
+    animation: zoomIn2 0.3s;
+    display: flex;
+    flex-wrap: wrap;
+    opacity: 1;
+}
+.popup_set .title{
+    font-size:0.48rem;
+    font-weight: bold; 
+    text-align: center;
+    padding:0.4rem 0 0.2667rem;
+}
+.popup_set .bottom_tab{
+    width: 100%;
+    position: relative;
+    bottom:0;
+    border-top:0.0267rem solid #d9d9d9;
+}
+.popup_set .cancel,
+.popup_set .ok{
+    display: inline-block;
+    width: 48%;
+    box-sizing: border-box;
+    padding:0.4267rem;
+    text-align: center;
+    font-size:0.4267rem;
+}
+.popup_set .cancel{
+    border-right:0.0267rem solid #d9d9d9;
+}
+.popup_set .ok{
+    color:#3cc51f;
+}
+.popup_set .content{
+    padding:0 0.2667rem;
+}
+.popup_set .content p{
+    padding:0.2667rem 0 0.2667rem;
+    font-size: 0.3733rem;
+}
+.popup_set .content input[type="text"]{
+    width: 92%;
+    padding:0.2667rem;
+    font-size: 0.4267rem;
+    border: 0.0267rem solid #9e9e9e;
+}
+.popup_set .content .def_bg{
+    background: #CCCCCC;
+}
+.popup_set .content .model_one,
+.popup_set .content .model_two{
+    display: inline-block;
+    width: 49%;
+    padding:0.2667rem 0;
+    border:0;
+    color:#fff;
+    text-align: center;
+}
+.popup_set .content .yellow_bg{
+    background: #FF9900;
+}
+.popup_set .content .fb_mod {
+    margin: 0.2133rem 0;
+    border: 0.0267rem solid #9e9e9e;
+}
+.popup_set .content .fb_mod .reduce,
+.popup_set .content .fb_mod .add{
+    width: 10%;
+    padding:0.2667rem;
+}
+.popup_set .content .fb_mod .reduce{
+    border-right:0.0267rem solid #9e9e9e; 
+}
+.popup_set .content .fb_mod .add{
+    border-left:0.0267rem solid #9e9e9e; 
+}
+.popup_set .content .cont_tit{
+    font-size: 0.4267rem;
+    padding-right: 0.2133rem;
+}
+.popup_set .content .weui-check__label{
+    position: relative;
+    padding-right:1.0667rem;
+}
+.popup_set .content .weui-check__label .day{
+    font-size: 0.48rem;
+    position: absolute;
+    top:-0.32rem;
+    width: 1.3333rem;
+}
+.popup_set .content img{
+    width: 1.3333rem;
+}
+.popup_set .content .checked_img{
+    display: inline-block;
+    padding:0.1333rem;
+    border-radius: 0.1333rem;
+    margin-right: 0.2667rem;
+}
+.popup_set .content .checked_img.is_check{
+    border:0.0533rem solid #ff0000;
+}
+/* 生成分享设置 */
+.hb_canvas{
+    background: url('../images/bg.jpg') no-repeat 100% 100%;
+    padding:0.2667rem 0;
+    margin-bottom: 60px;
+}
+.hb_canvas .tit_top{
+    width: 96%;
+    margin:0 0 0.2667rem;
+    position: relative;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    height: 1.6rem;
+}
+.hb_canvas .tit_top img{
+    width: 1.6rem;
+    position: absolute;
+    top:0;
+    right:0;
+    border-radius: 50%;
+}
+.hb_canvas .tit_top p{
+    padding:0.1334rem 0.2667rem;
+}
+.hb_canvas .tit_top p:first-child{
+    font-size:0.5333rem;
+    font-weight: bold;
+    color:#000;
+}
+.hb_canvas .tit_top p:nth-child(2){
+    font-size:0.4rem;
+}
+
+.hb_canvas table{
+    width: 96%;
+    border-spacing: 0;
+    margin: auto;
+    border-radius: 0.1333rem;
+}
+.hb_canvas table th{
+    color:#fff;
+    background: #ff0000;
+    border:0;
+    padding:0.08rem 0;
+}
+.hb_canvas table td{
+    padding:0.1333rem 0;
+    border-right:1px solid #d9d9d9;
+    border-bottom:1px solid #d9d9d9;
+}
+.hb_canvas table .win td{
+    color:#fff;
+    background: #ff0000;
+}
+.hb_canvas table .now td{
+    padding:0.2667rem 0;
+    font-weight: bold;
+    color:#000;
+}
+.hb_canvas .tit_bot{
+    width: 96%;
+    margin:0.2667rem auto 0;
+    box-sizing: border-box;
+    padding:0.2667rem;
+    border-radius: 0.1333rem;
+}
+.hb_canvas .tit_bot .weui-flex__item p{
+    font-size: 0.5867rem;
+    font-weight: bold;
+    color:#000;
+    padding:0.1333rem 0;
 }

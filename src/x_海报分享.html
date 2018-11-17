@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <title>查看推荐</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="description">
+
+    <link rel="stylesheet" href="../bower_components/weui/dist/lib/weui.min.css">
+    <link rel="stylesheet" href="../bower_components/weui/dist/css/jquery-weui.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+<div class="page_two">
+    <div class="hb_canvas">
+        <div class="tit_top bg_fff">
+            <p>大楚1号推荐</p>
+            <p>大楚彩店 4201015154</p>
+            <img src="./images/ewm.png" alt="">
+        </div>
+        <table class="text_center bg_fff">
+            <thead>
+                <tr>
+                    <th>日期</th>
+                    <th>推荐方案</th>
+                    <th>百元<br>奖金</th>
+                    <th>命中<br>情况</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>11-01</td>
+                    <td>001 让胜平，002胜</td>
+                    <td>256.56</td>
+                    <td>1</td>
+                </tr>
+                <tr class="win">
+                    <td>11-01</td>
+                    <td>001 让胜平，002胜</td>
+                    <td>256.56</td>
+                    <td>命中</td>
+                </tr>
+                <tr>
+                        <td>11-01</td>
+                        <td>001 让胜平，002胜</td>
+                        <td>256.56</td>
+                        <td>1</td>
+                    </tr>
+                    <tr class="win">
+                        <td>11-01</td>
+                        <td>001 让胜平，002胜</td>
+                        <td>256.56</td>
+                        <td>命中</td>
+                    </tr>
+                    <tr>
+                            <td>11-01</td>
+                            <td>001 让胜平，002胜</td>
+                            <td>256.56</td>
+                            <td>1</td>
+                        </tr>
+                        <tr class="win">
+                            <td>11-01</td>
+                            <td>001 让胜平，002胜</td>
+                            <td>256.56</td>
+                            <td>命中</td>
+                        </tr>
+                        <tr>
+                                <td>11-01</td>
+                                <td>001 让胜平，002胜</td>
+                                <td>256.56</td>
+                                <td>1</td>
+                            </tr>
+                            <tr class="win">
+                                <td>11-01</td>
+                                <td>001 让胜平，002胜</td>
+                                <td>256.56</td>
+                                <td>命中</td>
+                            </tr>
+                            <tr>
+                                    <td>11-01</td>
+                                    <td>001 让胜平，002胜</td>
+                                    <td>256.56</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr class="win">
+                                    <td>11-01</td>
+                                    <td>001 让胜平，002胜</td>
+                                    <td>256.56</td>
+                                    <td>命中</td>
+                                </tr>
+                                <tr>
+                                        <td>11-01</td>
+                                        <td>001 让胜平，002胜</td>
+                                        <td>256.56</td>
+                                        <td>1</td>
+                                    </tr>
+                                    <tr class="win">
+                                        <td>11-01</td>
+                                        <td>001 让胜平，002胜</td>
+                                        <td>256.56</td>
+                                        <td>命中</td>
+                                    </tr>
+                                    <tr>
+                                            <td>11-01</td>
+                                            <td>001 让胜平，002胜</td>
+                                            <td>256.56</td>
+                                            <td>1</td>
+                                        </tr>
+                                        <tr class="win">
+                                            <td>11-01</td>
+                                            <td>001 让胜平，002胜</td>
+                                            <td>256.56</td>
+                                            <td>命中</td>
+                                        </tr>
+                <tr class="now">
+                    <td>今天</td>
+                    <td>001 让胜平，002胜</td>
+                    <td>256.56</td>
+                    <td>祝红</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="weui-flex tit_bot bg_fff">
+            <div class="weui-flex__item">
+                <p>实际奖金以出票为准</p>
+                <p>截止时间11-07 23:55</p>
+            </div>
+            <div>
+                <img src="./images/ewm.png" alt="">
+            </div>
+            <div style="padding:0 3px;">扫<br>码<br>进<br>店</div>
+        </div>
+    </div>
+    <div class="ck_merch_footer">
+        <button class="btn_1" onclick="set()">设置</button>
+        <button class="btn_2">生成分享图片</button>
+    </div>
+</div>
+
+<!-- 自定义弹窗 -->
+<div class="mask"></div>
+<div class="popup_set" >
+    <div class="title">分享设置</div>
+    <div class="content">
+        <div class="weui-flex" style="padding:0.2667rem 0;border-bottom:0.0267rem solid #9e9e9e;">
+            <div class="cont_tit">分享天数</div>
+            <div class="weui-flex__item">
+                <div class="weui-cells_checkbox">
+                    <label class="weui-check__label">
+                        <div class="weui-cell__hd" style="display: inline-block;">
+                            <input type="checkbox" class="weui-check" checked>
+                            <i class="weui-icon-checked"></i>
+                        </div>
+                        <div class="weui-cell__bd" style="display: inline-block;">
+                        <p class="day">7天</p>
+                        </div>
+                    </label>
+                    <label class="weui-check__label">
+                        <div class="weui-cell__hd" style="display: inline-block;">
+                            <input type="checkbox" class="weui-check" checked>
+                            <i class="weui-icon-checked"></i>
+                        </div>
+                        <div class="weui-cell__bd" style="display: inline-block;">
+                        <p class="day">15天</p>
+                        </div>
+                    </label>
+                    <label class="weui-check__label">
+                        <div class="weui-cell__hd" style="display: inline-block;">
+                            <input type="checkbox" class="weui-check" checked>
+                            <i class="weui-icon-checked"></i>
+                        </div>
+                        <div class="weui-cell__bd" style="display: inline-block;">
+                        <p class="day">30天</p>
+                        </div>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="weui-flex" style="padding:0.2667rem 0;border-bottom:0.0267rem solid #9e9e9e;">
+            <div class="cont_tit">分享模式</div>
+            <div class="weui-flex__item">
+                <div class="weui-cells_checkbox">
+                    <label class="weui-check__label">
+                        <div class="weui-cell__hd" style="display: inline-block;">
+                            <input type="checkbox" class="weui-check" checked>
+                            <i class="weui-icon-checked"></i>
+                        </div>
+                        <div class="weui-cell__bd" style="display: inline-block;">
+                        <p class="day">标准</p>
+                        </div>
+                    </label>
+                    <label class="weui-check__label">
+                        <div class="weui-cell__hd" style="display: inline-block;">
+                            <input type="checkbox" class="weui-check" checked>
+                            <i class="weui-icon-checked"></i>
+                        </div>
+                        <div class="weui-cell__bd" style="display: inline-block;">
+                        <p class="day" style="width: 2.6667rem;">累计收益</p>
+                        </div>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="weui-flex" style="padding:0.2667rem 0;">
+            <div class="cont_tit">背景图案</div>
+            <div class="weui-flex__item">
+                <span class="checked_img is_check">
+                    <img src="./images/recommended/foot.png" alt="">
+                </span>
+                <span class="checked_img">
+                    <img src="./images/recommended/foot.png" alt="">
+                </span>
+                <span class="checked_img">
+                    <img src="./images/recommended/foot.png" alt="">
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="bottom_tab">
+        <span class="cancel" onclick="close_popup()">取消</span>
+        <span class="ok" onclick="onok()">确定</span>
+    </div>
+</div>
+
+<script src="../bower_components/weui/dist/lib/jquery-2.1.4.js"></script>
+<script src="../bower_components/weui/dist/lib/fastclick.js"></script>
+<script src="../bower_components/weui/dist/js/jquery-weui.js"></script>
+<script src="../bower_components/flexible/flexible.js"></script>
+
+<script>
+    $(function() {
+        FastClick.attach(document.body);
+    });
+</script>
+
+<script type="text/javascript">
+
+    // 打开弹窗
+    function set(){
+        $(".mask").css('display','block');
+        $(".popup_set").addClass('main').css('display','block');
+    }
+    set();
+    function onok(){
+        // 执行操作..
+
+
+        close_popup();
+    }
+    // 关闭弹窗
+    function close_popup(){
+        $(".mask").css('display','none');
+        $(".popup_set").css('display','none');
+    }
+</script>
+</body>
+</html>
