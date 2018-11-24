@@ -2360,6 +2360,9 @@ li{
     border-right:1px solid #d9d9d9;
     border-top:1px solid #d9d9d9;
 }
+.cdxq_cont td.red_color{
+    color:#ff0000;
+}
 /* 方案详情 */
 .pro_content .top .weui-flex__item i{
     display: inline-block;
@@ -2367,4 +2370,14 @@ li{
 }
 .pro_content_details .cont_li .win{
     color:#ff0000;
+}
+.pro_content_details .cha_detail{
+    padding:10px;
+    border-top:1px solid #d9d9d9;
+}
+.pro_content_details .cha_detail .font_bule{
+    color:#03a9f4;
+}
+.pro_content_details .cha_detail .font_bule i:before {
+    border-color:#03a9f4;
 }
