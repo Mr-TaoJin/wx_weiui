@@ -1,0 +1,54 @@
+body,h1,h2,h3,h4,h5,h5,p,ul,ol,dl,dd,pre{
+    margin:0;
+    padding:0;
+}
+img{vertical-align:bottom;}
+i{font-style: inherit;}
+em{font-style: inherit;}
+body{
+    font:14px "微软雅黑",Arial,Helvetica,sans-serif;
+    color:#666;
+    background-color:#ffffff;
+}
+a{color:#808080;text-decoration:none;}
+a:hover{color:#333;}
+li{list-style:none;}
+/*重定义样式*/
+.weui-mask.weui-mask--visible {opacity: 0.4;}
+.tabbar-bg a .weui-tabbar__label{color:#fff;}
+.weui-cell .weui-vcode-btn{color:#00bfff;}
+.weui-cells .weui-cell .weui-input{color:#ccc;font-size: 16px;}
+.weui-cells .weui-cell input::-webkit-input-placeholder{color:#ccc;font-size: 16px;}
+.weui-cells .weui-cell input::-moz-placeholder{   /* Mozilla Firefox 19+ */color:#ccc;font-size: 16px;}
+.weui-cells .weui-cell input:-moz-placeholder{    /* Mozilla Firefox 4 to 18 */color:#ccc;font-size: 16px;}
+.weui-cells .weui-cell input:-ms-input-placeholder{  /* Internet Explorer 10-11 */color:#ccc;font-size: 16px;}
+.weui-cell:before{border-top:0;}
+.weui-cell {border-top:1px solid #e5e5e5;}
+.weui-dialog__bd_zdy {padding: 0 0 .8em;min-height: 20px;font-size: 0.4rem;line-height: 1.3;word-wrap: break-word;word-break: break-all;color: #999;}
+.weui-dialog.weui-dialog--visible{border-radius: 10px;}
+/* 公用样式 */
+.text_center{text-align:center;}
+.text_left{text-align:left;}
+.text_right{text-align:right;}
+.clear_float:after{content:"";display:block;clear:both;}
+.clear_height{content:"";display:table;}
+.bg_fff{background:#fff;}
+.icon_right{/*向右图标*/float:right;}
+.icon_right::before{
+    content: " ";
+    display: inline-block;
+    height: 6px;
+    width: 6px;
+    border-width: 2px 2px 0 0;
+    border-color: #c8c8cd;
+    border-style: solid;
+    -webkit-transform: matrix(.71,.71,-.71,.71,0,0);
+    transform: matrix(.71,.71,-.71,.71,0,0);
+}
+.page{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color:#ddd;
+    font-size:0.3733rem;
+}
