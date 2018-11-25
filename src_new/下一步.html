@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <title>下一步</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="description">
+
+    <link rel="stylesheet" href="../bower_components/weui/dist/lib/weui.min.css">
+    <link rel="stylesheet" href="../bower_components/weui/dist/css/jquery-weui.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+<div class="page">
+    <div class="weui-flex bg_fff next_step_top font_16 font_black font_bold">
+        <div class="weui-flex__item">
+            <span>方案金额</span>
+        </div>
+        <div class="weui-flex__item text_right">
+            <span>100.00元</span>
+        </div>
+    </div>
+
+    <div class="weui-flex bg_fff next_step_content">
+        <div class="logo text_center">
+            <img src="./images/pic.png" alt="">
+        </div>
+        <div class="weui-flex__item">
+            <p class="font_black font_16">生成方案图片</p>
+            <p>发送方案图片到店主 <em class="dz">丁久旭</em> 的微信并转账</p>
+        </div>
+        <div class="weui-cells_checkbox">
+            <label class="weui-check__label">
+                <div class="weui-cell__hd">
+                    <input type="checkbox" class="weui-check" checked>
+                    <i class="weui-icon-checked"></i>
+                </div>
+            </label>
+        </div>
+    </div>
+    <div class="weui-flex bg_fff next_step_content">
+        <div class="logo text_center">
+            <img src="./images/money.png" alt="">
+        </div>
+        <div class="weui-flex__item">
+            <p class="font_black font_16">店内余额支付</p>
+            <p>店内余额: 600.65元  <em class="dz">预存</em></p>
+        </div>
+        <div class="weui-cells_checkbox">
+            <label class="weui-check__label">
+                <div class="weui-cell__hd">
+                    <input type="checkbox" class="weui-check" checked>
+                    <i class="weui-icon-checked"></i>
+                </div>
+            </label>
+        </div>
+    </div>
+
+    <div class="footer_btn next_step_fot text_center bg_fff font_18">
+        <span>生成方案图片</span>
+    </div>
+</div>
+<script src="../bower_components/weui/dist/lib/jquery-2.1.4.js"></script>
+<script src="../bower_components/weui/dist/lib/fastclick.js"></script>
+<script src="../bower_components/weui/dist/js/jquery-weui.js"></script>
+<script src="../bower_components/flexible/flexible.js"></script>
+
+<script>
+    $(function() {
+        FastClick.attach(document.body);
+    });
+</script>
+
+<script type="text/javascript">
+
+</script>
+</body>
+</html>
