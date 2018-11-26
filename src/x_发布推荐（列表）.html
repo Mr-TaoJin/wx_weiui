@@ -72,7 +72,7 @@
 
 <!-- 自定义弹窗 -->
 <div class="mask"></div>
-<div class="popup_fb" >
+<div class="popup_set popup_fb">
     <p class="title">方案信息</p>
     <div class="weui-flex cont">
         <div class="left_text">方案名称</div>
@@ -92,11 +92,12 @@
         <div class="left_text">推荐属性</div>
         <div class="weui-flex__item">混合投注</div>
     </div>
-    <div class="weui-flex">
-        <div class="weui-flex__item" style="border-right:0.0267rem solid #d9d9d9;"><button class="cancel" onclick="close_popup()">取消</button></div>
-        <div class="weui-flex__item"><button class="ok" onclick="onok()">确定</button></div>
+    <div class="bottom_tab">
+        <span class="cancel" onclick="close_popup()">取消</span>
+        <span class="ok" onclick="onok()">确定</span>
     </div>
 </div>
+
 <script src="../bower_components/weui/dist/lib/jquery-2.1.4.js"></script>
 <script src="../bower_components/weui/dist/lib/fastclick.js"></script>
 <script src="../bower_components/weui/dist/js/jquery-weui.js"></script>
@@ -127,7 +128,7 @@
      // 打开弹窗
      function cddw(){
         $(".mask").css('display','block');
-        $(".popup_fb").addClass('main').css('display','block');
+        $(".popup_set").addClass('main').css('display','block');
     }
     function onok(){
         // 执行操作..
@@ -138,7 +139,7 @@
     // 关闭弹窗
     function close_popup(){
         $(".mask").css('display','none');
-        $(".popup_fb").css('display','none');
+        $(".popup_set").css('display','none');
     }
     
 </script>

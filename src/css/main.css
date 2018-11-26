@@ -1439,18 +1439,20 @@ li{
 }
 
 /* ==================================彩店助手2.1样式========================= */
+body{
+    background-color:#F2F2F2 ;
+}
 /* 重置weiui样式 */
 .weui-dialog.weui-dialog--visible{
     border-radius: 10px;
 }
 .page_two{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color:#ddd;
+    /* position: absolute; */
+    /* width: 100%;
+    height: 100%; */
+    /* background-color:#F2F2F2 ; */
     font-size:0.3733rem;
 }
-
 /* 发布推荐 */
 .release_rec{
     padding:0.5333rem;
@@ -1640,10 +1642,10 @@ li{
     height: 100%;
     overflow:hidden;
     z-index:100;
-    display:none;
+    /* display:none; */
     background: rgba(0, 0, 0, 0.3);
 }
-.popup_fb{
+/* .popup_fb{
     width:80%;
     height:7rem;
     position:absolute;
@@ -1658,8 +1660,8 @@ li{
     padding:0.4rem 0.2133rem 0;
     border-radius:0.4rem;
     font-size:0.4533rem;
-}
-@keyframes zoomIn {
+} */
+/* @keyframes zoomIn {
     from {
         opacity: 0;
         transform: scale3d(0.3, 0.3, 0.3);
@@ -1667,40 +1669,40 @@ li{
     50% {
         opacity: 1;
     }
-}
-.popup_fb.main {
+} */
+/* .popup_fb.main {
     animation: zoomIn 0.3s;
     display: flex;
     flex-wrap: wrap;
     opacity: 1;
-}
-.popup_fb .title{
+} */
+/* .popup_fb .title{
     font-size:0.48rem;
     font-weight: bold; 
     text-align: center;
     padding-bottom:0.2667rem;
-}
+} */
 .popup_fb .cont{
     padding:0.2667rem 0.2133rem;
-    border-bottom:0.0267rem solid #d9d9d9;
+    /* border-bottom:0.0267rem solid #d9d9d9; */
     color:#000;
 }
 .popup_fb .left_text{
     padding-right:8px;
 }
-.popup_fb button{
+/* .popup_fb button{
     width: 100%;
     height: 1.3334rem;
     border: 0;
     background: #fff;
     font-size:0.5333rem;
-}
-.popup_fb button.cancel{
+} */
+/* .popup_fb button.cancel{
     border-right:0.0267rem solid #d9d9d9;
 }
 .popup_fb button.ok{
     color:#3cc51f;
-}
+} */
 /* 发布今日推荐（足球） */
 .icon_top{/*向上图标*/
     float:right;
@@ -2100,6 +2102,7 @@ li{
     background:#fff;
     border-radius:0.4rem;
     box-sizing: border-box;
+    display: none;
 }
 @keyframes zoomIn2 {
     from {
@@ -2192,13 +2195,19 @@ li{
 }
 .popup_set .content .weui-check__label{
     position: relative;
-    padding-right:1.0667rem;
+    padding-right:0.8rem;
 }
 .popup_set .content .weui-check__label .day{
-    font-size: 0.48rem;
+    font-size: 0.3733rem;
     position: absolute;
-    top:-0.32rem;
+    top:-0.2667rem;
     width: 1.3333rem;
+}
+.popup_set .weui-cells_checkbox .weui-cell__hd{
+    padding:0;
+}
+.popup_set .weui-cells_checkbox .weui-icon-checked:before{
+    font-size:0.3733rem;
 }
 .popup_set .content img{
     width: 1.3333rem;
@@ -2249,13 +2258,19 @@ li{
     width: 96%;
     border-spacing: 0;
     margin: auto;
-    border-radius: 0.1333rem;
+    border-radius: 0.2667rem;
 }
 .hb_canvas table th{
     color:#fff;
     background: #ff0000;
     border:0;
     padding:0.08rem 0;
+}
+.hb_canvas table thead tr th:first-child{
+    border-top-left-radius: 0.2667rem;
+}
+.hb_canvas table thead tr th:last-child{
+    border-top-right-radius: 0.2667rem;
 }
 .hb_canvas table td{
     padding:0.1333rem 0;
