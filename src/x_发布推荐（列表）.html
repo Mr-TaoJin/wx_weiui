@@ -10,6 +10,17 @@
     <link rel="stylesheet" href="../bower_components/weui/dist/lib/weui.min.css">
     <link rel="stylesheet" href="../bower_components/weui/dist/css/jquery-weui.css">
     <link rel="stylesheet" href="./css/main.css">
+
+    <style>
+        .content_fa .cont{
+            padding:0.2667rem 0.2133rem;
+            /* border-bottom:0.0267rem solid #d9d9d9; */
+            color:#000;
+        }
+        .content_fa .left_text{
+    padding-right:8px;
+}
+    </style>
 </head>
 <body>
 <div class="page_two">
@@ -72,25 +83,27 @@
 
 <!-- 自定义弹窗 -->
 <div class="mask"></div>
-<div class="popup_set popup_fb">
+<div class="popup_set">
     <p class="title">方案信息</p>
-    <div class="weui-flex cont">
-        <div class="left_text">方案名称</div>
-        <div class="weui-flex__item">
-            <input class="weui-input" type="text" placeholder="测试推荐1号单">
-        </div>
-    </div>
-    <div class="weui-flex cont">
-        <div class="left_text">玩法类型</div>
-        <div class="weui-flex__item">竞彩足球</div>
-    </div>
-    <div class="weui-flex cont">
-        <div class="left_text">推荐类型</div>
-        <div class="weui-flex__item">2X1</div>
-    </div>
-    <div class="weui-flex cont">
-        <div class="left_text">推荐属性</div>
-        <div class="weui-flex__item">混合投注</div>
+    <div class="content_fa">
+            <div class="weui-flex cont">
+                <div class="left_text">方案名称</div>
+                <div class="weui-flex__item">
+                    <input class="weui-input" type="text" placeholder="测试推荐1号单">
+                </div>
+            </div>
+            <div class="weui-flex cont">
+                <div class="left_text">玩法类型</div>
+                <div class="weui-flex__item">竞彩足球</div>
+            </div>
+            <div class="weui-flex cont">
+                <div class="left_text">推荐类型</div>
+                <div class="weui-flex__item">2X1</div>
+            </div>
+            <div class="weui-flex cont">
+                <div class="left_text">推荐属性</div>
+                <div class="weui-flex__item">混合投注</div>
+            </div>
     </div>
     <div class="bottom_tab">
         <span class="cancel" onclick="close_popup()">取消</span>
@@ -130,10 +143,9 @@
         $(".mask").css('display','block');
         $(".popup_set").addClass('main').css('display','block');
     }
+    cddw();
     function onok(){
         // 执行操作..
-
-
         close_popup();
     }
     // 关闭弹窗
