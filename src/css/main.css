@@ -2193,7 +2193,7 @@ body{
     font-size: 0.4267rem;
     padding-right: 0.2133rem;
 }
-.popup_set .content .weui-check__label{
+/* .popup_set .content .weui-check__label{
     position: relative;
     padding-right:0.8rem;
 }
@@ -2205,10 +2205,10 @@ body{
 }
 .popup_set .weui-cells_checkbox .weui-cell__hd{
     padding:0;
-}
+}*/
 .popup_set .weui-cells_checkbox .weui-icon-checked:before{
-    font-size:0.3733rem;
-}
+    font-size:0.48rem;
+} 
 .popup_set .content img{
     width: 1.3333rem;
 }
