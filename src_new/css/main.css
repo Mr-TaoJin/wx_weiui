@@ -494,10 +494,18 @@ table td{border-right:0.0267rem solid #d9d9d9;border-top:0.0267rem solid #d9d9d9
     font-size:0.48rem;
 }
 .detail_cont_font_cont .multiple em:nth-child(2){
-    width: 1.0667rem;
     border-left:0.0267rem solid #d9d9d9;
     border-right:0.0267rem solid #d9d9d9;
+    padding:0.2667rem 0;
 }
+.detail_cont_font_cont .multiple em:nth-child(2) input{
+    display: inline-block;
+    text-align: center;
+    width: 50px;
+    height: 100%;
+    border:0;
+}
+input:focus{outline:none;}
 .betting_content{
     border-top:0.0267rem solid #d9d9d9;
     padding:0.1333rem;
