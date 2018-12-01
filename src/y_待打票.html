@@ -55,32 +55,83 @@
     </div>
 </div>
 
-
+<!-- 修改重定义样式 -->
+<style>
+    .content_scroll{
+        height: 200px;
+        overflow-y:auto;
+    }
+    .cont_auto{
+        display: inline-block;
+        width: 32%;
+        margin-bottom:3px;
+    }
+    .popup_set .content input[type="text"].input_ret{
+        width: 50%;
+        padding:0;
+    }
+    .popup_set .content .name_s{
+        padding-right:0.2667rem;
+        font-weight: bold;
+    }
+</style>
 <!-- 自定义弹窗 -->
 <div class="mask"></div>
 <div class="popup_set" >
     <div class="title" style="border-bottom:1px solid #ddd">确认打票</div>
-    <div class="content">
-        <div class="weui-flex" style="padding:0.2667rem 0;">
-            <div class="weui-flex__item text_left">周三001</div>
-            <div class="weui-flex__item text_right">皇马 vs 利物浦</div>
+    <div class="content content_scroll">
+        <div>
+            <div class="weui-flex" style="padding:0.2667rem 0;">
+                <div class="weui-flex__item text_left">周三001</div>
+                <div class="weui-flex__item text_right">皇马 vs 利物浦</div>
+            </div>
+            <div style="padding:0.2667rem 0;border-bottom:1px solid #ddd;">
+                <div class="cont_auto text_center"><span class="name_s">胜</span><input type="text" class="input_ret"></div>
+                <div class="cont_auto text_center"><span class="name_s">平</span><input type="text" class="input_ret"></div>
+                <div class="cont_auto text_center"><span class="name_s">负</span><input type="text" class="input_ret"></div>
+                <div class="cont_auto text_center"><span class="name_s">负</span><input type="text" class="input_ret"></div>
+                <div class="cont_auto text_center"><span class="name_s">负</span><input type="text" class="input_ret"></div>
+            </div>
         </div>
-        <div class="weui-flex text_center" style="padding:0.2667rem 0;border-bottom:1px solid #ddd;">
-            <div class="weui-flex__item "><span class="name_s">胜</span><input type="text" class="input_ret"></div>
-            <div class="weui-flex__item "><span class="name_s">平</span><input type="text" class="input_ret"></div>
-            <div class="weui-flex__item "><span class="name_s">负</span><input type="text" class="input_ret"></div>
-        </div>
-        <div class="weui-flex" style="padding:0.2667rem 0;">
-            <div class="weui-flex__item text_left">周三001</div>
-            <div class="weui-flex__item text_right">皇马（-2） vs 利物浦</div>
-        </div>
-        <div class="weui-flex text_center" style="padding:0.2667rem 0;">
-            <div class="weui-flex__item "><span class="name_s">让胜</span><input type="text" class="input_ret"></div>
-            <div class="weui-flex__item "></div>
-            <div class="weui-flex__item "></div>
-        </div>
-        <p><i class="weui-icon-warn" style="color:#000;font-size:0.48rem;margin-bottom:5px;"></i>如过出现变赔，请在上面修改赔率</p>
+        <div>
+                <div class="weui-flex" style="padding:0.2667rem 0;">
+                    <div class="weui-flex__item text_left">周三001</div>
+                    <div class="weui-flex__item text_right">皇马 vs 利物浦</div>
+                </div>
+                <div style="padding:0.2667rem 0;border-bottom:1px solid #ddd;">
+                    <div class="cont_auto text_center"><span class="name_s">胜</span><input type="text" class="input_ret"></div>
+                    <div class="cont_auto text_center"><span class="name_s">平</span><input type="text" class="input_ret"></div>
+                    <div class="cont_auto text_center"><span class="name_s">负</span><input type="text" class="input_ret"></div>
+                    <div class="cont_auto text_center"><span class="name_s">负</span><input type="text" class="input_ret"></div>
+                </div>
+            </div>
+            <div>
+                    <div class="weui-flex" style="padding:0.2667rem 0;">
+                        <div class="weui-flex__item text_left">周三001</div>
+                        <div class="weui-flex__item text_right">皇马 vs 利物浦</div>
+                    </div>
+                    <div style="padding:0.2667rem 0;border-bottom:1px solid #ddd;">
+                        <div class="cont_auto text_center"><span class="name_s">胜</span><input type="text" class="input_ret"></div>
+                        <div class="cont_auto text_center"><span class="name_s">平</span><input type="text" class="input_ret"></div>
+                        <div class="cont_auto text_center"><span class="name_s">负</span><input type="text" class="input_ret"></div>
+                        <div class="cont_auto text_center"><span class="name_s">负</span><input type="text" class="input_ret"></div>
+                    </div>
+                </div>
+                <div>
+                        <div class="weui-flex" style="padding:0.2667rem 0;">
+                            <div class="weui-flex__item text_left">周三001</div>
+                            <div class="weui-flex__item text_right">皇马 vs 利物浦</div>
+                        </div>
+                        <div style="padding:0.2667rem 0;border-bottom:1px solid #ddd;">
+                            <div class="cont_auto text_center"><span class="name_s">胜</span><input type="text" class="input_ret"></div>
+                            <div class="cont_auto text_center"><span class="name_s">平</span><input type="text" class="input_ret"></div>
+                            <div class="cont_auto text_center"><span class="name_s">负</span><input type="text" class="input_ret"></div>
+                            <div class="cont_auto text_center"><span class="name_s">负</span><input type="text" class="input_ret"></div>
+                        </div>
+                    </div>
+        
     </div>
+    <p><i class="weui-icon-warn" style="color:#000;font-size:0.48rem;margin:5px 0;"></i>如过出现变赔，请在上面修改赔率</p>
     <div class="bottom_tab">
         <span class="cancel" onclick="close_popup()">取消</span>
         <span class="ok" onclick="onok()">确定</span>
