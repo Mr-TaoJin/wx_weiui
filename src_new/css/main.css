@@ -530,9 +530,16 @@ table td{border-right:0.0267rem solid #d9d9d9;border-top:0.0267rem solid #d9d9d9
     padding:0.16rem 0.2667rem;
 }
 .add_and_reduce .add_detail em.num{
-    border:0.0267rem solid #d9d9d9;
     border-radius: 0.1333rem;
-    padding:0.16rem 0.5333rem;
+    padding:0;
+}
+.add_and_reduce .add_detail em.num input[type="text"]{
+    width: 1.3333rem;
+    border:0;
+    height: 0.64rem;
+    border-radius: 0.1333rem;
+    border:0.0267rem solid #d9d9d9;
+    text-align:center;
 }
 .bonus_optimization_btn{
     padding:0.48rem 0;
@@ -548,6 +555,7 @@ table td{border-right:0.0267rem solid #d9d9d9;border-top:0.0267rem solid #d9d9d9
 }
 .bonus_optimization_table{
     width: 100%;
+  margin-bottom:100px;
 }
 .bonus_optimization_table td{
     padding:0.08rem 0;
