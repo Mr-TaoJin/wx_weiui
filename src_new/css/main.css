@@ -54,7 +54,7 @@ button:focus{outline:none;}
 .font_red{color:#ff0000}
 .font_fff{color:#ffffff}
 .font_blue{color:#03a9f4}
-.footer_btn{position: fixed;bottom:0;left:0;width: 100%;}
+.footer_btn{position: fixed;bottom:0;left:0;width: 100%;z-index:100}
 .main{
     width: 96%;
     background: #fff;
@@ -474,9 +474,6 @@ button:focus{outline:none;}
     font-size:0.4267rem;
     border-radius: 0.1333rem;
 }
-.detail_cont_font_cont .detail_left{
-    
-}
 .detail_cont_font_cont .fs{
     width: 3.4667rem;
     border-right:0.0267rem solid #d9d9d9;
@@ -513,14 +510,18 @@ button:focus{outline:none;}
 .betting_content{
     border-top:0.0267rem solid #d9d9d9;
     padding:0.1333rem;
+    height: 200px;
+    overflow-y:auto;
 }
 .betting_content ul.content li{
     display: inline-block;
+    width: 23%;
+    box-sizing: border-box;
     border:0.0267rem solid #d9d9d9;
-    padding:0.2667rem 0.8rem;;
-    margin-top:0.1333rem;
+    padding:0.2667rem 0;
+    margin:0.1333rem 0 0 1%;
     border-radius: 0.2133rem;
-    
+    text-align: center;
 }
 .betting_content ul.content li.check{
     background-color: #FF9933;
@@ -694,4 +695,88 @@ button:focus{outline:none;}
     text-align: center;
     color:#fff;
     font-size: 0.4267rem;
+}
+/* 拆单详情 */
+.ddp_content_top{
+    padding:0.2133rem 0.2667rem;
+}
+.ddp_content{
+    margin-top:0.2667rem;
+    border-bottom:1px solid #d9d9d9;
+}
+.ddp_content .top,
+.ddp_content .mid{
+    padding:0.1333rem 0.2667rem;
+}
+.ddp_content .money{
+    color:#FF9900;
+}
+.ddp_content .mid{
+    background: #f2f2f2;
+}
+.ddp_content .win{
+    font-size:0.4267rem;
+    font-weight: bold;
+    padding:0.2667rem 0;
+    text-align: center;
+}
+.cdxq_cont{
+    margin:0 0 0.5333rem 0;
+}
+.cdxq_cont table{
+    width: 100%;
+    border-spacing: 0;
+}
+.cdxq_cont table td{
+    text-align: center;
+    padding:0.1333rem 0;
+    border-right:0.0267rem solid #d9d9d9;
+    border-top:0.0267rem solid #d9d9d9;
+}
+.cdxq_cont table tr:nth-child(even){
+    background: #f2f2f2;
+}
+.cdxq_cont table tr:last-child td{
+    border-bottom:0.0267rem solid #d9d9d9;
+}
+.cdxq_cont td.red_color{
+    color:#ff0000;
+}
+.cdxq_cont .just_content{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.cdxq_cont .cont_s{
+    display: inline-block;
+    width:2.6667rem;
+    padding:0.08rem 0;
+}
+/* 店长推荐 */
+.ck_tj_con .tit_t{
+    margin-top:10px;
+    padding:0.2133rem 0.2667rem;
+    border-bottom:1px solid #d9d9d9;
+}
+.ck_tj_con .tit_t .dh{
+    font-size: 0.4267rem;
+    color:#000;
+    font-weight: bold;
+}
+.ck_tj_con .tit_t .fa{
+    float: right;
+}
+.ck_tj_con table{
+    border-spacing: 0;
+    width: 100%;
+}
+.ck_tj_con table th{
+    background: #666;
+    color:#fff;
+}
+.ck_tj_con table td{
+    padding:8px 0;
+}
+.ck_tj_con table tr td:last-child{
+    border:0;
 }
