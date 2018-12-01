@@ -10,18 +10,71 @@
     <link rel="stylesheet" href="../bower_components/weui/dist/lib/weui.min.css">
     <link rel="stylesheet" href="../bower_components/weui/dist/css/jquery-weui.css">
     <link rel="stylesheet" href="./css/main.css">
+
+    <!-- 新改样式 -->
+    <style>
+        .new_style_tit_top{
+            padding-top:0.2667rem;
+            margin-bottom:0.2667rem;
+            background: url("./images/1.png") no-repeat top left;
+            background-size:100%; 
+            color:#fff;
+            height: 100px;
+        }
+        .new_style_tit_top .images_s{
+            width: 2.6667rem;
+            text-align: center;
+        }
+        .new_style_tit_top .images_s img{
+            border-radius: 50%;
+        }
+        
+        .hb_canvas .tit_bot_new{
+            background: url("./images/2.png") no-repeat top left;
+            background-size:100%; 
+            padding:0.5333rem 0.5334rem ;
+            height: 100px;
+            color:#fff;
+        }
+        .hb_canvas .tit_bot_new .weui-flex__item p{
+            font-size: 0.5867rem;
+            font-weight: bold;
+            color:#000;
+            padding:0.1333rem 0;
+        }
+    </style>
 </head>
 <body>
 <div class="page_two">
     <div class="hb_canvas">
-        <div class="tit_top bg_fff">
-            <p>大楚1号推荐</p>
-            <p>大楚彩店 4201015154</p>
-            <img src="./images/ewm.png" alt="">
+        <div class="weui-flex new_style_tit_top">
+            <div class="images_s">
+                <img src="./images/ewm.png" alt="">
+            </div>
+            <div class="weui-flex__item">
+                <p style="font-size:30px;">大楚1号推荐</p>
+                <p style="padding:3px 0;font-size: 18px;">大楚彩店</p>
+            </div>
         </div>
         <table class="text_center bg_fff">
             <thead>
-                <tr>
+                <tr class="red_bg">
+                    <th>日期</th>
+                    <th>推荐方案</th>
+                    <th>百元<br>奖金</th>
+                    <th>命中<br>情况</th>
+                </tr>
+            </thead>
+            <thead>
+                <tr class="zs_bg">
+                    <th>日期</th>
+                    <th>推荐方案</th>
+                    <th>百元<br>奖金</th>
+                    <th>命中<br>情况</th>
+                </tr>
+            </thead>
+            <thead>
+                <tr class="hs_bg">
                     <th>日期</th>
                     <th>推荐方案</th>
                     <th>百元<br>奖金</th>
@@ -35,7 +88,7 @@
                     <td>256.56</td>
                     <td>1</td>
                 </tr>
-                <tr class="win">
+                <tr class="zs_bg">
                     <td>11-01</td>
                     <td>001 让胜平，002胜</td>
                     <td>256.56</td>
@@ -47,7 +100,7 @@
                         <td>256.56</td>
                         <td>1</td>
                     </tr>
-                    <tr class="win">
+                    <tr class="hs_bg">
                         <td>11-01</td>
                         <td>001 让胜平，002胜</td>
                         <td>256.56</td>
@@ -121,7 +174,7 @@
                 </tr>
             </tbody>
         </table>
-        <div class="weui-flex tit_bot bg_fff">
+        <div class="weui-flex tit_bot_new">
             <div class="weui-flex__item">
                 <p>实际奖金以出票为准</p>
                 <p>截止时间11-07 23:55</p>
@@ -243,7 +296,7 @@
         $(".mask").css('display','block');
         $(".popup_set").addClass('main').css('display','block');
     }
-    set();
+    // set();
     function onok(){
         // 执行操作..
 

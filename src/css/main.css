@@ -2223,8 +2223,8 @@ body{
 }
 /* 生成分享设置 */
 .hb_canvas{
-    background: url('../images/bg.jpg') no-repeat 100% 100%;
-    padding:0.2667rem 0;
+    /* background: url('../images/bg.jpg') no-repeat 100% 100%; */
+    padding:0 0 0.2667rem 0;
     margin-bottom: 60px;
 }
 .hb_canvas .tit_top{
@@ -2261,10 +2261,20 @@ body{
     border-radius: 0.2667rem;
 }
 .hb_canvas table th{
-    color:#fff;
-    background: #ff0000;
     border:0;
     padding:0.08rem 0;
+}
+.hb_canvas table tr.red_bg th{
+    background: #ff0000;
+    color:#fff;
+}
+.hb_canvas table tr.zs_bg th{
+    background: #9b41ff;
+    color:#fff;
+}
+.hb_canvas table tr.hs_bg th{
+    background: #ff9900;
+    color:#fff;
 }
 .hb_canvas table thead tr th:first-child{
     border-top-left-radius: 0.2667rem;
@@ -2280,6 +2290,14 @@ body{
 .hb_canvas table .win td{
     color:#fff;
     background: #ff0000;
+}
+.hb_canvas table .zs_bg td{
+    color:#fff;
+    background: #9b41ff;
+}
+.hb_canvas table .hs_bg td{
+    color:#fff;
+    background: #ff9900;
 }
 .hb_canvas table .now td{
     padding:0.2667rem 0;
