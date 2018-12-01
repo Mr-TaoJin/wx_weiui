@@ -780,3 +780,67 @@ button:focus{outline:none;}
 .ck_tj_con table tr td:last-child{
     border:0;
 }
+/* 查看推荐 */
+.wait_head{
+    padding:0.2667rem;
+}
+.wait_head .name,
+.wait_head .order_num{
+    display: inline-block;
+    width: 49%;
+    font-size:0.4267rem;
+}
+.wait_head .name{
+    
+    font-weight: bold;
+}
+.wait_head .order_num{
+    text-align: right;
+}
+.dev_recommend{
+    margin:0.2667rem auto 0;
+}
+.dev_recommend table{
+    width: 100%;
+    font-size:0.32rem;
+    border-spacing: 0;
+    border-radius: 10px;
+}
+.dev_recommend table thead{
+    background:#666;
+    color:#fff;
+} 
+.dev_recommend table thead tr th{
+    font-weight: 100;
+    padding:0.1333rem;
+}
+.dev_recommend table tbody tr td{
+    color:#000;
+    height: 1.12rem;
+}
+.dev_recommend table tbody tr td:last-child{
+    border-right:0;
+}
+.dev_recommend table tbody tr:nth-child(even) td{
+    background: #f2f2f2;
+}
+.dev_recommend tbody tr td p{
+    padding:0.0533rem 0;
+}
+.dev_recommend .border_line{
+    border-bottom:0.0267rem solid #d9d9d9;
+}
+.dev_recommend table tbody tr.win td{
+    color:#ff0000;
+}
+.dev_recommend table tbody tr.wait td{
+    color:#000;
+    font-weight: bold;
+}
+.dev_recommend_fot p{
+    padding:0.4rem;
+    background: #FF9900;
+    text-align: center;
+    color:#fff;
+    font-size: 0.4267rem;
+}
