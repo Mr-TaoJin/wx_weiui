@@ -10,6 +10,41 @@
     <link rel="stylesheet" href="../bower_components/weui/dist/lib/weui.min.css">
     <link rel="stylesheet" href="../bower_components/weui/dist/css/jquery-weui.css">
     <link rel="stylesheet" href="./css/main.css">
+    <style>
+        .detail_cont_content .team_det .xg_flex{
+            height: 60px; 
+            align-items: center;
+        }
+        .detail_cont_content .team_det .xg_flex .xg_type{
+            background: #FF9900; 
+            color:#fff;
+            height: 60px;
+            font-size:0.32rem;
+            line-height: 0.3467rem;
+            width: 0.5333rem;
+            word-break:break-all;
+            display: -webkit-box;
+            -webkit-box-orient: horizontal;
+            -webkit-box-pack: center;
+            -webkit-box-align: center;
+            
+            display: -moz-box;
+            -moz-box-orient: horizontal;
+            -moz-box-pack: center;
+            -moz-box-align: center;
+            
+            display: -o-box;
+            -o-box-orient: horizontal;
+            -o-box-pack: center;
+            -o-box-align: center;
+            
+            display: -ms-box;
+            -ms-box-orient: horizontal;
+            -ms-box-pack: center;
+            -ms-box-align: center;
+            
+        }
+    </style>
 </head>
 <body>
 <div class="page">
@@ -33,8 +68,11 @@
             <div class="team_det">
                 <ul>
                     <li>
-                        <span class="type text_center">非让球</span>
-                        <span class="ret text_center font_bold">胜1.75</span>
+                        <div class="weui-flex xg_flex text_center">
+                            <!-- 带-号时最好<br> -->
+                            <div class="xg_type">主+1</div>
+                            <div class="weui-flex__item font_bold">胜1.75</div>
+                        </div>
                     </li>
                 </ul>
             </div>

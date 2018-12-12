@@ -96,9 +96,21 @@ button:focus{outline:none;}
     margin-left:0.2133rem;
 }
 .index_card .bottom{
-    padding:0.2667rem 0.1333rem;
+    padding:10px 4.9988px 0;
+    display: -webkit-box; /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
+    display: -moz-box; /* 老版本语法: Firefox (buggy) */
+    display: -ms-flexbox; /* 混合版本语法: IE 10 */
+    display: -webkit-flex; /* 新版本语法: Chrome 21+ */
+    display: flex; /* 新版本语法: Opera 12.1, Firefox 22+ */
+    -webkit-box-align: center;
+    -moz-align-items: center;
+    -webkit-align-items: center;
+    align-items: center;
 }
-.dowebok { display: inline-block;width: 8rem; height:0.48rem; overflow:hidden;}
+.index_card .bottom img{
+    width: 0.8rem;
+}
+.dowebok { display: inline-block;width: 8rem; height:0.8rem; overflow:hidden;}
 .dowebok ul { margin: 0; line-height: 0.48rem;}
 .index_tj .tit{
     box-sizing: border-box;
@@ -161,9 +173,18 @@ button:focus{outline:none;}
 .index_tj .zmm{
     padding-top:3px;
 }
-.index_footer .weui-flex__item{
-    padding:0.4rem 0;
-}
+.index_footer{ border-top:1px solid #ddd;background-color:#fff;}
+.index_footer .weui-flex__item{padding:0.2133rem 0;}
+.index_footer .checked{color:#f90;}
+.index_footer .weui-flex__item i{display: inline-block;width: 0.9333rem;height: 0.9333rem;}
+.index_footer .home_icon{background-image: url('../images/index/home.png');background-repeat:no-repeat;background-size:100% 100%;}
+.index_footer .dztj_icon{background-image: url('../images/index/dztj.png');background-repeat:no-repeat;background-size:100% 100%;}
+.index_footer .jh_icon{background-image: url('../images/index/jh.png');background-repeat:no-repeat;background-size:100% 100%;}
+.index_footer .center_icon{background-image: url('../images/index/center.png');background-repeat:no-repeat;background-size:100% 100%;}
+.index_footer .checked .home_icon{background-image: url('../images/index/home_z.png');background-repeat:no-repeat;background-size:100% 100%;}
+.index_footer .checked .dztj_icon{background-image: url('../images/index/dztj_z.png');background-repeat:no-repeat;background-size:100% 100%;}
+.index_footer .checked .jh_icon{background-image: url('../images/index/jh_z.png');background-repeat:no-repeat;background-size:100% 100%;}
+.index_footer .checked .center_icon{background-image: url('../images/index/center_z.png');background-repeat:no-repeat;background-size:100% 100%;}
 /* 开奖公告 */
 .lottery{
     padding: 0.2667rem  0.8rem 0.2667rem 0.2667rem;
@@ -504,9 +525,10 @@ button:focus{outline:none;}
     height: 0.8rem;
     border:0;
     position: absolute;
-    top:-0.0533rem;
+    top:0;
     left:0;
     z-index: 100;
+    opacity: 0;
 }
 .detail_cont_font_cont .multiple em:nth-child(1){
     border-right:0.0267rem solid #d9d9d9;
