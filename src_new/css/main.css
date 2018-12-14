@@ -452,10 +452,8 @@ button:focus{outline:none;}
 .detail_cont_content .team_det ul li{
     display: inline-block;
     width: 30%;
-    border:0.0267rem solid #d9d9d9;
     box-sizing: border-box;
     margin-left: 2%;
-    height: 60px;
     position: relative;
     overflow: hidden;
 }
@@ -775,6 +773,15 @@ button:focus{outline:none;}
     display:flex;
     justify-content:center;
     align-items:center;
+}
+.cdxq_cont .just_content>span:first-child{
+    display: inline-block;
+    width: 20%;
+    text-align: right;
+    padding-right:10%;
+}
+.cdxq_cont .just_content>span:last-child{
+    text-align: left;
 }
 .cdxq_cont .cont_s{
     display: inline-block;

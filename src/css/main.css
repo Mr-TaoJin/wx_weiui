@@ -2376,6 +2376,9 @@ body{
     padding:0;
 }
 .popup_set .content .name_s{
+    display: inline-block;
+    width: 30%;
+    text-align: right;
     padding-right:0.2667rem;
     font-weight: bold;
 }
