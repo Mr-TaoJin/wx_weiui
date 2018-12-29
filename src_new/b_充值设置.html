@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ch">
+
+<head>
+    <title>充值设置</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="description">
+
+    <link rel="stylesheet" href="../bower_components/weui/dist/lib/weui.min.css">
+    <link rel="stylesheet" href="../bower_components/weui/dist/css/jquery-weui.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <div class="page">
+        <div class="cz_set">
+            <p class="tit">请输入正确的收款账号，以免造成错误清账</p>
+            <div class="weui-flex bg_fff top">
+                <div class="">
+                    <img src="./images/two/wx.png" alt="">
+                </div>
+                <div class="weui-flex__item">
+                    <p class="font_black">微信号</p>
+                    <p style="margin-top:6px;">未设置</p>
+                </div>
+                <div class="">
+                    <span class="s_btn" onclick="set()">设置</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="../bower_components/weui/dist/lib/jquery-2.1.4.js"></script>
+    <script src="../bower_components/weui/dist/lib/fastclick.js"></script>
+    <script src="../bower_components/weui/dist/js/jquery-weui.js"></script>
+    <script src="../bower_components/flexible/flexible.js"></script>
+
+    <script>
+        $(function () {
+            FastClick.attach(document.body);
+        });
+    </script>
+
+    <script type="text/javascript">
+        function set() {
+            $.prompt({
+                title: '标题',
+                text: '请输入正确的微信号，设置后不可修改',
+                input: '输入框默认值',
+                empty: false, // 是否允许为空
+                onOK: function (input) {
+                    //点击确认
+                },
+                onCancel: function () {
+                    //点击取消
+                }
+            });
+        }
+    </script>
+</body>

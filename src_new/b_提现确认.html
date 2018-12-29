@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ch">
+
+<head>
+    <title>提现确认</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="description">
+
+    <link rel="stylesheet" href="../bower_components/weui/dist/lib/weui.min.css">
+    <link rel="stylesheet" href="../bower_components/weui/dist/css/jquery-weui.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <div class="page">
+        <div class="main bg_fff" style="border-radius: 10px;">
+            <div class="weui-flex setcharge_top">
+                <div><img class="img_s" src="./images/ewm.png" alt=""></div>
+                <div class="weui-flex__item">
+                    <p class="font_22 font_black font_blod" style="margin-bottom:5px;">龙眼彩服</p>
+                    <p>15007142244</p>
+                </div>
+            </div>
+        </div>
+        <div class="main bg_fff setcharge_mid" style="border-radius: 10px;">
+            <p class="font_black">提现金额</p>
+            <p class="tit">¥ 2.00</p>
+            <p class="font_black">收款微信号</p>
+            <p class="tit_copy"><em class="font_black font_bold">15007142244</em>（长按复制）</p>
+            <p class="font_black">该用户于2018-12-27 14:56:55 提现，请尽快处理</p>
+            <div class="weui-flex text_center setcharge_btn">
+                <div class="weui-flex__item">
+                    <span>驳回</span>
+                </div>
+                <div class="weui-flex__item">
+                    <span class="checked" onclick="recharge()">确定</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../bower_components/weui/dist/lib/jquery-2.1.4.js"></script>
+    <script src="../bower_components/weui/dist/lib/fastclick.js"></script>
+    <script src="../bower_components/weui/dist/js/jquery-weui.js"></script>
+    <script src="../bower_components/flexible/flexible.js"></script>
+
+    <script>
+        $(function () {
+            FastClick.attach(document.body);
+        });
+    </script>
+
+    <script type="text/javascript">
+
+        function recharge() {
+            $.confirm_zdy({//此为自定义方法，若想修改请去jquery-weui.js查看
+                title: '确认提现',
+                text: '提现金额为100元，确定提现吗？',
+                text2:'请确认已将提现金额转账给彩民',
+                onOK: function () {
+                    //点击确认
+                },
+                onCancel: function () {
+                }
+            });
+        }
+
+    </script>
+</body>

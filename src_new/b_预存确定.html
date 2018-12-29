@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ch">
+
+<head>
+    <title>预存确定</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="description">
+
+    <link rel="stylesheet" href="../bower_components/weui/dist/lib/weui.min.css">
+    <link rel="stylesheet" href="../bower_components/weui/dist/css/jquery-weui.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <div class="page bg_fff">
+        <div class="prestorage_center">
+            <div class="text_center">
+                <img class="" src="./images/two/wx_max.png" alt="">
+                <p class="ts font_18">请您确认是否完成支付</p>
+            </div>
+
+        </div>
+        <div class="weui-flex text_center prestorage_btn">
+            <div class="weui-flex__item">
+                <span>未完成支付</span>
+            </div>
+            <div class="weui-flex__item">
+                <span class="checked">已完成支付</span>
+            </div>
+        </div>
+        <p class="prestorage_tit">如果您已经支付成功，请点击【已完成支付】按钮，店主才会收到您的充值申请，如果未到账，请联系店主</p>
+        <p class="prestorage_tit">如果您没有支付，请点击【未完成支付】按钮，放弃支付</p>
+    </div>
+
+    <!-- 自定义弹窗 -->
+    <div class="mask"></div>
+    <div class="popup_set" >
+        <div class="text_center" style="padding:20px 10px 10px 10px;">
+            <p>店主已经收到您的充值请求，请稍后留意充值到账通知</p>
+        </div>
+        
+        <div class="bottom_tab">
+            <p class="font_16 text_center" style="padding:10px;" onclick="close_popup()">我知道了</p>
+        </div>
+    </div>
+    <script src="../bower_components/weui/dist/lib/jquery-2.1.4.js"></script>
+    <script src="../bower_components/weui/dist/lib/fastclick.js"></script>
+    <script src="../bower_components/weui/dist/js/jquery-weui.js"></script>
+    <script src="../bower_components/flexible/flexible.js"></script>
+
+    <script>
+        $(function () {
+            FastClick.attach(document.body);
+        });
+    </script>
+
+    <script type="text/javascript">
+        // 打开弹窗
+        function set(){
+            $(".mask").css('display','block');
+            $(".popup_set").addClass('main').css('display','block');
+        }
+        set();
+        // 关闭弹窗
+        function close_popup(){
+            $(".mask").css('display','none');
+            $(".popup_set").css('display','none');
+        }
+    </script>
+</body>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ch">
+
+<head>
+    <title>上传二维码</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="description">
+
+    <link rel="stylesheet" href="../bower_components/weui/dist/lib/weui.min.css">
+    <link rel="stylesheet" href="../bower_components/weui/dist/css/jquery-weui.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <div class="page" style="padding-bottom: 80px;">
+        <div class="main bg_fff" style="border-radius: 10px;">
+            <div class="weui-flex setcharge_top_st">
+                <div><img class="img_s" src="./images/two/wx_sm.png" alt=""></div>
+                <div class="weui-flex__item">
+                    <p>类型：<em>微信收款</em></p>
+                    <p>收款码金额：<em>2元</em></p>
+                    <p>支付备注信息：<em>2244</em></p>
+                </div>
+            </div>
+            <div class="weui-flex text_center setcharge_btn_st">
+                <div class="weui-flex__item">
+                    <span>删除</span>
+                </div>
+                <div class="weui-flex__item">
+                    <span class="checked" onclick="recharge()">修改</span>
+                </div>
+            </div>
+        </div>
+        <div class="main bg_fff" style="border-radius: 10px;">
+            <div class="weui-flex setcharge_top_st">
+                <div><img class="img_s" src="./images/two/wx_sm.png" alt=""></div>
+                <div class="weui-flex__item">
+                    <p>类型：<em>微信收款</em></p>
+                    <p>收款码金额：<em>2元</em></p>
+                    <p>支付备注信息：<em>2244</em></p>
+                </div>
+            </div>
+            <div class="weui-flex text_center setcharge_btn_st">
+                <div class="weui-flex__item">
+                    <span>删除</span>
+                </div>
+                <div class="weui-flex__item">
+                    <span class="checked" onclick="recharge()">修改</span>
+                </div>
+            </div>
+        </div>
+        <div class="main bg_fff" style="border-radius: 10px;">
+            <div class="weui-flex setcharge_top_st">
+                <div><img class="img_s" src="./images/two/wx_sm.png" alt=""></div>
+                <div class="weui-flex__item">
+                    <p>类型：<em>微信收款</em></p>
+                    <p>收款码金额：<em>2元</em></p>
+                    <p>支付备注信息：<em>2244</em></p>
+                </div>
+            </div>
+            <div class="weui-flex text_center setcharge_btn_st">
+                <div class="weui-flex__item">
+                    <span>删除</span>
+                </div>
+                <div class="weui-flex__item">
+                    <span class="checked" onclick="recharge()">修改</span>
+                </div>
+            </div>
+        </div>
+        <div class="footer_btn setcharge_btn_foot" onclick="set()">新增收款码</div>
+    </div>
+
+
+    <!-- 自定义弹窗 -->
+    <div class="mask"></div>
+    <div class="popup_set">
+        <div class="title">请输入信息</div>
+        <div class="content setcharge_pop">
+            <input type="text" placeholder="请输入收款码金额">
+            <input type="text" placeholder="请输入彩民支付时需填写的备注信息">
+            <p class="upload">
+                <span class="btn">点击上传收款码</span>
+            </p>
+        </div>
+        <div class="bottom_tab">
+            <span class="cancel" onclick="close_popup()">取消</span>
+            <span class="ok" onclick="onok()">确定</span>
+        </div>
+    </div>
+
+    <script src="../bower_components/weui/dist/lib/jquery-2.1.4.js"></script>
+    <script src="../bower_components/weui/dist/lib/fastclick.js"></script>
+    <script src="../bower_components/weui/dist/js/jquery-weui.js"></script>
+    <script src="../bower_components/flexible/flexible.js"></script>
+
+    <script>
+        $(function () {
+            FastClick.attach(document.body);
+        });
+    </script>
+
+    <script type="text/javascript">
+
+        function recharge() {
+            $.confirm_zdy({//此为自定义方法，若想修改请去jquery-weui.js查看
+                title: '确认提现',
+                text: '提现金额为100元，确定提现吗？',
+                text2: '请确认已将提现金额转账给彩民',
+                onOK: function () {
+                    //点击确认
+                },
+                onCancel: function () {
+                }
+            });
+        }
+
+        // 打开弹窗
+        function set() {
+            $(".mask").css('display', 'block');
+            $(".popup_set").addClass('main').css('display', 'block');
+        }
+        set();
+        function onok() {
+            // 执行操作..
+
+
+            close_popup();
+        }
+        // 关闭弹窗
+        function close_popup() {
+            $(".mask").css('display', 'none');
+            $(".popup_set").css('display', 'none');
+        }
+    </script>
+</body>
