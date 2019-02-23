@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ch">
+
+<head>
+    <title>选号记录</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="description">
+
+    <link rel="stylesheet" href="../bower_components/weui/dist/lib/weui.min.css">
+    <link rel="stylesheet" href="../bower_components/weui/dist/css/jquery-weui.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <div class="page">
+        <div class="weui-flex order_record_tab bg_fff text_center" style="align-items: center;">
+            <div class="weui-flex__item">
+                <span>提交方式</span>
+                <img src="./images/new_add/xia.png" alt="">
+            </div>
+            <div class="weui-flex__item">
+                <span>订单状态</span>
+                <img src="./images/new_add/xia.png" alt="">
+            </div>
+        </div>
+        <div class="bg_fff order_record_pop">
+            <ul>
+                <li class="check">全部</li>
+                <li>生成方案图片</li>
+                <li>储值卡支付</li>
+                <li class="check">已中奖</li>
+                <li>待开奖</li>
+                <li>待开奖</li>
+            </ul>
+        </div>
+        <div class="order_record_list bg_fff">
+            <div class="list">
+                <div class="weui-flex">
+                    <div class="weui-flex__item font_16 font_black">龙眼3号</div>
+                    <div class="weui-flex__item text_right">2018-11-16 20.43.11</div>
+                </div>
+                <div class="weui-flex">
+                    <div class="weui-flex__item">100.00 预存支付</div>
+                    <div class="weui-flex__item text_right">待开奖</div>
+                </div>
+            </div>
+            <div class="list">
+                <div class="weui-flex">
+                    <div class="weui-flex__item font_16 font_black">龙眼3号</div>
+                    <div class="weui-flex__item text_right">2018-11-16 20.43.11</div>
+                </div>
+                <div class="weui-flex">
+                    <div class="weui-flex__item">100.00 预存支付</div>
+                    <div class="weui-flex__item text_right">待开奖</div>
+                </div>
+            </div>
+            <div class="list">
+                <div class="weui-flex">
+                    <div class="weui-flex__item font_16 font_black">龙眼3号</div>
+                    <div class="weui-flex__item text_right">2018-11-16 20.43.11</div>
+                </div>
+                <div class="weui-flex">
+                    <div class="weui-flex__item">100.00 预存支付</div>
+                    <div class="weui-flex__item text_right">奖金: <em class="font_red">100.00</em></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 自定义弹窗 -->
+    <div class="mask"></div>
+    <div class="popup_set">
+        <div class="title">订单筛选</div>
+        <div class="content">
+            <p class="tit">下单方式</p>
+            <div class="weui-flex" style="padding:0.2667rem 0;">
+                <div class="weui-flex__item">
+                    <div class="weui-cells_checkbox">
+                        <label class="weui-check__label">
+                            <div class="weui-cell__hd">
+                                <input type="checkbox" class="weui-check" checked>
+                                <i class="weui-icon-checked"></i>
+                                <span>全部</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+                <div class="weui-flex__item">
+                    <div class="weui-cells_checkbox">
+                        <label class="weui-check__label">
+                            <div class="weui-cell__hd">
+                                <input type="checkbox" class="weui-check" checked>
+                                <i class="weui-icon-checked"></i>
+                                <span>预存支付</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="weui-flex" style="padding:0.2667rem 0;">
+                <div class="weui-flex__item">
+                    <div class="weui-cells_checkbox">
+                        <label class="weui-check__label">
+                            <div class="weui-cell__hd">
+                                <input type="checkbox" class="weui-check" checked>
+                                <i class="weui-icon-checked"></i>
+                                <span>生成图片</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <p class="tit">订单状态</p>
+            <div class="weui-flex" style="padding:0.2667rem 0;">
+                <div class="weui-flex__item">
+                    <div class="weui-cells_checkbox">
+                        <label class="weui-check__label">
+                            <div class="weui-cell__hd">
+                                <input type="checkbox" class="weui-check" checked>
+                                <i class="weui-icon-checked"></i>
+                                <span>全部</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+                <div class="weui-flex__item">
+                    <div class="weui-cells_checkbox">
+                        <label class="weui-check__label">
+                            <div class="weui-cell__hd">
+                                <input type="checkbox" class="weui-check" checked>
+                                <i class="weui-icon-checked"></i>
+                                <span>已中奖</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="weui-flex" style="padding:0.2667rem 0;">
+                <div class="weui-flex__item">
+                    <div class="weui-cells_checkbox">
+                        <label class="weui-check__label">
+                            <div class="weui-cell__hd">
+                                <input type="checkbox" class="weui-check" checked>
+                                <i class="weui-icon-checked"></i>
+                                <span>待开奖</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+                <div class="weui-flex__item">
+                    <div class="weui-cells_checkbox">
+                        <label class="weui-check__label">
+                            <div class="weui-cell__hd">
+                                <input type="checkbox" class="weui-check" checked>
+                                <i class="weui-icon-checked"></i>
+                                <span>未中奖</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom_tab">
+            <span class="cancel" onclick="close_popup()">取消</span>
+            <span class="ok" onclick="onok()">确定</span>
+        </div>
+    </div>
+
+
+
+    <script src="../bower_components/weui/dist/lib/jquery-2.1.4.js"></script>
+    <script src="../bower_components/weui/dist/lib/fastclick.js"></script>
+    <script src="../bower_components/weui/dist/js/jquery-weui.js"></script>
+    <script src="../bower_components/flexible/flexible.js"></script>
+
+    <script>
+        $(function () {
+            FastClick.attach(document.body);
+        });
+    </script>
+
+    <script type="text/javascript">
+        // 打开弹窗
+        function set() {
+            $(".mask").css('display', 'block');
+            $(".popup_set").addClass('main').css('display', 'block');
+        }
+        function onok() {
+            // 执行操作..
+
+
+            close_popup();
+        }
+        // 关闭弹窗
+        function close_popup() {
+            $(".mask").css('display', 'none');
+            $(".popup_set").css('display', 'none');
+        }
+    </script>
+</body>
+
+</html>
