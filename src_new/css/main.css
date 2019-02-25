@@ -1622,3 +1622,117 @@ button:focus{outline:none;}
     background-size: 0.5333rem;
     background-position:96% 0.2667rem ;
 }
+/* 新首页 */
+.new_index_card{
+    /* height: 100px; */
+    margin-top:0.2133rem;
+    background: url('../images/bg_3.png') no-repeat;
+}
+.new_index_card .top{
+    align-items: center;
+    padding:5px 0;
+}
+.new_index_card .top img{
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+.new_index_card .tit{
+    color:#fff;
+    font-style: italic;
+    text-align: right;
+    font-size:0.4267rem;
+    padding-right:0.2667rem;
+}
+.new_index_card .mid{
+    /* align-items: center; */
+    margin:5px 0;
+    color:#fff;
+}
+.new_index_card .mid .header{
+    width: 1.3333rem;
+    border-radius: 50%;
+    margin:0.1333rem 0.2133rem;
+}
+.new_index_card .mid .time{
+    width: 0.4267rem;
+    vertical-align: middle;
+}
+.new_index_card .mid .dm{
+    font-size: 0.64rem;
+    font-weight: bold;
+}
+.new_index_card .tel{
+    text-align: right;
+}
+.new_index_card .tel img{
+    margin-right:0.1333rem;
+    margin-top:0.6667rem;
+}
+.new_index_card .bot{
+    border-bottom: 0.2133rem;
+    background: #fff;
+    align-items: center;
+    padding:0.1333rem;
+}
+.new_index_card .bot .btn{
+    display: inline-block;
+    padding:0.08rem 0.4rem;
+    background: #0066ff;
+    color:#fff;
+    border-radius: 0.8rem;
+}
+.new_nav{
+    border-radius: 0.8rem;
+    margin-top:0.2667rem;
+}
+.new_nav .weui-flex{
+    align-items: center;
+}
+.new_nav .bmfw{
+    background: #ff0000;
+    border-radius: 0.8rem;
+    padding:0.08rem 0.2667rem;
+    color:#fff;
+}
+.new_nav .bmfw img{
+    width: 0.5333rem;
+}
+.new_nav .tit{
+    text-align: right;
+}
+.new_nav .tit img{
+    width: 20px;
+    margin-right: 10px;
+}
+.new_change{
+    align-items: center;
+    padding:5px;
+    border-bottom:1px solid #d9d9d9;
+}
+.new_change img{
+    width: 0.5333rem;
+}
+.new_team{
+    text-align: center;
+}
+.new_team .tit{
+    padding:0.08rem 0;
+}
+.new_team .weui-flex__item{
+    position: relative;
+    padding:30px 0 0px;
+}
+.new_team img{
+    border-radius: 50%;
+    width: 40px;
+}
+.new_team .wait{
+    position: absolute;
+    top:10px;
+    right:2px;
+    background: #ccc;
+    color:#fff;
+    padding:1px 5px;
+    border-radius: 30px;
+    font-size: 0.32rem;
+}
