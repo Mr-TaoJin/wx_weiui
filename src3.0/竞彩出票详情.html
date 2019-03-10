@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ch">
+
+<head>
+    <title>竞彩出票详情</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="description">
+
+    <link rel="stylesheet" href="../bower_components/weui/dist/lib/weui.min.css">
+    <link rel="stylesheet" href="../bower_components/weui/dist/css/jquery-weui.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <div class="page">
+        <div class="weui-flex detail_x">
+            <div class="weui-flex__item">竞彩足球胜平负</div>
+            <div>6小时50分后截止</div>
+        </div>
+        <div class="detail_team_x">
+            <div class="weui-flex detail_x">
+                <div class="weui-flex__item">投注选项</div>
+                <div>均优 2X1 15注 1倍 <em class="money">20.00</em> 元 </div>
+            </div>
+            <div class="weui-flex detail_det">
+                <div class="det_x">
+                    <p>周三001</p>
+                    <p>欧冠</p>
+                    <p>11-20</p>
+                    <p>16:25截止</p>
+                </div>
+                <div class="weui-flex__item det_pa">
+                    <div class="weui-flex">
+                        <div class="weui-flex__item">皇马</div>
+                        <div class="weui-flex__item text_center">VS</div>
+                        <div class="weui-flex__item text_right">利物浦</div>
+                    </div>
+                    <p class="det_res">胜（1.78）</p>
+                </div>
+            </div>
+            <div class="weui-flex detail_det">
+                <div class="det_x">
+                    <p>周三001</p>
+                    <p>欧冠</p>
+                    <p>11-20</p>
+                    <p>16:25截止</p>
+                </div>
+                <div class="weui-flex__item det_pa">
+                    <div class="weui-flex">
+                        <div class="weui-flex__item">皇马</div>
+                        <div class="weui-flex__item text_center">VS</div>
+                        <div class="weui-flex__item text_right">利物浦</div>
+                    </div>
+                    <p class="det_res">胜（1.77） 平（1.22）丨2球（1.22）3球（1.22）4球（1.22）丨平平（2.22）丨负负（1.22）</p>
+                </div>
+            </div>
+        </div>
+        <div class="details_title">
+            <p>客户名称: 测试发单</p>
+            <p>方案编号: 20181120142522</p>
+            <p>下单时间: 2018-11-20 14:25:22</p>
+        </div>
+        <!-- 正常 -->
+        <div class="footer_btn text_center details_footer">
+            <div class="weui-flex">
+                <div class="weui-flex__item" onclick="recharge()">
+                    <img src="./images/cd.png" alt="">
+                    <p>撤单</p>
+                </div>
+                <div class="weui-flex__item">
+                    <img src="./images/ewm.png" alt="">
+                    <p>二维码</p>
+                </div>
+                <div class="weui-flex__item">
+                    <img src="./images/ewm.png" alt="">
+                    <p>拆单</p>
+                </div>
+                <div class="qd_btn" onclick="set()">
+                    <span>确定打票</span>
+                </div>
+            </div>
+        </div>
+        <!-- 派奖 -->
+        <!-- <div class="footer_btn text_center details_win_footer" onclick="win()">派奖</div> -->
+    </div>
+    <!-- 自定义弹窗 -->
+    <div class="mask"></div>
+    <div class="popup_set">
+        <div class="title">确认打票</div>
+        <div class="content">
+            <div class="content_line">
+                <div class="weui-flex">
+                    <div class="weui-flex__item">周三001 </div>
+                    <div class="weui-flex__item text_right">皇马 vs 利物浦</div>
+                </div>
+                <ul class="pop_ul clear_float">
+                    <li>
+                        <span>胜胜</span>
+                        <input type="text">
+                    </li>
+                    <li>
+                        <span>胜</span>
+                        <input type="text">
+                    </li>
+                    <li>
+                        <span>胜</span>
+                        <input type="text">
+                    </li>
+                </ul>
+            </div>
+            <div class="content_line">
+                <div class="weui-flex">
+                    <div class="weui-flex__item">周三001 </div>
+                    <div class="weui-flex__item text_right">皇马 vs 利物浦</div>
+                </div>
+                <ul class="pop_ul clear_float">
+                    <li>
+                        <span>胜胜</span>
+                        <input type="text">
+                    </li>
+                    <li>
+                        <span>胜</span>
+                        <input type="text">
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <p class="cont_tit">*如过出现变赔，请在上面修改赔率</p>
+        <div class="bottom_tab">
+            <span class="cancel" onclick="close_popup()">取消</span>
+            <span class="ok" onclick="onok()">确定</span>
+        </div>
+    </div>
+    <script src="../bower_components/weui/dist/lib/jquery-2.1.4.js"></script>
+    <script src="../bower_components/weui/dist/lib/fastclick.js"></script>
+    <script src="../bower_components/weui/dist/js/jquery-weui.js"></script>
+    <script src="../bower_components/flexible/flexible.js"></script>
+    <script src="../bower_components/liMarquee.js"></script>
+
+    <script>
+        $(function () {
+            FastClick.attach(document.body);
+        });
+    </script>
+
+    <script type="text/javascript">
+        function recharge() {
+            $.confirm_zdy({//此为自定义方法，若想修改请去jquery-weui.js查看
+                title: '撤单',
+                text: '您确定此方案无法出票吗？',
+                text2: '*退回订单后请联系彩民解释撤单原因',
+                onOK: function () {
+                    //点击确认
+                },
+                onCancel: function () {
+                }
+            });
+        }
+
+        // 打开弹窗
+        function set() {
+            $(".mask").css('display', 'block');
+            $(".popup_set").addClass('main').css('display', 'block');
+        }
+        function onok() {
+            // 执行操作..
+            close_popup();
+        }
+        // 关闭弹窗
+        function close_popup() {
+            $(".mask").css('display', 'none');
+            $(".popup_set").css('display', 'none');
+        }
+
+        // 已中奖
+        function win() {
+            $.prompt_zdy({//自定义内容
+                title: '派奖',//标题
+                // text: '内容文案',
+                // user_name: '沙夏',//用户名称
+                // money: '账户余额：100.25',//充值金额（自定义拼接）
+                warn_msg: '*如果上方金额与实际中奖金额不一致，请在此修改；不修改则默认按照上方金额派奖', //提醒消息(默认空不显示)
+                input: '',//默认输入值
+                empty: false, // 是否允许为空
+                btnOk: '确定',//确定按钮文字
+                placeholder: '请输入金额',
+                onOK: function (input) {
+                    //点击确认
+                },
+                onCancel: function () {
+                    //点击取消
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

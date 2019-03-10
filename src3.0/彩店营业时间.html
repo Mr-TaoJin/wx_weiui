@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ch">
+
+<head>
+    <title>彩店营业时间</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="description">
+
+    <link rel="stylesheet" href="../bower_components/weui/dist/lib/weui.min.css">
+    <link rel="stylesheet" href="../bower_components/weui/dist/css/jquery-weui.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <div class="page">
+        <div class="weui-flex new_time_x">
+            <div class="weui-flex__item">
+                <p>周一到周五</p>
+                <p class="time">08:50-23:55</p>
+            </div>
+            <div class="weui-flex__item">
+                <p>周一到周五</p>
+                <p class="time">08:50-23:55</p>
+            </div>
+        </div>
+        <p class="new_btn_y">修改</p>
+
+        <div class="footer_btn text_center home_footer">
+            <div class="weui-flex">
+                <div class="weui-flex__item">
+                    <img src="./images/home.png" alt="">
+                    <p>首页</p>
+                </div>
+                <div class="weui-flex__item">
+                    <!-- <img src="./images/dd.png" alt="">
+                    <p>订单</p> -->
+                </div>
+                <div class="weui-flex__item">
+                    <!-- <img src="./images/fk.png" alt="">
+                    <p>客户</p> -->
+                </div>
+                <div class="weui-flex__item">
+                    <img src="./images/my.png" alt="">
+                    <p>我的</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 自定义弹窗 -->
+    <div class="mask"></div>
+    <div class="popup_set">
+        <div class="title">修改营业时间</div>
+        <div class="select_pop">
+            <p class="tit_p">周一到周五</p>
+            <select>
+                <option value=""></option>
+            </select>
+            <select>
+                <option value=""></option>
+            </select>
+            <span>至</span>
+            <select>
+                <option value=""></option>
+            </select>
+            <select>
+                <option value=""></option>
+            </select>
+            <p class="tit_p">周六到周日</p>
+            <select>
+                <option value=""></option>
+            </select>
+            <select>
+                <option value=""></option>
+            </select>
+            <span>至</span>
+            <select>
+                <option value=""></option>
+            </select>
+            <select>
+                <option value=""></option>
+            </select>
+            <p class="tit_p">请输入登录密码</p>
+            <input class="password" type="password">
+        </div>
+        
+        <div class="bottom_tab">
+            <span class="cancel" onclick="close_popup()">取消</span>
+            <span class="ok" onclick="onok()">确定</span>
+        </div>
+    </div>
+    <script src="../bower_components/weui/dist/lib/jquery-2.1.4.js"></script>
+    <script src="../bower_components/weui/dist/lib/fastclick.js"></script>
+    <script src="../bower_components/weui/dist/js/jquery-weui.js"></script>
+    <script src="../bower_components/flexible/flexible.js"></script>
+    <script src="../bower_components/liMarquee.js"></script>
+
+    <script>
+        $(function () {
+            FastClick.attach(document.body);
+        });
+    </script>
+
+    <script type="text/javascript">
+        // 打开弹窗
+        function set() {
+            $(".mask").css('display', 'block');
+            $(".popup_set").addClass('main').css('display', 'block');
+        }
+        set();
+        function onok() {
+            // 执行操作..
+            close_popup();
+        }
+        // 关闭弹窗
+        function close_popup() {
+            $(".mask").css('display', 'none');
+            $(".popup_set").css('display', 'none');
+        }
+
+        // 时间
+        function time(v) {
+            var arr = [];
+            for (var i = 0; i < v; i++) {
+                var j = '';
+                if (i < 9) {
+                    j = '0' + (i + 1);
+                } else {
+                    j = (i + 1).toString();
+                }
+                arr.push(j)
+            }
+            return arr;
+        }
+        var hours = time(24);
+        var minutes = time(60);
+    </script>
+</body>
+
+</html>

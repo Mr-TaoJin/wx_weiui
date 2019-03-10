@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ch">
+
+<head>
+    <title>冷热指数</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="description">
+
+    <link rel="stylesheet" href="../bower_components/weui/dist/lib/weui.min.css">
+    <link rel="stylesheet" href="../bower_components/weui/dist/css/jquery-weui.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <div class="page">
+        <div class="weui-flex common_nav">
+            <div class="weui-flex__item">昨日</div>
+            <div class="weui-flex__item">近7天</div>
+            <div class="weui-flex__item checked">近30天</div>
+        </div>
+        <div class="lrzs_box_two">
+            <table>
+                <tr>
+                    <td rowspan="2">日期</td>
+                    <td colspan="3">赛果分布</td>
+                    <td colspan="3">冷热指数</td>
+                </tr>
+                <tr>
+                    <td>一赔</td>
+                    <td>二赔</td>
+                    <td>三赔</td>
+                    <td>热门</td>
+                    <td>正常</td>
+                    <td>冷门</td>
+                </tr>
+                <tr>
+                    <td><span class="font_black">19-03-06</span><span>(周一)</span></td>
+                    <td>7</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td class="fff_f red">热门</td>
+                    <td class="fff_f">正常</td>
+                    <td class="fff_f blue">冷门</td>
+                </tr>
+                <tr>
+                    <td><span class="font_black">19-03-06</span><span>(周一)</span></td>
+                    <td>7</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td class="fff_f ">热门</td>
+                    <td class="fff_f green">正常</td>
+                    <td class="fff_f blue">冷门</td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+    <script src="../bower_components/weui/dist/lib/jquery-2.1.4.js"></script>
+    <script src="../bower_components/weui/dist/lib/fastclick.js"></script>
+    <script src="../bower_components/weui/dist/js/jquery-weui.js"></script>
+    <script src="../bower_components/flexible/flexible.js"></script>
+    <script src="../bower_components/liMarquee.js"></script>
+
+    <script>
+        $(function () {
+            FastClick.attach(document.body);
+        });
+    </script>
+
+    <script type="text/javascript">
+
+    </script>
+</body>
+
+</html>
