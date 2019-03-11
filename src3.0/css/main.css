@@ -222,6 +222,20 @@ button:focus{outline:none;}
     padding:0.2133rem;
     background: #fff;
 }
+.detail_y>.tit{
+    padding:0.2133rem;
+    background: #fff;
+    color:#000;
+    border-bottom:0.0267rem solid #E4E4E4;
+}
+.detail_y>.weui-flex{
+    padding:8px 0;
+}
+.detail_y .blod{
+    color:#000;
+    font-size: 0.4rem;
+    padding-top:8px;
+}
 .detail_team_x{
     margin-top:0.2667rem;
 }
