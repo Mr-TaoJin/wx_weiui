@@ -152,6 +152,9 @@ button:focus{outline:none;}
 .home_bg_img{
     margin:0.2667rem 0 0 0.2667rem;
 }
+.home_footer .checked{
+    color:#ff0000;
+}
 /* 订单管理 */
 .order_bg{
     background: #0066FF;
